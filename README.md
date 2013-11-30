@@ -31,11 +31,11 @@ Main LocalGrowth features
 
 You will require the following software
 
-*[ruby version ~> 2.0.0][1]
-*[rails version ~> 4.0.0][2]
-*[git][3]
+[1][ruby version ~> 2.0.0]
+[2][rails version ~> 4.0.0]
+[3][git]
+*Optional [4][rvm] for ruby management.
 
-* Optional [rvm][4] for ruby management.
 
 These components might be tricky to set up and might require additional dependencies depending on your system. In case you ran into problems I'd advise you to consult with goolge.
 
@@ -126,7 +126,7 @@ lorem
 
 
 
-[1][https://www.ruby-lang.org/en/]
-[2][http://rubyonrails.org/]
-[3][http://git-scm.com/]
-[4][https://rvm.io/]
+[https://www.ruby-lang.org/en/][1]
+[http://rubyonrails.org/][2]
+[http://git-scm.com/][3]
+[https://rvm.io/][4]
