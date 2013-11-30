@@ -24,4 +24,4 @@
 
 
 
-[1][https://trello.com/b/knWA4OMS/lamiatodo]
+[1]: https://trello.com/b/knWA4OMS/lamiatodo
