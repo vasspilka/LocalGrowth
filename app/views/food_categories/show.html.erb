@@ -1,0 +1,9 @@
+<%= provide(:title, @food_category.title) %>
+  <div class="row">
+    <div class="span5">
+      <ul class="center categories-red"><%= render @food_categories %></ul>
+    </div>
+    <div class="span7 shops-container shops-container-red">
+      <table><tr><%= will_paginate @food_shops ,previous_label: h("«"), next_label: h("»")%></tr><td><%= render @food_shops %></td></table>
+    </div>
+  </div> 

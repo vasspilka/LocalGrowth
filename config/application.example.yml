@@ -1,0 +1,45 @@
+#Main info
+app_name: "YourWebsite"
+town_name: "YourTown"
+
+
+
+
+
+
+
+# Mailer config
+# You need this for mailing functions to work
+action_mailer_address: "smtp.gmail.com" # For Gmail
+action_mailer_port: 587
+action_mailer_domain: "websitedomain.com" 
+action_mailer_username: "gmail_user"        # If you use gmail you can put your username
+action_mailer_password: "secure_password!"  # and password here for mailer to work
+
+developement:
+  action_mailer_host: "localhost:3000"
+test:
+  action_mailer_host: "localhost:3000"
+production:
+  action_mailer_host: "Your_Server_IP"
+
+# Notification Mailer 
+# These emails are used for the feedback message
+default_from: "websitedomain.com"
+default_to: "your_email@example.com"
+
+
+# Authentication Config
+device_secret_key:
+device_mailer:
+
+# Oauth Authentication
+facebook_app_id:
+facebook_app_sercret:
+google_maps_id:
+google_maps_secret:
+
+# Database config
+database_adapter:
+
+# # for configs not yet implemented inside the app

@@ -1,0 +1,52 @@
+<table class="shop-item " id="<%= other_shop.id%>" width="600px" height="100px"> 
+  <td class="shop-logo" width="130px;" height="100%"><%= image_tag(other_shop.logo_url) %></td>
+  <td class="shop-info" height="100%" width="65%"> 
+    <table width="100%" height="100%">
+      <tr height="48%">
+        <td width="100%"><table width="100%" height="100%" id="main-data">
+          <td width="56%" height="100%" class="center" id="title"><b ><%= other_shop.title %></b></td>
+          <td width="44%" id="address" class="center"><b>Διέυθηνση:</b><br><b><%= other_shop.address %></b></td>
+        </table></td>
+      </tr>
+      <% if other_shop.other_subcategories.any? %>
+      <tr>
+        <th width="100%"  class="subcategory center">          
+            <b>Υποκατηγορίες:</b>
+        </th>
+      </tr>      
+      <tr>
+        <td width="100%" class="center">              
+          <% other_shop.other_subcategories.each do |subcategory| %>
+            <b class="subcategories"><%= subcategory.title %></b>
+          <% end %> 
+        </td>
+      </tr>
+      <% else %>
+      <tr></tr>
+      <tr></tr>
+      <% end %>
+
+    </table>
+  </td>
+  <% if other_shop.phones.any? %>
+  <td class="phones" height="100%" width="21%"> 
+    <table class="center"> 
+    <% if other_shop.phones.count > 1 %>
+      <th>Τηλέφωνα</th>
+    <% else %>
+      <th>Τηλέφωνο</th>
+    <% end %>
+      <% other_shop.phones.each do |phone| %>
+          <tr>            
+            <td>
+              <%= phone.number_type + ":" %>
+              <%= phone.number %>
+            </td>
+          </tr>
+      <% end %> 
+    </table>
+  </td>
+  <% else %>
+    <td class="phones" height="100%" width="21%"></td>
+  <% end %>
+</table>

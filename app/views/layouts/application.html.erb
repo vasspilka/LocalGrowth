@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="gr">
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= render 'layouts/google_analytics' %>
+</head>
+<body>
+  <%= render 'layouts/header' %>
+  <div id="centeredmenu">
+    <ul>
+      <li><a href="/food_categories/1" class="action-button shadow animate red">Φαγητό</a></li>
+      <li><a href="/fun_categories/1" class="action-button shadow animate blue">Διασκέδαση</a></li>
+      <li><a href="/other_categories/1" class="action-button shadow animate green">Άλλα</a></li>
+    </ul>
+  </div>
+  <div class="container row container-spacing">
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+        <a class="close" data-dismiss="alert">×</a>
+        <%= msg %>
+      </div>
+    <% end %>
+    <div></div>
+    <div><%= yield %></div>
+    <%= render 'layouts/footer' %>
+  </div>
+</body>
+</html>

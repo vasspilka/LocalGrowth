@@ -1,0 +1,24 @@
+<header class="navbar navbar-inverse navbar-spacing">
+  <div class="navbar-inner">
+    <div class="container">
+      <nav>      
+        <ul class="nav pull-right">
+          <li><%= link_to "Αρχική Σελίδα",    root_path %></li>
+          <li><%= link_to "Βοήθεια",    help_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Φορμες<b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/forms/store_input">Καταχωρίσεων</a></li>
+              <li><a href="/feedback_messages/new">Προβλημάτων</a></li>
+              <li><a href="/feedback_messages/new">Προτάσεων</a></li>
+            </ul>
+          </li>
+          <li></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+

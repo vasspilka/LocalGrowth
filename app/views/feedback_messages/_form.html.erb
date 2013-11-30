@@ -1,0 +1,14 @@
+<%= simple_form_for(@feedback_message, :defaults => { :input_html => { :class => 'input-xxlarge' } }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :subject, label: "Θέμα", collection: ["Τεχνικό Προβλημα","Αιτημα για τροποποιηση/αφέρεση πληροφοριών","Ιδέες και προτάσεις","Άλλο"]%>
+    <%= f.input :name, label: "Όνομα" %>
+    <%= f.input :email %>
+    <%= f.input :body,label: "Περιεχόμενο" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit,  :class => "btn-primary", value: "Αποστολή"  %>
+  </div>
+<% end %>

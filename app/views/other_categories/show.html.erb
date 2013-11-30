@@ -1,0 +1,9 @@
+<%= provide(:title, @other_category.title) %>
+  <div class="row">
+    <div class="span5">
+      <ul class="center categories-green "><%= render @other_categories %></ul>
+    </div>
+    <div class="span7 shops-container shops-container-green">
+      <table><tr><%= will_paginate @other_shops ,previous_label: h("«"), next_label: h("»")%></tr><td><%= render @other_shops %></td></table>
+    </div>
+  </div> 

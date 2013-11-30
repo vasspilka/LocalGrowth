@@ -1,0 +1,43 @@
+<table class="shop-item" id="<%= fun_shop.id%>"> 
+  <td class="shop-logo"><%= image_tag(fun_shop.logo_url) %></td>
+  <td class="shop-info">
+    <table>
+      <tr>
+        <td>
+          <table>
+            <td><%= fun_shop.title %></td>
+            <th class="center">Διέυθηνση:</th>
+            <td><%= fun_shop.address %></td>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="subcategories">
+          <table class="center">          
+            <th>Υποκατηγορίες</th>
+              <tr>
+                <td  id="subcategories-spacing"><table>              
+                  <% fun_shop.fun_subcategories.each do |subcategory| %>
+                    <td id="subcategories-title"><%= subcategory.title %></td>
+                  <% end %> 
+                </table></td>
+              </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+  <td class="phones"> 
+    <table class="center" >        
+      <th>Τηλέφονα</th>
+      <% fun_shop.phones.each do |phone| %>
+          <tr>            
+            <td>
+              <%= phone.number_type + ":" %>
+              <%= phone.number %>
+            </td>
+          </tr>
+      <% end %> 
+    </table>
+  </td>
+</table>
