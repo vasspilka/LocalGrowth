@@ -31,11 +31,9 @@ Main LocalGrowth features
 
 You will require the following software
 
-[1][ruby version ~> 2.0.0]
-[2][rails version ~> 4.0.0]
-[3][git]
-*Optional [4][rvm] for ruby management.
-
+* [ruby version ~> 2.0.0][1]
+* [rails version ~> 4.0.0][2]
+* [git][3]
 
 These components might be tricky to set up and might require additional dependencies depending on your system. In case you ran into problems I'd advise you to consult with goolge.
 
@@ -57,7 +55,7 @@ First we need to clone the repository using git and install some dependencies
 
 After all the dependencies have been installed we need to create a config and a database file,
 don't worry I have already set up examples for you. All you need to do is remove the 
-'.example' extension from 'application.example.yml' and 'database.example.yml' inside the config folder.
+`.example` extension from `application.example.yml` and `database.example.yml` inside the config folder.
 
 Linux:
 
@@ -70,10 +68,10 @@ Windows:
     > ren config/application.example.yml application.yml
 
 
-You may want to have a look at those files 'database.yml' consists of the database architecture
-you will need this to set up 'mysql' or 'postgresql'.
+You may want to have a look at those files `database.yml` consists of the database architecture
+you will need this to set up `mysql` or `postgresql`.
 
-'application.yml' has configurations for the application. While for local deployment these settings should work fine, for production you should change these.
+`application.yml` has configurations for the application. While for local deployment these settings should work fine, for production you should change these.
 
 Now we need to create the datatables and add some data. Finally we can run the server.
 
@@ -106,7 +104,7 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
   
   If you know any of the above technologies you can help improve LocalGrowth
   by contribution to the code.
-  'More about that at CONTRIBUTING.md' 
+  More about that at [CONTRIBUTING.md][5] 
 
 
   Feedback is also a good way to help, you can tell us about suggestions you might have or 
@@ -126,7 +124,8 @@ lorem
 
 
 
-[https://www.ruby-lang.org/en/][1]
-[http://rubyonrails.org/][2]
-[http://git-scm.com/][3]
-[https://rvm.io/][4]
+[1]: https://www.ruby-lang.org/en/
+[2]: http://rubyonrails.org/
+[3]: http://git-scm.com/
+
+[5]: https://github.com/vasspilka/LocalGrowth/blob/master/CONTRIBUTING.md
