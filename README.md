@@ -75,7 +75,8 @@ you will need this to set up `mysql` or `postgresql`.
 
 Now we need to create the datatables and add some data. Finally we can run the server.
 
-    > rake db:setup
+    > rake db:migrate
+    > rake db:seed
     > rails s 
 
 The database is seeded with some basic data for you to see how the application works.

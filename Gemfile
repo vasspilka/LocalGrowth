@@ -64,7 +64,6 @@ group :production do
 end
 
 # Use unicorn as the app server
-gem 'unicorn'
 
 # Use Capistrano for deployment
 
