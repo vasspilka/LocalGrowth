@@ -1,52 +1,26 @@
-<table class="shop-item " id="<%= food_shop.id%>" width="600px" height="100px"> 
-  <td class="shop-logo" width="130px;" height="100%"><%= image_tag(food_shop.logo_url) %></td>
-  <td class="shop-info" height="100%" width="65%"> 
-    <table width="100%" height="100%">
-      <tr height="48%">
-        <td width="100%"><table width="100%" height="100%" id="main-data">
-          <td width="56%" height="100%" class="center" id="title"><b ><%= food_shop.title %></b></td>
-          <td width="44%" id="address" class="center"><b>Διεύθυνση:</b><br><b><%= food_shop.address %></b></td>
-        </table></td>
-      </tr>
-      <% if food_shop.food_subcategories.any? %>
-      <tr>
-        <th width="100%"  class="subcategory center">          
-            <b>Υποκατηγορίες:</b>
-        </th>
-      </tr>      
-      <tr>
-        <td width="100%" class="center">              
-          <% food_shop.food_subcategories.each do |subcategory| %>
-            <b class="subcategories"><%= subcategory.title %></b>
-          <% end %> 
-        </td>
-      </tr>
-      <% else %>
-      <tr></tr>
-      <tr></tr>
-      <% end %>
+<h3>This is the view for individual Food shop find me in "app/views/food_shops/_food_shop.html.erb"</h3>
 
-    </table>
-  </td>
-  <% if food_shop.phones.any? %>
-  <td class="phones" height="100%" width="21%"> 
-    <table class="center"> 
-    <% if food_shop.phones.count > 1 %>
-      <th>Τηλέφωνα</th>
-    <% else %>
-      <th>Τηλέφωνο</th>
-    <% end %>
-      <% food_shop.phones.each do |phone| %>
-          <tr>            
-            <td>
-              <%= phone.number_type + ":" %>
-              <%= phone.number %>
-            </td>
-          </tr>
-      <% end %> 
-    </table>
-  </td>
+<%= image_tag(food_shop.logo_url) %>
+<%= food_shop.title %>
+<%= food_shop.address %>
+
+
+<% if food_shop.food_subcategories.any? %>            
+    <% food_shop.food_subcategories.each do |subcategory| %>
+      <%= subcategory.title %>
+    <% end %> 
+<% else %>
+<% end %>
+
+<% if food_shop.phones.any? %>
+  <% if food_shop.phones.count > 1 %>
+    <p>Τηλέφωνα</p>
   <% else %>
-    <td class="phones" height="100%" width="21%"></td>
+    <p>Τηλέφωνο</p>
   <% end %>
-</table>
+    <% food_shop.phones.each do |phone| %>
+            <%= phone.number_type + ": " + phone.number %>
+    <% end %> 
+<% else %>
+<% end %>
+

@@ -1,9 +1,11 @@
+
+<h1>This is the view for Food find me in "app/views/food_categories/show.html.erb"</h1>
+
 <%= provide(:title, @food_category.title) %>
-  <div class="row">
-    <div class="span5">
-      <ul class="center categories-red"><%= render @food_categories %></ul>
-    </div>
-    <div class="span7 shops-container shops-container-red">
-      <table><tr><%= will_paginate @food_shops ,previous_label: h("«"), next_label: h("»")%></tr><td><%= render @food_shops %></td></table>
-    </div>
-  </div> 
+
+  <% @food_categories.each do |category| %>
+    <a href="<%= category.id %>"><li><%= category.title %></li></a>
+  <% end %>
+
+<%= render @food_shops %>
+

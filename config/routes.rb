@@ -1,10 +1,17 @@
 LocalGrowth::Application.routes.draw do
   
+
   resources :feedback_messages
 
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   devise_for :users
+
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   
   resources :fun_categories
   resources :fun_shops
@@ -12,6 +19,8 @@ LocalGrowth::Application.routes.draw do
   resources :food_shops
   resources :other_categories
   resources :other_shops
+  resources :events
+  resources :deals
 
 
 

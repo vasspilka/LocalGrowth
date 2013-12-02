@@ -1,0 +1,6 @@
+<% provide(:title, @user.username) %>
+
+<%= @user.email %>
+<%= render 'shared/stats' %>
+
+<%= render 'follow_form' if signed_in? %>
