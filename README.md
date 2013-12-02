@@ -31,9 +31,32 @@ Main LocalGrowth features
 
 You will require the following software
 
-* [ruby version ~> 2.0.0][1]
-* [rails version ~> 4.0.0][2]
-* [git][3]
+* [ruby version ~> 2.0.0][1]:
+
+  For Windows you can use [RubyInstaller][RubyInstaller] dont forget the DevKit. And FOLLOW THE INSTRUCTIONS!
+  
+  For Unix/Linux there is [RVM][rvm]. Just use this command `\curl -L https://get.rvm.io | bash -s stable` 
+  and you should have the latest stable Ruby version with [RVM][rvm] a great tool for managing Ruby versions and gemsets.
+
+
+  To ensure you have properly installed Ruby run the following command in cmd or Terminal.
+  `ruby -v`
+  Your output should be something like this.
+  `ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux]`
+
+* [rails version ~> 4.0.0][2]:
+
+  After succesfully installing Ruby, run these to install Bundler and Rails
+
+    > gem install bundler
+    > gem install rails 4.0.1
+    > bundle update
+
+* [git][3]:
+  
+  Installing git should be easy just follow the website instructions.
+
+
 
 These components might be tricky to set up and might require additional dependencies depending on your system. In case you ran into problems I'd advise you to consult with goolge.
 
@@ -46,7 +69,6 @@ First we need to clone the repository using git and install some dependencies
 
     > git clone https://github.com/vasspilka/LocalGrowth.git
     > cd LocalGrowth
-    > gem install bundler
     > bundle update
     > bundle install --without production
 
@@ -128,5 +150,6 @@ lorem
 [1]: https://www.ruby-lang.org/en/
 [2]: http://rubyonrails.org/
 [3]: http://git-scm.com/
-
+[rvm]: https://rvm.io/
+[RubyInstaller]: http://rubyinstaller.org/downloads/
 [5]: https://github.com/vasspilka/LocalGrowth/blob/master/CONTRIBUTING.md

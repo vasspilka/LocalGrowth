@@ -25,11 +25,6 @@ LocalGrowth::Application.routes.draw do
   match '/legal', to: 'static_pages#legal', via: 'get'
 
 
-  get "forms/problem"
-  get "forms/store_input"
-  get "forms/suggestion"
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

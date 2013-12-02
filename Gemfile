@@ -14,18 +14,22 @@ gem 'simple_form'
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-will_paginate'
 gem 'bootstrap-generators', '~> 2.3'
-gem 'foundation-rails'
-gem 'foundation-icons-sass-rails'
+
+# For website Redesign
+#gem 'foundation-rails'
+#gem 'foundation-icons-sass-rails'
 
 #Security and Admin tools
 gem 'rails_admin'
 gem "devise"
-gem 'kaminari', '~> 0.14'
 gem 'bcrypt-ruby' 
 
+# Pagination with
+gem 'kaminari', '~> 0.14'
+
 # Javascript related gems
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'        # Removes all spaces.
+gem 'coffee-rails', '~> 4.0.0' 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
