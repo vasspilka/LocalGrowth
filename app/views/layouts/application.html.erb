@@ -10,10 +10,12 @@
 </head>
 <body>
     <h1>Main Layout find me in "app/views/layouts/application.html.erb"</h1>
-    <% # On EAD you can use any search method you want and you can load as manny objects as you want %>
-    <%= render partial: "shared/deal.html.erb", collection: Deal.order( 'RANDOM()' ).first %>
-    <%= render Ad.order( 'RANDOM()' ).first %>
-    <%= render Event.order( 'RANDOM()' ).first %>
+    <% # On EAD you can use any search method you want and you can load as manny objects as you want here are some rendering options%>
+    <%= render partial: "shared/deal.html.erb", collection: Deal.all %>
+    <%= render partial: "shared/ad.html.erb", object: Ad.order( 'RANDOM()' ).first %>
+    <%= render partial: "shared/event.html.erb", object: Event.order( 'RANDOM()' ).first %>
+    <% # End of EAD rendering %>
+
     <%= render 'layouts/header' %>
     <%= render 'layouts/flash_notice' %>
     <div><%= yield %></div>
