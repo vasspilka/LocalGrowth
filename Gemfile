@@ -8,16 +8,13 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-#Design related gems
-gem 'bootstrap-sass'
-gem 'simple_form'
+# Design related gems
+gem 'formtastic'
 gem 'sass-rails', '~> 4.0.0'
-gem 'bootstrap-will_paginate'
-gem 'bootstrap-generators', '~> 2.3'
 
 # For website Redesign
-#gem 'foundation-rails'
-#gem 'foundation-icons-sass-rails'
+gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 
 #Security and Admin tools
 gem 'rails_admin'
@@ -25,7 +22,7 @@ gem "devise"
 gem 'bcrypt-ruby' 
 
 # Pagination with
-gem 'kaminari', '~> 0.14'
+gem 'kaminari'
 
 # Javascript related gems
 gem 'uglifier', '>= 1.3.0'        # Removes all spaces.

@@ -1,18 +1,13 @@
 <% provide(:title, 'Επικοινωνία') %>
 <h1>Επικοινωνία</h1>
 <div class= "row">
-  <div class="span3">
-    <span class="label label-info">Info</span>
-    <h5>E-mail: <%= CONFIG[:contact_email]%></h5>
-    <h5></h5>
-  </div>
-  <div class="span9">
-    <p>
-    	Για καταχώριση καταστήματος απευθηνθείτε στην <a href="/forms/store_input">φόρμα Καταχωρίσεων</a>
-        <br><br>
-    	Εαν έχετε κάποιο τεχνικό (ή αλλο με το Site) πρόβλημα απευθηνθείτε στην <a href="/forms/problem">φόρμα Προβλημάτων</a>
-        <br><br>
-    	Για ιδέες και προτάσεις για το Site απευθηνθείτε στην <a href="/forms/suggestion">φόρμα Προτάσεων</a>
+  <span class="label label-info">Info</span>
+  <h5>E-mail: <%= CONFIG[:contact_email]%></h5>
+  <p>
+  	Για καταχώριση καταστήματος απευθηνθείτε στην <a href="/feedback_messages/new">φόρμα Καταχωρίσεων</a>
+    <br><br>
+  	Εαν έχετε κάποιο τεχνικό (ή αλλο με το Site) πρόβλημα απευθηνθείτε στην <%= link_to "φόρμα Προβλημάτων", new_feedback_message_path %>
+    <br><br>
+    Για ιδέες και προτάσεις για το Site απευθηνθείτε στην <%= link_to "φόρμα Προτάσεων", new_feedback_message_path %>
     </p>
-  </div>
 </div>

@@ -1,18 +1,20 @@
 LocalGrowth::Application.routes.draw do
   
+  root 'static_pages#home'
 
-  resources :feedback_messages
-
+  # Authentication
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   devise_for :users
 
+  # Users
   resources :users do
     member do
       get :following, :followers
     end
   end
-  
+
+  # All the resources
   resources :fun_categories
   resources :fun_shops
   resources :food_categories
@@ -21,11 +23,11 @@ LocalGrowth::Application.routes.draw do
   resources :other_shops
   resources :events
   resources :deals
+  resources :feedback_messages
+  resources :relationships, only: [:create, :destroy]
 
 
-
-
-  root 'static_pages#home'
+  # Matching
   match '/help',    to: 'static_pages#help' ,   via: 'get'
   match '/about',   to: 'static_pages#about' ,  via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
