@@ -2,5 +2,11 @@
 
 <%= link_to "Sign in", new_user_session_path %>
 <%= link_to "Sign out", destroy_user_session_path, method: "DELETE" %>
-<%= link_to "Αρχική Σελίδα",    root_path %> 
-<%= link_to "Βοήθεια",    help_path %>
+<%= link_to "Αρχική Σελίδα", root_path %> 
+<%= link_to "Βοήθεια", help_path %>
+
+<br><br>
+
+<%= link_to "Διασκέδαση" , fun_categories_path %>
+<%= link_to "Φαγητό" , food_categories_path %>
+<%= link_to "Άλλα" , other_categories_path %>

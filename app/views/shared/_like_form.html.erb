@@ -1,0 +1,8 @@
+<h5>This is the Follow button find me in "app/views/users/_follow_form.html.erb"</h5>>
+  <div id="follow_form">
+  <% if current_user.likes?("@object") %>
+    <%= render 'unfollow' %>
+  <% else %>
+    <%= render 'follow' %>
+  <% end %>
+  </div>

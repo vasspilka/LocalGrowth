@@ -1,0 +1,12 @@
+<%= provide(:title, @title) %>
+
+
+<h1>This is the view for <%= "#{@category.class}" %> find me in "app/views/shared/_categories_show.html.erb"</h1>
+
+<% @categories.each do |category| %>
+  <a href=<%= "/#{category.class.to_s.underscore.pluralize(2)}/#{category.id}" %>><li><%= category.title %></li></a>
+<% end %>
+
+
+<%= paginate @shops %>
+<%= render @shops %>

@@ -1,0 +1,6 @@
+<%= form_for(current_user.likes.build(likeable_id: @object.id,likeable_type: @object.class.to_s),
+             remote: true) do |f| %>
+  <div><%= f.hidden_field :likeable_id: %></div>
+  <div><%= f.hidden_field :likeable_type: %></div>
+  <%= f.submit "Like", class: "btn btn-large btn-primary" %>
+<% end %>

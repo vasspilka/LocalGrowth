@@ -1,17 +1,23 @@
 class FoodCategoriesController < ApplicationController
   
-  def show
-  	@food_category = FoodCategory.find(params[:id])
-  	@food_categories = FoodCategory.all
-  	@food_shops = FoodShop.find_all_by_food_category_id(params[:id])
+  # Idea!! Add id for like routing?
+
+
+  def index
+  	@categories = FoodCategory.all
+  	@shops = FoodShop.page(params[:page])
+
+  	@title = "Φαγητό"
+  	render "shared/categories_show.html.erb"
   end
 
+  def show
+  	@category = FoodCategory.find(params[:id])
+  	@categories = FoodCategory.all
+  	@shops = FoodShop.page(params[:page]).where(food_category_id: @category.id)
 
-
-
-
-
-
-
+  	@title = "Φαγητό | #{@category.title}"
+  	render "shared/categories_show.html.erb"
+  end
 
 end

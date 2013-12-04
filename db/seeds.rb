@@ -38,11 +38,23 @@ other_categories = OtherCategory.create([{ title: 'Supermarket'},{ title: 'Book 
 other_subcategories = OtherSubcategory.create([{title: 'Toys'},{title: 'Fresh vegetables'},
   {title: 'Ready Food'}])
 other_shops = OtherShop.create ([
+  {other_category_id: 1, title: 'The corner Bookstore', description: "You name it and we find it", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
+  {other_category_id: 1, title: 'Lidl', description: "Where the price meets quality", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
+  {other_category_id: 1, title: 'Jumbo', description: "Toys and much much more", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
+  {other_category_id: 1, title: 'Ikea', description: "All you need for your house", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
+  {other_category_id: 1, title: 'Comic Bookstore', description: "Superheroes? Villains? Action Figures? We've got them all", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
+  {other_category_id: 1, title: 'The corner Bookstore', description: "You name it and we find it", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
+  {other_category_id: 1, title: 'Lidl', description: "Where the price meets quality", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
+  {other_category_id: 1, title: 'Jumbo', description: "Toys and much much more", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
+  {other_category_id: 1, title: 'Ikea', description: "All you need for your house", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
   {other_category_id: 2, title: 'The corner Bookstore', description: "You name it and we find it", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
   {other_category_id: 1, title: 'Lidl', description: "Where the price meets quality", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
   {other_category_id: 1, title: 'Jumbo', description: "Toys and much much more", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
   {other_category_id: 1, title: 'Ikea', description: "All you need for your house", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
-  {other_category_id: 2, title: 'Comic Bookstore', description: "Superheroes? Villains? Action Figures? We've got them all", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'}])
+  {other_category_id: 2, title: 'The corner Bookstore', description: "You name it and we find it", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
+  {other_category_id: 1, title: 'Lidl', description: "Where the price meets quality", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
+  {other_category_id: 1, title: 'Jumbo', description: "Toys and much much more", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'},
+  {other_category_id: 1, title: 'Ikea', description: "All you need for your house", logo_url: "logo/no-logo.png", address: "None", working_hours: '8:00-4:00'}])
 
 other_subcategorization= OtherSubcategorization.create([{other_subcategory_id:1,other_shop_id:2},{other_subcategory_id:2,other_shop_id:2},{other_subcategory_id:3,other_shop_id:4}])
 

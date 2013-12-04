@@ -1,7 +1,7 @@
 <h2> Communication form find me in "app/views/feedback_messages/_form.html.erb" <h2>
 
-<%= semantic_form_for(@feedback_message, :defaults => { :input_html => { :class => 'input-xxlarge' } }) do |f| %>
-  <% # f.error_notification %>
+<%= simple_form_for(@feedback_message, :defaults => { :input_html => { :class => 'input-xxlarge' } }) do |f| %>
+  <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :subject, label: "Θέμα", collection: ["Τεχνικό Προβλημα","Αιτημα για τροποποιηση/αφέρεση πληροφοριών","Ιδέες και προτάσεις","Άλλο"]%>

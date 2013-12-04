@@ -1,15 +1,14 @@
 source 'https://rubygems.org'
 
-
-
 ruby '2.0.0'
+
 #ruby-gemset=LocalGrowth
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '~> 4.0.0'
 
 # Design related gems
-gem 'formtastic'
+gem 'simple_form'
 gem 'sass-rails', '~> 4.0.0'
 
 # For website Redesign
