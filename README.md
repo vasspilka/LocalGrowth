@@ -48,9 +48,11 @@ You will require the following software
 
   After succesfully installing Ruby, run these to install Bundler and Rails
 
+
     > gem install bundler
-    > gem install rails 4.0.1
     > bundle update
+    > bundle install --without production
+
 
 * [git][3]:
   
