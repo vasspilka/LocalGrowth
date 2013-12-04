@@ -1,4 +1,4 @@
-<%= form_for(current_user.relationships.find_by(likeable_id: @object.id,likeable_type: @object.class.to_s),
+<%= form_for(current_user.likes.find_by(likeable_id: likeable.id, likeable_type: likeable.class.to_s),
              html: { method: :delete },
              remote: true) do |f| %>
   <%= f.submit "Unlike", class: "btn btn-large" %>

@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
 
   #Relationship with likeable objects (Shops,Events,Deals)
   has_many :likes, foreign_key: "user_id", dependent: :destroy
+  has_many :liked_likeables, through: :likes, source: :liked
   has_many :liked_events, through: :likes, source: :likeable, source_type: 'Event'
   has_many :liked_deals, through: :likes, source: :likeable, source_type: 'Deal'
   has_many :liked_fun_shops, through: :likes, source: :likeable, source_type: 'FunShop'
@@ -39,16 +40,16 @@ class User < ActiveRecord::Base
   end
 
   #Actions for likeable obects
-  def likes?(likeable_object)
-  	likes.find_by(likeable_id: likeable_object.id,likeable_type: "#{likeable_object.class.to_s}")
+  def likes?(likeable_id,likeable_type)
+  	likes.find_by(likeable_id: likeable_id,likeable_type: likeable_type)
   end
   
-  def like!(likeable_object)
-  	likes.create!(likeable_id: likeable_object.id,likeable_type: "#{likeable_object.class.to_s}")
+  def like!(likeable)
+  	likes.create!(likeable_id: likeable.id,likeable_type: likeable.class.to_s)
   end
 
-  def unlike!(likeable_object)
-  	likes.find_by(likeable_id: likeable_object.id,likeable_type: "#{likeable_object.class.to_s}").destroy!
+  def unlike!(likeable)
+  	likes.find_by(likeable_id: likeable.id,likeable_type: likeable.class.to_s).destroy!
   end
 
   #Actions for Relations with Users

@@ -1,34 +1,30 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
 
+ruby '2.0.0'
 #ruby-gemset=LocalGrowth
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.0.0'
 
-# Design related gems
-gem 'simple_form'
-gem 'sass-rails', '~> 4.0.0'
-
-# For website Redesign
-gem 'foundation-rails'
-gem 'foundation-icons-sass-rails'
-
-#Security and Admin tools
-gem 'rails_admin'
+# Security and Admin tools
 gem "devise"
+gem 'rails_admin'
 gem 'bcrypt-ruby' 
-
-# Pagination with
-gem 'kaminari'
 
 # Javascript related gems
 gem 'uglifier', '>= 1.3.0'        # Removes all spaces.
 gem 'coffee-rails', '~> 4.0.0' 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
+# Design related gems
+gem 'simple_form'
+gem 'sass-rails', '~> 4.0.0'
+gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 
+# Pagination with
+gem 'kaminari'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -36,7 +32,7 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-#Testing framework
+# Testing framework
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
@@ -56,17 +52,14 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-#Production  related gems, Database etc.
+# Production gems
 group :production do
+  # Postgres Database
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
+  # Use Capistrano for deployment
   gem 'capistrano'
 end
-
-# Use unicorn as the app server
-
-# Use Capistrano for deployment
-
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

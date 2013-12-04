@@ -3,6 +3,9 @@
 <%= image_tag(food_shop.logo_url) %>
 <%= food_shop.title %>
 <%= food_shop.address %>
+<%= food_shop.likes.count %>
+
+<%= render 'shared/like_form', :likeable => food_shop if user_signed_in? %>
 
 
 <% if food_shop.food_subcategories.any? %>            

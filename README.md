@@ -48,10 +48,6 @@ You will require the following software
 
   After succesfully installing Ruby, run these to install Bundler and Rails
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6dcd1378a9f7417c59c1c0c0531767f08cad2779
       > gem install bundler
       > bundle update
       > bundle install --without production

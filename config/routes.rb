@@ -25,6 +25,8 @@ LocalGrowth::Application.routes.draw do
   resources :deals
   resources :feedback_messages
   resources :relationships, only: [:create, :destroy]
+  resources :likes, only: [:create, :destroy]
+
 
 
   # Matching
