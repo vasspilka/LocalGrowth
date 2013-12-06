@@ -36,11 +36,21 @@ end
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
-  #Next line for linux pop-up, you might need diferent gem for other OS
-    gem 'libnotify'
   gem 'factory_girl_rails'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
+
+  # For test pop up
+  # Linux
+    gem 'libnotify'
+
+  # Windows
+  # gem 'rb-notifu', '0.0.4'
+  # gem 'win32console', '1.3.2'
+  # gem 'wdm', '0.1.0'
+
+  # MAC OS X.
+  # gem 'growl', '1.0.3'
 end
 
 
