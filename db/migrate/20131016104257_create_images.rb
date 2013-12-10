@@ -11,6 +11,8 @@ class CreateImages < ActiveRecord::Migration
     end
 
     create_table :comments do |t|
+      t.string :username
+      t.string :email
       t.text :content
       t.belongs_to :commentable, polymorphic: true, index: true
 

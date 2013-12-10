@@ -9,6 +9,7 @@ gem 'rails', '~> 4.0.0'
 
 # Security and Admin tools
 gem "devise"
+gem 'omniauth-facebook'
 gem 'rails_admin'
 gem 'bcrypt-ruby' 
 

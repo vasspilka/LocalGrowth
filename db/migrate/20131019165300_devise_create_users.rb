@@ -31,12 +31,15 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.datetime :locked_at
         
       ## Omniauth Facebook
+      t.string :provider
+      t.string :uid
 
       ## Other info
       t.string :username
       t.string :name
       t.string :birthday
       t.string :address
+      t.string :gravatar
       t.integer :student_am
 
 

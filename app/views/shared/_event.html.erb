@@ -1,2 +1,8 @@
 <h5>Event individual view find me in "app/views/events/_event.html.erb"</h5>
 <%= event.title %>
+<p id="attendings_count<%=event.class.to_s%><%=event.id%>"><%= event.attendings.count %><p>
+<p id="likes_count<%=event.class.to_s%><%=event.id%>"><%= event.likes.count %><p>
+
+
+<%= render 'shared/attend_form', :event => event if user_signed_in? %>
+<%= render 'shared/like_form', :likeable => event if user_signed_in? %>

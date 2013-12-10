@@ -1,0 +1,8 @@
+<h5>This is the Attend button find me in "app/views/users/_attend_form.html.erb"</h5>
+<div id="attend_button">
+<% if current_user.attended?(event) %>
+  <%= render 'shared/unattend', :event => event %>
+<% else %>
+  <%= render 'shared/attend', :event => event %>
+<% end %>
+</div>

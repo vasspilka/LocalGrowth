@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable,
+         :omniauthable, :omniauth_providers => [:facebook]
 
   has_many :phones, as: :phoneable
   #Relationship with other users       
@@ -15,7 +16,6 @@ class User < ActiveRecord::Base
 
   #Relationship with likeable objects (Shops,Events,Deals)
   has_many :likes, foreign_key: "user_id", dependent: :destroy
-  has_many :liked_likeables, through: :likes, source: :liked
   has_many :liked_events, through: :likes, source: :likeable, source_type: 'Event'
   has_many :liked_deals, through: :likes, source: :likeable, source_type: 'Deal'
   has_many :liked_fun_shops, through: :likes, source: :likeable, source_type: 'FunShop'
@@ -40,8 +40,8 @@ class User < ActiveRecord::Base
   end
 
   #Actions for likeable obects
-  def likes?(likeable_id,likeable_type)
-  	likes.find_by(likeable_id: likeable_id,likeable_type: likeable_type)
+  def likes?(likeable)
+  	likes.find_by(likeable_id: likeable.id,likeable_type: likeable.class.to_s)
   end
   
   def like!(likeable)
@@ -63,5 +63,32 @@ class User < ActiveRecord::Base
 
   def unfollow!(other_user)
     relationships.find_by(followed_id: other_user.id).destroy!
+  end
+
+  # Facebook with omniauth
+  def self.from_omniauth(auth, signed_in_resource=nil)
+    user = User.where(:provider => auth.provider, :uid => auth.uid).first
+    unless user
+      user = User.create(
+        provider: auth.provider,
+        uid: auth.uid,
+        name: auth.extra.raw_info.name,
+        email: auth.info.email,
+        password: Devise.friendly_token[0,20]
+        )
+    end
+    user
+  end
+
+  def self.new_with_session(params, session)
+    super.tap do |user|
+      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+        user.email = data["email"] if user.email.blank?
+        user.provider = data["provider"] if user.provider.blank?
+        user.name = data["name"] if user.name.blank?
+        user.email = data["uid"] if user.uid.blank?
+        user.gravatar = data["image"] if user.gravatar.blank?
+      end
+    end
   end
 end

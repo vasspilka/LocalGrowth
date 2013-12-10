@@ -18,6 +18,7 @@ class CreateFunShops < ActiveRecord::Migration
       t.text :description
       t.string :logo_url
       t.string :address
+      t.string :website_url
       t.string :working_hours
       t.integer :points ,:default => 0
       t.integer :rating ,:limit => 1

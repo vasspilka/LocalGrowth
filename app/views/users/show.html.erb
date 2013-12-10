@@ -1,5 +1,7 @@
 <% provide(:title, @user.username) %>
 
+<%= image_tag(@user.gravatar) %>
+
 <%= @user.email %>
 <%= render 'shared/stats' %>
 <%= render 'shared/user_info' %>

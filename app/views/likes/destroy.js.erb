@@ -1,1 +1,2 @@
-$(<%= "#like-button#{@likeable.id}" %>).html("<%= escape_javascript(render '/shared/like', :likeable => @likeable) %>")
+$("#like-button<%=@likeable.class.to_s%><%=@likeable.id%>").html("<%= escape_javascript(render '/shared/like', :likeable => @likeable) %>")
+$("#likes_count<%=@likeable.class.to_s%><%=@likeable.id%>").html('<%= @likeable.likes.count %>')

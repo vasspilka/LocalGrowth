@@ -1,7 +1,7 @@
 <h1>This is the Header find me in "app/views/layouts/_header" </h1>
 
 <%= link_to "Sign in", new_user_session_path %>
-<%= link_to "Sign out", destroy_user_session_path, method: "DELETE" %>
+<%= link_to "Sign out", destroy_user_session_path, method: "DELETE" if current_user %>
 <%= link_to "Αρχική Σελίδα", root_path %> 
 <%= link_to "Βοήθεια", help_path %>
 
