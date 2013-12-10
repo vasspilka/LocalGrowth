@@ -36,6 +36,6 @@ device_mailer:
 
 # Oauth Authentication (Defaults to LocalGrowth apps, they are for testing) 
 facebook_app_id: "448298675275606"
-facebook_app_sercret: "b94f40817884784d23d1fce3e873814d"
+facebook_app_secret: "b94f40817884784d23d1fce3e873814d"
 google_maps_id:
 google_maps_secret:
