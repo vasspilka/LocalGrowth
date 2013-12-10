@@ -81,7 +81,3 @@ ads = Ad.create([{ad_url:'no-image.jpg',title: 'Trinity the ultimate clubbing ex
 
 
 comments = Comment.create([{username: 'Snowden', email: 'snowden@gmail.com', content: 'This place is awsome, They will never find me here :D'}])
-
-relationships = Relationship.create([{follower_id:5, followed_id: 4},{follower_id:5, followed_id: 3}])
-likes = Like.create([{user_id: 3,likeable_id:3 , likeable_type: "FunShop"},{user_id: 4,likeable_id:3 , likeable_type: "FunShop"}])
-attendings = Attending.create([{user_id: 3, event_id:1},{user_id: 4, event_id:1},{user_id: 5, event_id:1}])

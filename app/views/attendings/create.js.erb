@@ -1,2 +1,2 @@
 $("#attend_button").html("<%= escape_javascript(render('shared/unattend', :event => @event)) %>")
-$("attendings_count<%=@event.class.to_s%><%=@event.id%>").html('<%= @event.attendings.count %>')
+$("#attendings_count<%=@event.class.to_s%><%=@event.id%>").html('<%= @event.attendings.count %>')

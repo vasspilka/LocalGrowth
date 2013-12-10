@@ -74,6 +74,7 @@ class User < ActiveRecord::Base
         uid: auth.uid,
         name: auth.extra.raw_info.name,
         email: auth.info.email,
+        gravatar: auth.info.image,
         password: Devise.friendly_token[0,20]
         )
     end
@@ -83,10 +84,10 @@ class User < ActiveRecord::Base
   def self.new_with_session(params, session)
     super.tap do |user|
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
-        user.email = data["email"] if user.email.blank?
         user.provider = data["provider"] if user.provider.blank?
+        user.uid = data["uid"] if user.uid.blank?
+        user.email = data["email"] if user.email.blank?
         user.name = data["name"] if user.name.blank?
-        user.email = data["uid"] if user.uid.blank?
         user.gravatar = data["image"] if user.gravatar.blank?
       end
     end
