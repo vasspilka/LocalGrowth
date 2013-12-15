@@ -18,10 +18,12 @@ gem 'uglifier', '>= 1.3.0'        # Removes all spaces.
 gem 'coffee-rails', '~> 4.0.0' 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
+
 # Design related gems
-gem 'simple_form'
 gem 'sass-rails', '~> 4.0.0'
-gem 'foundation-rails'
+gem 'simple_form'
+gem 'font-awesome-sass'
+gem 'zurb-foundation'
 gem 'foundation-icons-sass-rails'
 
 # Pagination with

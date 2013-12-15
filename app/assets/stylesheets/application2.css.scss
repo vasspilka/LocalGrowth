@@ -1,0 +1,381 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ */
+
+@import "foundation-icons";
+@import "foundation_and_overrides";
+
+/* 
+
+============================
++				           +
++		   FONTS 	       +
++				           +
+============================
+ 
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Andika);
+@import url(http://fonts.googleapis.com/css?family=Lilita+One);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Scada:400,700);
+
+
+/* 
+
+============================
++				           +
++		  GENERAL 	       +
++				           +
+============================
+ 
+*/
+
+$anchors-primary-color: #000;
+$primary-color: #7dbe0a;
+$secondary-color: #7faaca;
+$third-color: #ffd65e;
+
+div.large-12.columns.nav {
+	padding-left: 0;
+	padding-right: 0;
+	// margin-bottom: 5px;
+}
+
+
+body {
+	// font-family: "Andika", sans-serif;
+	font-family: 'Scada', sans-serif;
+	background : #fff;
+}
+
+hr {
+	margin-top    : 0;
+	margin-bottom : 20px;
+}
+
+
+/* 
+
+============================
++				           +
++	   SUB-NAV FILTER      +
++				           +
+============================
+ 
+*/
+
+dl.sub-nav.filter {
+	@include sub-nav(#fff, 11px, #2C2C2C);
+	border: $panel-border-style $panel-border-size $panel-border-color;
+	background: #9dd53a;
+	background: -moz-linear-gradient(top, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9dd53a), color-stop(50%,#a1d54f), color-stop(51%,#80c217), color-stop(100%,#7cbc0a));
+	background: -webkit-linear-gradient(top, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%);
+	background: -o-linear-gradient(top, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%);
+	background: -ms-linear-gradient(top, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%);
+	background: linear-gradient(to bottom, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr ='#9dd53a', endColorstr='#7cbc0a',GradientType=0 );
+	border-bottom: 0;
+	margin-top: 0px;
+	margin-left: 0;
+	margin-bottom: 0;
+	padding-left: 5px;
+	padding-top: 10px;
+}
+
+dl.sub-nav.filter dd {
+	margin-left: 10px;
+	margin-right: 0;
+	text-transform: uppercase;
+}
+
+
+/* 
+
+============================
++				           +
++		 CONTAINERS        +
++				           +
+============================
+ 
+*/
+
+.columns {
+	float: right;
+}
+
+/* 
+
+============================
++				           +
++		  SIDEBAR 	       +
++				           +
+============================
+ 
+*/
+
+
+aside.large-3.columns {
+	font-size: 1px;
+}
+
+.side-nav {
+	font-size: 1px;
+}
+
+/* .sidebar-button {
+	padding: 8.5px 17px;
+	border: 1px solid #D6B070;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#FFD65E));
+	background: -webkit-linear-gradient(top, #FFFFFF, #FFD65E);
+	background: -moz-linear-gradient(top, #FFFFFF, #FFD65E);
+	background: -ms-linear-gradient(top, #FFFFFF, #FFD65E);
+	background: -o-linear-gradient(top, #FFFFFF, #FFD65E);
+	background-color: #FFD65E;
+	box-shadow: 0px 7px 2px -5px #1A1A1A, inset 0px 0px 7px #BDA14C;
+	-webkit-box-shadow: 0px 7px 2px -5px #1A1A1A, inset 0px 0px 7px #BDA14C;
+	-moz-box-shadow: 0px 7px 2px -5px #1A1A1A, inset 0px 0px 7px #BDA14C;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-shadow: #F2EAEA 1px 1px 0px;
+	color: #1C1C1C;
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	cursor: pointer;
+}
+.sidebar-button:hover {
+	background: none;
+	background-color: #FFD65E;
+	box-shadow: 0px 0px 5px 0px #AAAAAA;
+	-webkit-box-shadow: 0px 0px 5px 0px #AAAAAA;
+	-moz-box-shadow: 0px 0px 5px 0px #AAAAAA;
+	border: 1px solid #ffffff;
+	// color: #7FAACA;	
+}
+.sidebar-button:active {
+	top: 1px;
+	position: relative;
+}
+ */
+
+.sidebar-button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+	background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+	background-color:#d0451b;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #942911;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Lilita One', cursive;
+	font-size: em-calc(22);
+	padding:5px 5px;
+	text-align: center;
+	text-decoration:none;
+	// text-shadow:0px 1px 0px #854629;
+}
+.sidebar-button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+	background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+	background-color:#bc3315;
+}
+.sidebar-buttonw:active {
+	position:relative;
+	top:1px;
+}
+
+
+/* 
+
+============================
++				           +
++		 NAVIGATION	       +
++				           +
+============================
+ 
+*/
+
+span.ToDo {
+	text-shadow: rgb(224, 224, 224) 0px 0px 3px;
+} 
+
+.breadcrumbs {
+	margin-bottom : 0;
+	border-bottom: 0;
+}
+
+
+
+.lamia-todo-logo {
+	margin-top    : 10px;
+	margin-bottom: 10px;
+	margin-left: 0;
+}
+
+.nav-bar.right {
+	margin-top    : 20px;
+	margin-bottom : 0;
+	margin-right: 15px;
+	max-height    : 50px;
+}
+
+/* 
+
+============================
++				           +
++		LIST STYLES        +
++				           +
+============================
+
+*/
+
+.geush-phones {
+	font-size   : em-calc(22);
+}
+
+ul li.geush-phones {
+	list-style : none;
+	margin-top : 0px;
+}
+
+/* 
+
+============================
++				           +
++		ICON SIZES         +
++				           +
+============================
+
+*/
+
+.size-14 {
+	font-size : em-calc(14);
+}
+
+.size-16 {
+	font-size : em-calc(16);
+}
+
+.size-18 {
+	font-size : em-calc(18);
+}
+
+.size-20 {
+	font-size : em-calc(20);
+}
+
+.size-24 {
+	font-size : em-calc(24);
+}
+
+.size-28 {
+	font-size : em-calc(28);
+}
+
+.size-36 {
+	font-size : em-calc(36);
+}
+
+.size-48 {
+	font-size : em-calc(48);
+}
+
+.size-60 {
+	font-size : em-calc(60);
+}
+
+.size-72 {
+	font-size : em-calc(72);
+}
+
+/* 
+
+============================
++				           +
++		   TABLES          +
++				           +
+============================
+
+
+*/
+
+table.no-border-top {
+	border-top: none;
+}
+
+thead tr {
+	margin-left: 5px;
+}
+
+tbody tr td li {
+	text-align: center;
+}
+
+td p {
+	text-align: justify;
+}
+
+/* 
+
+============================
++				           +
++	   	  SECTIONS         +
++				           +
+============================
+
+*/
+
+p.title {
+	color: #fff;
+	background: #9dd53a; /* Old browsers */
+	background: -moz-linear-gradient(top, #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9dd53a), color-stop(50%,#a1d54f), color-stop(51%,#80c217), color-stop(100%,#7cbc0a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* W3C */
+}
+
+section a {
+	color: #000;
+}
+
+/* 
+
+============================
++				           +
++	   	  FOOTER           +
++				           +
+============================
+
+*/
+

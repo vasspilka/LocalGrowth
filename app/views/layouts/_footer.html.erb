@@ -1,16 +1,21 @@
-<h1>This is the Footer find me in "app/views/layouts/_footer" </h1>
-<footer class="footer">
-  <small>
-   Part of the <a href="https://github.com/vasspilka/LocalGrowth" >LocalGrowth</a>  project<br>
-   <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/gr/deed.en"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/gr/88x31.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><%= " " + CONFIG[:app_name] %></span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/gr/deed.en">CC Attribution-ShareAlike 3.0 Greece License</a>
-  </small>
+<footer class="row">
+  <div class="large-12 columns">
+    <%= image_tag "footer-divider.png", class: "footer-divider" %>
+    <div class="footer-social-buttons">
 
-  <nav>
-    <ul>
-      <li><%= link_to "Πληροφορίες", info_path %></li>
-      <li><%= link_to "Επικοινωνία",contact_path %></li>
+      <small>
+        Part of the <a href="https://github.com/vasspilka/LocalGrowth" >LocalGrowth</a>  project<br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/gr/deed.en"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/gr/88x31.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><%= " " + CONFIG[:app_name] %></span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/gr/deed.en">CC Attribution-ShareAlike 3.0 Greece License</a>
+      </small>
+
       <li><%= link_to "Σχετικά με εμάς",about_path %></li>
+      <li><%= link_to "Πληροφορίες", info_path %></li>
       <li><%= link_to "Όροι Χρήσης",legal_path %></li>
-    </ul>
-  </nav>
+      <li><%= link_to "Βοήθεια", help_path , :class => "medium button" %></li>
+      <i class="animated pulse fi-social-twitter size-56 twitter-color"></i>
+      <i class="fi-social-facebook size-56 facebook-color animated shake"></i>
+      <i class="fi-social-skype size-56 skype-color"></i>
+      <i class="fi-social-youtube size-56 youtube-color"></i>
+    </div>
+  </div>
 </footer>

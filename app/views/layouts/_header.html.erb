@@ -1,14 +1,15 @@
-<h1>This is the Header find me in "app/views/layouts/_header" </h1>
+<div class="row">
+  <div class="large-12 columns nav">   
 
-<%= link_to "Sign in", new_user_session_path %>
-<%= link_to "Sign out", destroy_user_session_path, method: "DELETE" if current_user %>
-<%= link_to "Αρχική Σελίδα", root_path %> 
-<%= link_to "Βοήθεια", help_path %>
-
-<br><br>
-
-<%= link_to "Διασκέδαση" , fun_categories_path %>
-<%= link_to "Φαγητό" , food_categories_path %>
-<%= link_to "Άλλα" , other_categories_path %>
-
-<i class="fi-html5"></i><i class="fi-css3"></i>
+    <%= image_tag "lamia-todo-logo4.png", class: "lamia-todo-logo"%>
+    <div class="nav-bar right">
+      <ul class="button-group">
+         <li><%= link_to "Αρχική Σελίδα", root_path , :class => "medium button" %></li>
+         <li><%= link_to "Επικοινωνία",contact_path, :class => "medium button" %></li>
+         <li><%= link_to "Sign in", new_user_session_path, :class => "medium button" unless current_user %></li>
+         <li><%= link_to "Sign out", destroy_user_session_path, method: "DELETE" , :class => "medium button" if current_user %></li>
+         <li><a href="/about" class="medium button ltd">What is <%= image_tag "lamia-todo-mini-logo.png", class: "lamia-todo-mini-logo" %></a></li>
+      </ul>
+    </div>      
+  </div>
+</div>

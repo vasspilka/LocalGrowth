@@ -4,7 +4,7 @@ class CreateEvents < ActiveRecord::Migration
 
       t.string :title
       t.text   :description
-      t.string :event_url
+      t.string :image_url
       t.belongs_to :eventable, polymorphic: true, index: true
       t.string :starts_at
       t.string :ends_at
@@ -17,7 +17,7 @@ class CreateEvents < ActiveRecord::Migration
 
       t.string :title
       t.text   :description
-      t.string :deal_url
+      t.string :image_url
       t.belongs_to :dealable, polymorphic: true, index: true
       t.string :starts_at
       t.string :ends_at
@@ -30,7 +30,7 @@ class CreateEvents < ActiveRecord::Migration
 
       t.string :title
       t.text   :description
-      t.string :ad_url
+      t.string :image_url
       t.belongs_to :adable, polymorphic: true, index: true
 
       t.timestamps

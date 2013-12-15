@@ -69,15 +69,15 @@ admins = Admin.create([{email: 'admin@admin.com',password: 'admin_password',pass
 
 # Still need to create sample Events likes ,follows and attends
 
-events = Event.create([{event_url:'no-image.jpg',title: 'Roots Reggae at Roots', description:'Roots Reggae , dj ChillyWingz', eventable_id: 3, eventable_type:"FunShop",starts_at: '28/12/2013 20:30'},
-  {event_url:'no-image.jpg',title: 'The Ultimate Booksale', description:'Old and new books really cheap, only at the corner bookstore for 2 weeks', eventable_id: 1, eventable_type:"OtherShop", starts_at: '13/1/2014', ends_at: '27/1/2014'}])
+events = Event.create([{image_url:'no-image.jpg',title: 'Roots Reggae at Roots', description:'Roots Reggae , dj ChillyWingz', eventable_id: 3, eventable_type:"FunShop",starts_at: '28/12/2013 20:30'},
+  {image_url:'no-image.jpg',title: 'The Ultimate Booksale', description:'Old and new books really cheap, only at the corner bookstore for 2 weeks', eventable_id: 1, eventable_type:"OtherShop", starts_at: '13/1/2014', ends_at: '27/1/2014'}])
 
 
-deals = Deal.create([{deal_url:'no-image.jpg',title: 'Pizza Frenzy', description:'With every Pizza the second is on us',dealable_id: 1, dealable_type: "FoodShop", starts_at:'Every Friday'},
-  {deal_url:'no-image.jpg',title: 'All you can eat at Leuteris', description:'With every Pizza the second is on us',dealable_id: 3, dealable_type: "FoodShop", starts_at:'Every Sunday'}])
+deals = Deal.create([{image_url:'no-image.jpg',title: 'Pizza Frenzy', description:'With every Pizza the second is on us',dealable_id: 1, dealable_type: "FoodShop", starts_at:'Every Friday'},
+  {image_url:'no-image.jpg',title: 'All you can eat at Leuteris', description:'Eat up',dealable_id: 3, dealable_type: "FoodShop", starts_at:'Every Sunday'}])
 
-ads = Ad.create([{ad_url:'no-image.jpg',title: 'Trinity the ultimate clubbing experience', description:'Daily House/RnB, Fridays and Saturdays quest DJ SoundBlast', adable_id: 1, adable_type: "FunShop" },
-  {ad_url:'no-image.jpg',title: 'Roots Rock-bar', description:'Chill out with relaxing music', adable_id: 3, adable_type: "FunShop" }])
+ads = Ad.create([{image_url:'no-image.jpg',title: 'Trinity the ultimate clubbing experience', description:'Daily House/RnB, Fridays and Saturdays guest DJ SoundBlast', adable_id: 1, adable_type: "FunShop" },
+  {image_url:'no-image.jpg',title: 'Roots Rock-bar', description:'Chill out with relaxing music', adable_id: 3, adable_type: "FunShop" }])
 
 
 comments = Comment.create([{username: 'Snowden', email: 'snowden@gmail.com', content: 'This place is awsome, They will never find me here :D'}])

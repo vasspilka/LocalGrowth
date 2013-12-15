@@ -39,6 +39,8 @@ LocalGrowth::Application.routes.draw do
   match '/signup',  to: 'users#new',            via: 'get'
   match '/info', to: 'static_pages#info', via: 'get'
   match '/legal', to: 'static_pages#legal', via: 'get'
+  match '/temp', to: 'static_pages#temp', via: 'get'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

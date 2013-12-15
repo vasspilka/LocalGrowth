@@ -1,2 +1,9 @@
-<h5>Deal individual view find me in "app/views/shared/_deal.html.erb"</h5>
-<%= deal.title %>
+<div class="super-deal panel">
+  <h5>SUPER DEAL</h5><i class="fi-burst-sale size-72"></i>
+  <ul class="pricing-table">
+    <li class="title"><%= deal.title %></li>
+    <li class="description"><%= deal.description %></li>
+    <li class="bullet-item"><%= image_tag "#{deal.image_url}", class: "super-deal-image"%></li>
+    <li class="cta-button"><%= link_to "See full page", "/deals/#{deal.id}" , class: "button" %></li>
+  </ul>
+</div>

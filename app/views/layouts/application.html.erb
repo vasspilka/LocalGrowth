@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<html lang="gr">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="gr"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="gr"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="gr"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="gr"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="gr"> <!--<![endif]-->
 <head>
-  <title><%= full_title(yield(:title)) %></title>
-  <%= render 'layouts/google_analytics' %>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= full_title(yield(:title)) %></title>
+  <%= favicon_link_tag '/favicon.ico' %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "vendor/custom.modernizr" %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/google_analytics' %>
 </head>
 <body>
-    <h1>Main Layout find me in "app/views/layouts/application.html.erb"</h1>
-    <% # On EAD you can use any search method you want and you can load as manny objects as you want here are some rendering options%>
-    <%= render partial: "shared/deal.html.erb", collection: Deal.all %>
-    <%= render partial: "shared/ad.html.erb", object: Ad.order( 'RANDOM()' ).first %>
-    <%= render partial: "shared/event.html.erb", object: Event.order( 'RANDOM()' ).first %>
-    <% # End of EAD rendering %>
-
     <%= render 'layouts/header' %>
     <%= render 'layouts/flash_notice' %>
-    <div><%= yield %></div>
+    
+    <div class="row">
+
+      <div class="large-9 columns" role="content"><%= yield %></div>
+
+      <aside class="large-3 columns">        
+        <%= render 'layouts/sidebar' %>
+        <% # On EAD you can use any search method you want and you can load as manny objects as you want here are some rendering options%>
+        <%= render partial: "shared/deal.html.erb", collection: Deal.all %>
+        <%= render partial: "shared/ad.html.erb", object: Ad.order( 'RANDOM()' ).first %>
+        <%= render partial: "shared/event.html.erb", object: Event.order( 'RANDOM()' ).first %>
+        <% # End of EAD rendering %>        
+      </aside>
+
+    </div>
+
     <%= render 'layouts/footer' %>
+    <% # render 'layouts/foundation_javascript' %>
+    <%= javascript_include_tag "application" %>
 </body>
 </html>
