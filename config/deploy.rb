@@ -4,7 +4,7 @@ set :repo_url, 'https://github.com/vasspilka/LocalGrowth'
 set :branch, 'reformat'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
- set :deploy_to, '/var/www/lamiatodo'
+ set :deploy_to, '/home/user/apps/lamiatodo'
  set :scm, :git
 
  set :format, :pretty
