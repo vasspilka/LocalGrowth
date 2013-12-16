@@ -70,9 +70,17 @@ group :production do
   # Postgres Database
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
-  # Use Capistrano for deployment
-  gem 'capistrano'
 end
+
+
+# Capistrano for deployment
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+end
+
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
