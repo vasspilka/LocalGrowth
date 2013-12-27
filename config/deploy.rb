@@ -1,10 +1,12 @@
+require 'sshkit'
+
 set :application, 'lamiatodo'
 
 set :repo_url, 'https://github.com/vasspilka/LocalGrowth'
 set :branch, 'master'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
-set :deploy_to, "/home/user/apps/www/lamiatodo"
+set :deploy_to, "/home/user/apps/www/#{fetch(:application)}"
 set :scm, :git
 set :deploy_via, :remote_cache
 set :use_sudo, false
@@ -19,18 +21,22 @@ set :pty, true
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 # set :keep_releases, 5
-before "deploy:migrate", "configure:application"
+
 
 namespace :deploy do
- task :start do ; end
- task :stop do ; end
- task :restart do
-   run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
- end
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute "touch #{File.join(current_path,'tmp','restart.txt')}"
+    end
+  end
+ before :updated, "configure:application"
 end
 
 namespace :configure do
   task :application do
-  	run "#{try_sudo} cp #{current_path}/config/application.example.yml #{current_path}/config/application.yml"
+  	on roles(:app), in: :sequence, wait: 5 do
+  	  execute "cp #{release_path}/config/application.example.yml #{release_path}/config/application.yml"
+  	  execute "cp #{release_path}/config/database.example.yml #{release_path}/config/database.yml"
+  	end
   end
 end
