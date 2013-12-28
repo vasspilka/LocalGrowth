@@ -17,13 +17,21 @@
 <body>
     <%= render 'layouts/header' %>
     <%= render 'layouts/flash_notice' %>
-    
+    <%= render 'layouts/center_menu' %>
+
     <div class="row">
 
       <div class="large-9 columns" role="content"><%= yield %></div>
 
       <aside class="large-3 columns">        
-        <%= render 'layouts/sidebar' %>
+        <% if @categories %>
+          <ul class="side-nav">
+            <% @categories.each do |category| %>
+              <a href=<%= "/#{category.class.to_s.underscore.pluralize(2)}/#{category.id}" %>><li class="sidebar-button"><%= category.title %></li></a>
+            <% end %>
+          </ul>
+        <% end %>
+
         <% # On EAD you can use any search method you want and you can load as manny objects as you want here are some rendering options%>
         <%= render partial: "shared/deal.html.erb", collection: Deal.all %>
         <%= render partial: "shared/ad.html.erb", object: Ad.order( 'RANDOM()' ).first %>

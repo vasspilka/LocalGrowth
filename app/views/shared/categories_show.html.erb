@@ -1,11 +1,4 @@
 <%= provide(:title, @title) %>
 
-
-
-<% @categories.each do |category| %>
-  <a href=<%= "/#{category.class.to_s.underscore.pluralize(2)}/#{category.id}" %>><li><%= category.title %></li></a>
-<% end %>
-
-
 <%= paginate @shops %>
 <%= render @shops %>
