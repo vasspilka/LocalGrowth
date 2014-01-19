@@ -5,6 +5,10 @@ class StaticPagesController < ApplicationController
   def help
   end
 
+  def contact
+    @feedback_message = FeedbackMessage.new
+  end
+  
   def about
   end
 

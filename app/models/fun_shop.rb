@@ -9,7 +9,7 @@ class FunShop < ActiveRecord::Base
   has_many :events, as: :eventable
   has_many :deals, as: :dealable
   has_many :likes, as: :likeable
-  paginates_per 5
+  paginates_per 7
 
   validates :title,:fun_category_id, presence: true
 end

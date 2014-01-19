@@ -3,11 +3,8 @@
 <div class= "row">
   <span class="label label-info">Info</span>
   <h5>E-mail: <%= CONFIG[:contact_email]%></h5>
-  <p>
-  	Για καταχώριση καταστήματος απευθηνθείτε στην <a href="/feedback_messages/new">φόρμα Καταχωρίσεων</a>
-    <br><br>
-  	Εαν έχετε κάποιο τεχνικό (ή αλλο με το Site) πρόβλημα απευθηνθείτε στην <%= link_to "φόρμα Προβλημάτων", new_feedback_message_path %>
-    <br><br>
-    Για ιδέες και προτάσεις για το Site απευθηνθείτε στην <%= link_to "φόρμα Προτάσεων", new_feedback_message_path %>
-    </p>
+  <br><br><br>
+
+
+  <%= render "feedback_messages/form" %>
 </div>

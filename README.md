@@ -17,13 +17,15 @@ Our goal is to make a website, that can be deployed by anyone and potentially he
 
 Main LocalGrowth features 
 
-  * A model for storing buisness data.
-  * An UI in the website so admins can easily interact with data.
-  * An easy way for users to find what they need.
-  * A social netwok for users to interact with the local buisnesses.
-  * A model for storing Events and Deals.
-  * Integration with Facebook and Google maps.
+(Some features still under developement)
 
+  * A model for storing buisness data.
+  * An UI so admins can easily interact with data.
+  * An easy way for users to find what they need.
+  * A social netwok for users to interact with the local buisnesses and other users.
+  * A model for storing Events and Deals data.
+  * Integration with Facebook and Google maps.
+  * Automated Analytics to help admin make buisness decisions.
 
 
 
