@@ -32,11 +32,14 @@ namespace :deploy do
  before :updated, "configure:application"
 end
 
+
+# Dont forget to copy the database.yml and application.yml to your server example below
+# scp config/application.yml me@my_server:path_to_deploy/shared/config
 namespace :configure do
   task :application do
   	on roles(:app), in: :sequence, wait: 5 do
-  	  execute "cp #{release_path}/config/application.example.yml #{release_path}/config/application.yml"
-  	  execute "cp #{release_path}/config/database.example.yml #{release_path}/config/database.yml"
+  	  execute "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
+  	  execute "ln -nfs #{deploy_to}/shared/config/application.yml #{release_path}/config/application.yml"
   	end
   end
 end

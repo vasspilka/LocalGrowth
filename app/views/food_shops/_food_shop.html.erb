@@ -3,7 +3,7 @@
 <%= image_tag(food_shop.logo_url) %>
 <%= food_shop.title %>
 <%= food_shop.address %>
-<p id="likes_count<%=food_shop.class.to_s%><%=food_shop.id%>"> <%= food_shop.likes.count %><p>
+<p id="likes_count<%=food_shop.class.to_s%><%=food_shop.id%>"> <%= food_shop.points %><p>
 
 <%= render 'shared/like_form', :likeable => food_shop if user_signed_in? %>
 

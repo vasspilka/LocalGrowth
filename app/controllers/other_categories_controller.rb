@@ -2,7 +2,7 @@ class OtherCategoriesController < ApplicationController
   
   def index
   	@categories = OtherCategory.all
-  	@shops = OtherShop.page(params[:page])
+  	@shops = OtherShop.page(params[:page]).order("points desc")
 
   	@title = "Άλλα"
   	render "shared/categories_show.html.erb"
@@ -11,7 +11,7 @@ class OtherCategoriesController < ApplicationController
   def show
   	@category = OtherCategory.find(params[:id])
   	@categories = OtherCategory.all
-  	@shops = OtherShop.page(params[:page]).where(other_category_id: @category.id)
+  	@shops = OtherShop.page(params[:page]).where(other_category_id: @category.id).order("points desc")
 
   	@title = "Άλλα | #{@category.title}"
   	render "shared/categories_show.html.erb"
