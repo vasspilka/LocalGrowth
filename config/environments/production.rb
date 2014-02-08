@@ -80,8 +80,5 @@ LocalGrowth::Application.configure do
 
   config.action_mailer.delivery_method = :sendmail
 
-  ignore_exceptions = ExceptionNotifier.default_ignore_exceptions + [ActionView::MissingTemplate]
-  config.middleware.use ExceptionNotifier, :email_prefix => "[ERROR] ", :sender_address => 'noreply@lamiatodo.gr', :exception_recipients => "vasspilka@gmail.com", :ignore_exceptions => ignore_exceptions
-
   config.action_mailer.default_url_options = { :host => "lamiatodo.gr" }
 end
