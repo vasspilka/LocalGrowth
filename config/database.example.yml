@@ -21,8 +21,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: lamiatodo_test
+  database: Database_on_Server
   host: localhost
   pool: 5
-  username: lamiatodo
-  password: 68351069lamiatodo
+  username: User
+  password: PrivatePassword
