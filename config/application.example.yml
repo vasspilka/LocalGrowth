@@ -26,7 +26,7 @@ production:
   action_mailer_host: "Your_Server_IP"
 
 # Notification Mailer 
-default_from: "websitedomain.com"
+default_from: "no_reply@website.com"
 default_to: "your_email@example.com" # Feedback by users will be send here
 
 
