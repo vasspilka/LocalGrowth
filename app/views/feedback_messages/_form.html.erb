@@ -1,6 +1,4 @@
-<h2> Communication form find me in "app/views/feedback_messages/_form.html.erb" <h2>
-
-<%= simple_form_for(@feedback_message, :defaults => { :input_html => { :class => 'input-xxlarge' } }) do |f| %>
+<%= simple_form_for(@feedback_message) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">

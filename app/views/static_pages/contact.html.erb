@@ -1,10 +1,10 @@
 <% provide(:title, 'Επικοινωνία') %>
 <h1>Επικοινωνία</h1>
 <div class= "row">
-  <span class="label label-info">Info</span>
-  <h5>E-mail: <%= CONFIG[:contact_email]%></h5>
+  <%= render "feedback_messages/form" %>
   <br><br><br>
 
 
-  <%= render "feedback_messages/form" %>
+  <span class="label label-info">Info</span>
+  <h5>E-mail: <%= CONFIG[:contact_email]%></h5>
 </div>
