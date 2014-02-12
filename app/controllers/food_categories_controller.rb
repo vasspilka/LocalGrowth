@@ -1,7 +1,4 @@
 class FoodCategoriesController < ApplicationController
-  
-  # Idea!! Add id for like routing?
-
 
   def index
   	@categories = FoodCategory.all
