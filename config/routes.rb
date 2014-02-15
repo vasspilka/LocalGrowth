@@ -4,10 +4,8 @@ LocalGrowth::Application.routes.draw do
 
   # Authentication
   devise_for :admins
+  devise_for :users , path_names: {sign_in: "login",sign_out: "logout"}, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
-  devise_for :users , path_names: {sign_in: "login",sign_out: "logout"},
-                      controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   # Users
   resources :users do

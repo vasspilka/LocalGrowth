@@ -414,43 +414,51 @@ section a {
 /* 
 
 ============================
-+				           +
-+	   	  FOOTER           +
-+				           +
++               +
++       FOOTER           +
++               +
 ============================
 
 */
 
 .footer-divider {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 100%;
-	max-height: 20px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ width: 100%;
+ max-height: 20px;
+}
+
+.footer-info { 
+ list-style-type: none;
+ 
+ li {
+  display: inline;
+ }
 }
 
 .footer-social-buttons {
-	color: lighten(#222222, 20%);
-	text-align: center;
+ color: lighten(#222222, 20%);
+ text-align: center;
 }
 
 .footer-social-buttons i {
-	margin-right: 10px;
+ margin-right: 10px;
 }
 
 .facebook-color {
-	color: $facebook-color;
+ color: $facebook-color;
 }
 
 .twitter-color {
-	color: $twitter-color;
+ color: $twitter-color;
 }
 
 .youtube-color {
-	color: $youtube-color;
+ color: $youtube-color;
 }
 
 .skype-color {
-	color: $skype-color;
+ color: $skype-color;
 }
 
 @import "center-menu";
