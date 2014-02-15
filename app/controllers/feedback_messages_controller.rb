@@ -19,7 +19,7 @@ class FeedbackMessagesController < ApplicationController
 
     respond_to do |format|
       if @feedback_message.save
-        NotificationsMailer.new_message(@feedback_message).deliver
+        #NotificationsMailer.new_message(@feedback_message).deliver
         format.html { redirect_to root_path, notice: 'Το μηνυμα στάλθηκε με επιτυχεια!' }
         format.json { render json: @feedback_message.errors, status: :created, location: @feedback_message }
       else

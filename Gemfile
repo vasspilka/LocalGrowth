@@ -7,6 +7,9 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.0.0'
 
+#Locale and Languages
+gem 'i18n'
+
 # Security and Admin tools
 gem "devise"
 gem 'omniauth-facebook'
@@ -14,7 +17,7 @@ gem 'rails_admin'
 gem 'bcrypt-ruby' 
 
 # Javascript related gems
-gem 'uglifier', '>= 1.3.0'        # Removes all spaces.
+gem 'uglifier', '>= 1.3.0'        # Removes all spaces from css files.
 gem 'coffee-rails', '~> 4.0.0' 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
