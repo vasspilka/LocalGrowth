@@ -3,7 +3,7 @@ LocalGrowth::Application.routes.draw do
   root 'static_pages#home'
 
   # Authentication
-  devise_for :admins , path_names: {sign_in: "sign_in",sign_out: "sign_out"}
+  devise_for :admins
   devise_for :users , path_names: {sign_in: "login",sign_out: "logout"}, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 

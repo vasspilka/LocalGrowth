@@ -18,8 +18,8 @@
     <%= render 'layouts/header' %>
 
     <div class="row">
-    <%= render 'layouts/flash_notice' %>
-    <%= render 'layouts/center_menu' %>
+      <%= render 'layouts/flash_notice' %>
+      <%= render 'layouts/center_menu' %>
       
       <% # Main website content %>
       <div class="large-9 columns" role="content"><%= yield %></div>
@@ -33,13 +33,14 @@
           </ul>
         <% end %>
 
-        <% # On EAD you can use any search method you want and you can load as manny objects as you want here are some rendering options%>
+        <% # On EAD you can use any search method you want and you can load as manny objects as you want here are some rendering options %>
         <%= render partial: "shared/deal.html.erb", collection: Deal.all unless Deal.first.blank? %>
         <%= render partial: "shared/ad.html.erb", object: Ad.order( 'RANDOM()' ).first unless Ad.first.blank? %>
         <%= render partial: "shared/event.html.erb", object: Event.order( 'RANDOM()' ).first unless Event.first.blank? %>
-        <% # End of EAD rendering %>        
-      </aside>
+        <% # End of EAD rendering %>
 
+      </aside>
+      <%= render partial: "shared/poll.html.erb", collection: Poll.active unless Poll.active.blank? %>
     </div>
 
     <%= render 'layouts/footer' %>

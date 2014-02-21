@@ -8,7 +8,9 @@ google_analytics: "<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r
 #Put here the script Google Analytics has provided you with. With <tags> and such.
 #Spaces dont matter but keep things tidy. And you can leave this empty if you dont want Analytics
 
-
+# Deploy info
+server_ip: "11.111.11.110"
+server_user: "my_user"
 
 # Mailer config
 # You need this for mailing functions to work

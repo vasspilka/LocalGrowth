@@ -37,7 +37,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Other info
       t.string :username
       t.string :name
-      t.string :birthday
+      t.string :surname
+      t.date   :birthday
       t.string :address
       t.string :gravatar
       t.integer :student_am

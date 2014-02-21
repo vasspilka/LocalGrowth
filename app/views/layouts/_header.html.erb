@@ -8,7 +8,6 @@
          <li><%= link_to "Επικοινωνία",contact_path, :class => "medium button" %></li>
          <li><%= link_to "Sign in", new_user_session_path, :class => "medium button" unless current_user %></li>
          <li><%= link_to "Sign out", destroy_user_session_path, method: "DELETE" , :class => "medium button" if current_user %></li>
-         <li><a href="/about" class="medium button ltd">What is <%= image_tag "lamia-todo-mini-logo.png", class: "lamia-todo-mini-logo" %></a></li>
       </ul>
     </div>      
   </div>
