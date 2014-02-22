@@ -1,5 +1,5 @@
 <%= form_for(current_user.attendings.find_by(event_id: event),
              html: { method: :delete },
              remote: true) do |f| %>
-  <%= f.submit "Unattend", class: "btn btn-large" %>
+  <%= f.submit "Unattend", class: "" %>
 <% end %>

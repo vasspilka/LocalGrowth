@@ -2,7 +2,7 @@ class Option < ActiveRecord::Base
 
   #relations
   belongs_to :poll
-  has_many :answers
+  has_many :votes
 
   # validations
   validates :text, :presence => true, :allow_blank => false

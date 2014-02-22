@@ -11,13 +11,17 @@ class Like < ActiveRecord::Base
   protected
 
   def add_point
-  	points = self.likeable.points + 1 
-  	self.likeable.update_attributes(:points => points)
+    if self.likeable.points
+  	  points = self.likeable.points + 1 
+  	  self.likeable.update_attributes(:points => points)
+    end
   end
 
   def remove_point
-    points = self.likeable.points - 1 
-    self.likeable.update_attributes(:points => points)
+    if self.likeable.points
+      points = self.likeable.points - 1 
+      self.likeable.update_attributes(:points => points)
+    end
   end
 
 end

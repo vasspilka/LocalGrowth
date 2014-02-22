@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   has_many :attendings, foreign_key: "user_id", dependent: :destroy
   has_many :attended_events, through: :attendings, source:  :event
 
-  #Actions for attendings
+  #Actions for connectors
   def attended?(event)
   	attendings.find_by(event_id: event.id)
   end
@@ -63,6 +63,14 @@ class User < ActiveRecord::Base
 
   def unfollow!(other_user)
     relationships.find_by(followed_id: other_user.id).destroy!
+  end
+
+  def vote!(option)
+    votes.create!(option_id: option.id, poll_id: option.poll_id)
+  end
+
+  def unvote!(poll)
+    votes.find_by(poll_id: poll.id)
   end
 
   # Facebook with omniauth

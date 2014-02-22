@@ -18,10 +18,10 @@ class CreatePolls < ActiveRecord::Migration
     end
  
     # Answer logic
-    create_table :answers do |t|
+    create_table :votes do |t|
       t.belongs_to    :user, index: true
-      t.references    :option, index: true
       t.references    :poll, index: true
+      t.references    :option, index: true
 
       t.timestamps
     end
@@ -31,6 +31,6 @@ class CreatePolls < ActiveRecord::Migration
   def self.down
     drop_table :polls
     drop_table :options
-    drop_table :answers
+    drop_table :votes
   end
 end

@@ -1,0 +1,7 @@
+<%= poll.question %>
+
+<% poll.options.each do |option| %>
+	<%= option.text %>
+	<%= option.votes.count %>
+<% end %>
+
