@@ -1,0 +1,106 @@
+@import "compass";
+@import "compass/reset";
+@import "animate.min";
+@import "alerts";
+
+
+
+
+@font-face {
+  font-family: 'Roboto';    
+  src: url('Roboto-Thin.ttf') format('truetype');
+  font-weight: 100;
+
+}
+
+
+@font-face {
+  font-family: 'Roboto';    
+  src: url('Roboto-Light.ttf') format('truetype');
+  font-weight: 200;
+
+}
+
+@font-face {
+  font-family: 'Roboto';    
+  src: url('Roboto-Regular.ttf') format('truetype');
+  font-weight: 300;
+
+}
+
+@font-face {
+  font-family: 'Roboto';    
+  src: url('Roboto-Bold.ttf') format('truetype');
+  font-weight: 400;
+
+}
+
+@font-face {
+  font-family: 'HaloHandletter';    
+  src: url('HaloHandletter.otf') format('opentype');
+
+}
+
+
+
+// VARIABLES 
+
+
+/* font stack */
+$font-1: 'Roboto';
+$font-2: 'HaloHandletter';
+
+
+								 /* 
+
+ ============================
+ +				           +
+ +	  COLOUR VARIABLES     +
+ +				           +
+ ============================
+ 
+								 */
+
+$green : #18AE5C;
+
+
+ $anchors-primary-color: #000;
+ $primary-color: #7dbe0a;
+ $secondary-color: #7faaca;
+ $third-color: #ffd65e;
+ $facebook-color: #5a739c;
+ $twitter-color: #1287b5;
+ $youtube-color: #c9332d;
+ $skype-color: #00aff0;
+
+
+
+$normal : #fff;
+$hover : #fff;
+$active : #fff;
+$visited: #fff;
+$focus: #fff;
+
+
+
+a	{ @include link-colors($normal, $hover, $active, $visited, $focus); 
+
+	text-decoration: none;
+}
+
+
+
+
+
+// MIXINS
+
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}

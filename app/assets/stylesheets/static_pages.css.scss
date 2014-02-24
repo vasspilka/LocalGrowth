@@ -1,3 +1,73 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "basestyles";
+
+
+html,body	{
+	background: #fff;
+}
+
+// BACKGROUND PICTURE 
+.first-banner	{
+    background: url(blurcity.jpg) no-repeat center center fixed; 
+	@include background-size(cover);
+	height: 700px;
+	width: 100%;
+	
+
+	text-align: center;
+	
+	.logo	{
+		font-family: $font-1;
+		padding-top: 9em;
+		font-size: 3.5rem;
+		font-weight: 100;
+		color: #fff;
+		
+	    @include font-smoothing(on);
+		
+		@include transition-property(opacity);
+	    @include transition-duration(0.5s);
+		
+	}
+}
+
+
+
+// 	MAINT CONTENT
+
+.maincontent	{
+ 
+
+	margin: 4em 0em 0em 7em;
+	font-family: $font-1;
+
+
+	h1	{
+	font-size: 2rem;
+	font-weight: 100;
+	margin: 0 0em 0em 0em;
+
+	}
+
+	h2	{
+	font-size: 1rem;
+	font-weight: 200;
+	margin: 3em 2em 0em 0em;
+	line-height: 1.5rem;
+	text-align: justify;
+	text-justify: newspaper;
+
+	}
+
+}
+
+.site-footer	{
+	a	{ @include link-colors(#000, #000, #000, #000, #000); 
+
+		text-decoration: none;
+	}
+}
+
+

@@ -1,0 +1,165 @@
+// Place all the styles related to the shared controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "basestyles";
+
+
+nav	{
+	position: absolute;
+	font-size: 1rem;
+	top: 0%;
+	width: 100%;
+	height: 60px;
+	background-color:rgba(255, 255, 255, 0);
+	z-index: 9;
+	
+	
+
+	 ul	{
+	 	font-family: $font-1;
+		font-weight: 100;
+		list-style-type: none;
+		margin: 0;
+		float: right;
+	    padding: 1.250em 0 1.875em 0em;
+		
+		
+
+		li	{
+			
+			
+			display: inline;
+			margin-right: 3.250em;
+			
+			
+			i	{
+			margin-right: 0.4em;
+			opacity: 1;
+
+			color: rgba(255, 255, 255, 0.4) ;
+			
+		}
+		
+		&:hover	i	{
+			opacity: 1;
+		
+		}
+			
+		}
+	
+	}
+
+}
+
+
+
+.sidenav {
+   height: 100%;
+   width: 4em;
+   background: rgba(55, 59, 65, 0);
+   font-size: 1rem;
+   font-weight: 100;
+   font-family: $font-1;
+
+   
+   border: 1px solid rgba(55, 59, 65, 0.93);
+   box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+   
+   position: fixed;    
+   left: 0;
+   top: 0;
+   z-index: 10;
+   
+  @include transition-property(width, background);
+  @include transition-duration(0.5s);
+   
+   
+   ul { 
+     
+	width: 100%;
+	margin-top: 5em;
+	padding: 0;
+	line-height: 1.2rem;
+	
+	
+	li	{
+		
+		font-variant: small-caps;
+	    width: 100%;
+ 
+		text-align: center;
+  
+	    overflow: hidden;
+		
+		
+		i	{
+			opacity: 1;
+			color: #fff;
+			font-size: 1.2rem;
+		}
+		
+		.sideli	{
+			margin-top: 0.2em;
+			opacity: 0;
+			@include transition-property(opacity);
+			@include transition-duration(0.3s);
+			
+		}
+ 
+		a {
+			display: block;
+		}
+	   
+
+		
+		
+	}
+	
+   }
+
+ 
+ &:hover	{
+  width: 6em;
+  background: rgba(55, 59, 65, 1);
+  
+  @include transition-property(width, background);
+  @include transition-duration(0.3s);
+  
+  &:hover .sideli	{
+	  opacity: 1;
+	  
+	@include transition-property(opacity);
+	@include transition-duration(0.3s);
+  }
+	
+ }
+}
+ 
+ 
+
+// FOOTER
+
+.site-footer	{
+	width: 100%;
+	text-align: center;
+	font-family: $font-1;
+	font-weight: 100;
+	margin-top: 6em;
+		ul	{
+			
+		li	{
+			opacity: 0.4;
+			margin-right: 0.5em;
+			
+			@include transition-property(opacity);
+			@include transition-duration(0.3s);
+			
+			&:hover	{
+				opacity:1;
+				
+			}
+		}
+	}
+
+}
+ 

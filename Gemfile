@@ -25,9 +25,9 @@ gem 'jbuilder', '~> 1.2'
 # Design related gems
 gem 'sass-rails', '~> 4.0.0'
 gem 'simple_form'
-gem 'font-awesome-sass'
-gem 'foundation-rails'
-gem 'foundation-icons-sass-rails'
+# harris's gems
+gem 'compass-rails', '~> 1.1.3' 
+gem 'entypo-rails'
 
 # Pagination with
 gem 'kaminari'

@@ -1,5 +1,5 @@
 <%= form_for(current_user.likes.find_by(likeable_id: likeable.id, likeable_type: likeable.class.to_s),
              html: { method: :delete },
              remote: true) do |f| %>
-  <%= f.submit "1Down", class: "" %>
+  <%= f.submit "Unlike", class: "" %>
 <% end %>

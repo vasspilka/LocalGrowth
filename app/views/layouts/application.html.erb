@@ -10,35 +10,24 @@
   <title><%= full_title(yield(:title)) %></title>
   <%= favicon_link_tag '/favicon.ico' %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/google_analytics' %>
 </head>
 <body>
-    <%= render 'layouts/header' %>
+    <%= render 'shared/nav' %>
+    <%= render 'shared/sidenav' %>
+	
 
-    <div class="row">
-      <%= render 'layouts/flash_notice' %>
-      <%= render 'layouts/center_menu' %>
+    <%= render 'layouts/flash_notice' %>
       
       <% # Main website content %>
-      <div class="large-9 columns" role="content"><%= yield %></div>
+      <%= yield %>
 
-      <aside class="large-3 columns">        
-        <%= render 'layouts/categories_sidebar' %>
 
-        <% # On EAD you can use any search method you want and you can load as manny objects as you want here are some rendering options %>
-        <%= render partial: "shared/deal.html.erb", collection: Deal.all unless Deal.first.blank? %>
-        <%= render partial: "shared/ad.html.erb", object: Ad.order( 'RANDOM()' ).first unless Ad.first.blank? %>
-        <%= render partial: "shared/event.html.erb", object: Event.order( 'RANDOM()' ).first unless Event.first.blank? %>
-        <% # End of EAD rendering %>
+   
 
-      </aside>
-      <%= render partial: "shared/poll.html.erb", collection: Poll.active unless Poll.active.blank? %>
-    </div>
 
-    <%= render 'layouts/footer' %>
-    <% # render 'layouts/foundation_javascript' %>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag "application" %>
 </body>
 </html>

@@ -1,0 +1,27 @@
+.alert {
+
+	font-family: 'Roboto';
+	font-weight: 100;
+	width: 300px;
+	text-align: center;
+  border-radius: 0.3rem;
+  color: #fff;
+  padding: 0.3rem 1rem 0.2rem 1rem;
+  position: relative;
+  background: blue;
+  margin: 3rem auto -1rem auto;
+
+}
+
+.success {
+  background: #22CD6D;
+
+}
+.error {
+  background: #C71C1A;
+
+}
+
+.close	{
+	float: right;
+}

@@ -1,0 +1,18 @@
+<%= stylesheet_link_tag :shared, :media => "all" %>
+
+<nav>
+	
+	
+	<ul>	
+	
+       <li><i class="icon-home"></i><%= link_to "home", root_path %></li>
+		
+	   <li><i class="icon-login"></i><%= link_to "sign in", new_user_session_path unless current_user %></li>	
+		
+	   <li><%= link_to "sign out", destroy_user_session_path, method: "DELETE" if current_user %> </li>
+		
+	</ul>
+	
+
+
+</nav>
