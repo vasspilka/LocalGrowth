@@ -1,0 +1,7 @@
+<% if @categories %>
+  <ul class="side-nav">
+    <% @categories.each do |category| %>
+      <a href=<%= "/#{category.class.to_s.underscore.pluralize(2)}/#{category.id}" %>><li class="sidebar-button"><%= category.title %></li></a>
+    <% end %>
+  </ul>
+<% end %>

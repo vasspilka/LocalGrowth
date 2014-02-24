@@ -25,13 +25,7 @@
       <div class="large-9 columns" role="content"><%= yield %></div>
 
       <aside class="large-3 columns">        
-        <% if @categories %>
-          <ul class="side-nav">
-            <% @categories.each do |category| %>
-              <a href=<%= "/#{category.class.to_s.underscore.pluralize(2)}/#{category.id}" %>><li class="sidebar-button"><%= category.title %></li></a>
-            <% end %>
-          </ul>
-        <% end %>
+        <%= render 'layouts/categories_sidebar' %>
 
         <% # On EAD you can use any search method you want and you can load as manny objects as you want here are some rendering options %>
         <%= render partial: "shared/deal.html.erb", collection: Deal.all unless Deal.first.blank? %>

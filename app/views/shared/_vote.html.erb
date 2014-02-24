@@ -1,0 +1,5 @@
+<%= form_for(current_user.votes.build(poll_id: poll.id),remote: true) do |f| %>
+  <div><%= f.hidden_field :likeable_id %></div>
+  <div><%= f.hidden_field :likeable_type %></div>
+  <%= f.submit "1UP", class: "" %>
+<% end %>
