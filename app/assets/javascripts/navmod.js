@@ -13,18 +13,3 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
-
-   var $scrollingDiv = $(".logo");
-
-   $(window).scroll(function () {
-       $scrollingDiv.stop()
-           .animate({
-       }, "slow");
-       $scrollingDiv.css("opacity", (($(window).scrollTop() / $(document).height()) > 0.05) ? "0" : "");
-
-     });
-	
-	 
-});
-

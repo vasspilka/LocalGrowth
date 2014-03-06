@@ -1,10 +1,16 @@
 <%= stylesheet_link_tag :shared, :media => "all" %>
 
-<nav>
+
+
+<nav class="sitenav animated fadeInDown">
+    <span id="home"></span>
 	
+	<a class="scroll" data-speed="500" data-easing="easeInOutCubic" data-url="false" href="#mnav"><i class="icon-list"></i></a>
 	
+		
 	<ul>	
-	
+		
+		
        <li><%= link_to " home", root_path, :class => "home navicons" %></li>
 		
 	   <li><%= link_to " login", new_user_session_path, :class => "login navicons" unless current_user %></li>	
@@ -16,3 +22,4 @@
 
 
 </nav>
+

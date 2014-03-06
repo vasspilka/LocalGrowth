@@ -2,7 +2,7 @@
 @import "compass/reset";
 @import "animate.min";
 @import "alerts";
-
+@import "breakpoint";
 
 
 
@@ -63,6 +63,9 @@ $font-2: 'HaloHandletter';
 
 $green : #18AE5C;
 
+$solid-bg: #1c1c1c;
+$solid-bg-lighten: #3E3E3E;
+
 
  $anchors-primary-color: #000;
  $primary-color: #7dbe0a;
@@ -73,6 +76,7 @@ $green : #18AE5C;
  $youtube-color: #c9332d;
  $skype-color: #00aff0;
 
+	
 
 
 $normal : #fff;
@@ -86,6 +90,7 @@ $focus: #fff;
 a	{ @include link-colors($normal, $hover, $active, $visited, $focus); 
 
 	text-decoration: none;
+	font-family: $font-1;
 }
 
 
@@ -104,3 +109,10 @@ a	{ @include link-colors($normal, $hover, $active, $visited, $focus);
         -moz-osx-font-smoothing: auto;
     }
 }
+
+
+/* breakpoints  */
+
+$phone-portrait : 320px 480px;
+$tablet-portrait-landscape : 768px 1024px;
+

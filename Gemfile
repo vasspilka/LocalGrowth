@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-ruby '2.0.0'
+ruby '2.1.1'
 #ruby-gemset=LocalGrowth
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -23,18 +23,23 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
 # Design related gems
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 gem 'simple_form'
-# harris's gems
+
+#Front-end gems
 gem 'compass-rails', '~> 1.1.3' 
 gem 'entypo-rails'
+gem "breakpoint"
 
 # Pagination with
 gem 'kaminari'
 
-# Use sqlite3 as the database for Active Record
+# sqlite database , error handling & test
 group :development, :test do
   gem 'sqlite3'
+  gem "better_errors"
+  gem 'meta_request'
+  gem "binding_of_caller"
   gem 'rspec-rails'
 end
 
