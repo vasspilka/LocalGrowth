@@ -27,6 +27,7 @@ LocalGrowth::Application.routes.draw do
   resources :relationships, only: [:create, :destroy]
   resources :likes, only: [:create, :destroy]
   resources :attendings, only: [:create, :destroy]
+  resources :poll_votes, only: [:create, :destroy]
 
 
 

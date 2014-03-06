@@ -1,7 +1,13 @@
+<% poll = Poll.first%>
 <%= poll.question %>
 
-<% poll.options.each do |option| %>
-	<%= option.text %>
-	<%= option.votes.count %>
-<% end %>
+<% poll.poll_options.each do |poll_option| %>
+  <%= poll_option.text %>
+  <%= poll_option.poll_votes.count %>
+  <%= form_for(current_user.poll_votes.build(poll_id: poll.id, poll_option_id: poll_option.id),remote: true) do |f| %>
+    <div><%= f.hidden_field :poll_id %></div>
+    <div><%= f.hidden_field :poll_option_id %></div>
 
+    <%= f.submit "Vote", class: "" %>
+  <% end %>
+<% end %>

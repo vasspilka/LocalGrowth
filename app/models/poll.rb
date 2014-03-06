@@ -1,7 +1,7 @@
 class Poll < ActiveRecord::Base
 
-  has_many   :options, :dependent => :destroy
-  accepts_nested_attributes_for :options,
+  has_many   :poll_options, :dependent => :destroy
+  accepts_nested_attributes_for :poll_options,
     :reject_if => ->(a) { a[:text].blank? },
     :allow_destroy => true
 
