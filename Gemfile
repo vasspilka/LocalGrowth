@@ -5,7 +5,7 @@ ruby '2.1.1'
 #ruby-gemset=LocalGrowth
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.0.0'
+gem 'rails', '~> 4.0'
 
 #Locale and Languages
 gem 'i18n'
@@ -13,7 +13,7 @@ gem 'i18n'
 # Security and Admin tools
 gem "devise"
 gem 'omniauth-facebook'
-gem 'rails_admin'
+gem 'rails_admin', '0.6.0'
 gem 'bcrypt-ruby' 
 
 # Javascript related gems
