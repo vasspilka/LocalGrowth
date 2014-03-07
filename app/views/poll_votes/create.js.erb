@@ -1,0 +1,3 @@
+<% @option.poll.poll_options.each do |poll_option| %>
+  $("#poll_<%=poll_option.poll.id%>_option_<%=poll_option.id%>").html("<%= poll_option.poll_votes.count %>")
+<% end %>
