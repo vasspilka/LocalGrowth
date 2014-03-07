@@ -76,6 +76,11 @@ class User < ActiveRecord::Base
     poll_votes.find_by(poll_id: poll.id).destroy!
   end
 
+  def voted?(poll)
+    poll_votes.find_by(poll_id: poll.id)
+  end
+
+
   # Facebook with omniauth
   def self.from_omniauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
