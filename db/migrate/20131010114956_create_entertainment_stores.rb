@@ -1,20 +1,20 @@
-class CreateFunShops < ActiveRecord::Migration
+class CreateEntertainmentStores < ActiveRecord::Migration
   def change
-    create_table :fun_categories do |t|
+    create_table :entertainment_categories do |t|
       t.string :title
 
       t.timestamps
     end  
 
-    create_table :fun_subcategories do |t|
+    create_table :entertainment_subcategories do |t|
       t.string :title
 
       t.timestamps
     end
 
-    create_table :fun_shops do |t|
+    create_table :entertainment_stores do |t|
       t.string :title
-      t.references :fun_category
+      t.references :entertainment_category
       t.integer :points ,:default => 0
       t.text :description
       t.string :logo_url
@@ -26,9 +26,9 @@ class CreateFunShops < ActiveRecord::Migration
       t.timestamps
     end
    
-    create_table :fun_subcategorizations do |t|
-      t.belongs_to :fun_shop, index: true
-      t.belongs_to :fun_subcategory, index: true
+    create_table :entertainment_subcategorizations do |t|
+      t.belongs_to :entertainment_store, index: true
+      t.belongs_to :entertainment_subcategory, index: true
 
       t.timestamps
     end

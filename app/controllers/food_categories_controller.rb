@@ -2,7 +2,7 @@ class FoodCategoriesController < ApplicationController
 
   def index
   	@categories = FoodCategory.all
-  	@shops = FoodShop.page(params[:page]).order("points desc")
+  	@stores = FoodStore.page(params[:page]).order("points desc")
 
   	@title = "Φαγητό"
   	render "shared/categories_show.html.erb"
@@ -11,7 +11,7 @@ class FoodCategoriesController < ApplicationController
   def show
   	@category = FoodCategory.find(params[:id])
   	@categories = FoodCategory.all
-  	@shops = FoodShop.page(params[:page]).where(food_category_id: @category.id).order("points desc")
+  	@stores = FoodStore.page(params[:page]).where(food_category_id: @category.id).order("points desc")
 
   	@title = "Φαγητό | #{@category.title}"
   	render "shared/categories_show.html.erb"

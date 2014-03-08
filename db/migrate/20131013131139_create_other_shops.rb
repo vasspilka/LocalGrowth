@@ -1,4 +1,4 @@
-class CreateOtherShops < ActiveRecord::Migration
+class CreateOtherStores < ActiveRecord::Migration
   def change
     create_table :other_categories do |t|
       t.string :title
@@ -12,7 +12,7 @@ class CreateOtherShops < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :other_shops do |t|
+    create_table :other_stores do |t|
       t.string :title
       t.references :other_category, index: true
       t.integer :points ,:default => 0
@@ -28,7 +28,7 @@ class CreateOtherShops < ActiveRecord::Migration
     
     create_table :other_subcategorizations do |t|
       t.belongs_to :other_subcategory, index: true
-      t.belongs_to :other_shop, index: true
+      t.belongs_to :other_store, index: true
 
       t.timestamps
     end
