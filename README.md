@@ -1,4 +1,4 @@
-# LocalGrowth Ruby on Rails local buissness application
+# LocalGrowth Local buissness web application
 
 
 Current version: Early Alpha
@@ -22,9 +22,9 @@ Main LocalGrowth features
   * A model for storing buisness data.
   * An UI so admins can easily interact with data.
   * An easy way for users to find what they need.
-  * A social netwok for users to interact with the local buisnesses and other users.
+  * A social netwok for users to interact with the local buisnesses and users.
   * A model for storing Events and Deals data.
-  * Integration with Facebook and Google maps.
+  * Smart integration with Facebook and Google data.
   * Automated Analytics to help admin make buisness decisions.
 
 
@@ -33,7 +33,7 @@ Main LocalGrowth features
 
 You will require the following software
 
-* [ruby version ~> 2.0.0][1]:
+* [ruby version ~> 2.0][ruby]:
 
   For Windows you can use [RubyInstaller][RubyInstaller] dont forget the DevKit. And FOLLOW THE INSTRUCTIONS!
   
@@ -46,7 +46,7 @@ You will require the following software
   Your output should be something like this.
   `ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux]`
 
-* [rails version ~> 4.0.0][2]:
+* [rails version ~> 4.0.0][rails]:
 
   After succesfully installing Ruby, run these to install Bundler and Rails
 
@@ -55,7 +55,7 @@ You will require the following software
       > bundle install --without production
 
 
-* [git][3]:
+* [git][git]:
   
   Installing git should be easy just follow the website instructions.
 
@@ -68,14 +68,14 @@ In my examples I will use shell commands, windows users can use 'cmd', linux use
 First cd into the path you want to set up the app
     > cd my_app/path
 
-First we need to clone the repository using git and install some dependencies
+Then clone the repository using git and install some dependencies
 
     > git clone https://github.com/vasspilka/LocalGrowth.git
     > cd LocalGrowth
     > bundle update
     > bundle install --without production
 
-'bundle update' takes some time since it install the dependencies through the internet and might fail, if it fails try running it again until it succedes fully before running 'bundle install'.
+'bundle update' takes some time since it updates the dependencies through the internet and might fail, if it fails try running it again until it succedes before running 'bundle install'.
 
 
 After all the dependencies have been installed we need to create a config and a database file,
@@ -84,27 +84,26 @@ don't worry I have already set up examples for you. All you need to do is remove
 
 Linux:
 
-    $ cp config/database.example.yml config/database.yml 
+    $ cp config/database.example.yml config/database.yml
     $ cp config/application.example.yml config/application.yml 
 
 Windows:
 
-    > ren config/database.example.yml database.yml
-    > ren config/application.example.yml application.yml
+    > rename config/database.example.yml database.yml
+    > rename config/application.example.yml application.yml
 
 
 You may want to have a look at those files `database.yml` consists of the database architecture
-you will need this to set up `mysql` or `postgresql`.
+you will need this to set up `mysql` or `postgresql` when deploying to a server.
 
-`application.yml` has configurations for the application. While for local deployment these settings should work fine, for production you should change these.
+`application.yml` has configurations for the application. While for local deployment these settings should work fine, for production you should change these according to your needs.
 
 Now we need to create the datatables and add some data. Finally we can run the server.
 
-    > rake db:migrate
-    > rake db:seed
+    > rake db:migrate && rake db:seed
     > rails s 
 
-The database is seeded with some basic data for you to see how the application works.
+The database is seeded with some basic data for you to see how the application works don't run `rake db:seed` if you want the app empty.
 
 Hopefully if everything ran smoothly, now you can visit your app inside your browser at 'localhost:3000'
 
@@ -116,15 +115,26 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 
   The technologies behind LocalGrowth are
 
+  * Rails (Ruby webapp framework)
+  * Ruby (Server Side Language)
   * HTML 5 
   * CSS 3 (Compiled from Sass)
   * Javascript (Compiled from CoffeScript)
-  * Ruby (Server Side)
-  * Foundation (CSS & Javascript framework)
-  * Rails (Ruby webapp framework)
+  * ~~Foundation (CSS & Javascript framework)~~
 
   These technologies are the heart and body of the LocalGrowth project.
 
+
+## Goals, and the future
+
+  LocalGrowths main feature tries to be an easy deployment and use by anyone.
+  Our goal is for LocalGrowth to be deployed for your local region to do tasks your comminity needs.
+
+  LocalGrowth dosen't want to be just a buissness app, It can potentially be used as a web project for developers to learn from, understand, modify and use in any way they like.
+
+## The Uses
+
+  
 
 ## Geting involved
   
@@ -133,26 +143,28 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
   More about that at [CONTRIBUTING.md][5] 
 
 
-  Feedback is also a good way to help, you can tell us about suggestions you might have or 
-  bugs you have experienced.
+  Feedback is also a good way to help, you can tell us suggestions you might have or 
+  bugs you have experienced. Just make a new issue.
 
 
 ## How to deploy
 
-  Deployment is a long procedure and I am in no place to explain it now.
+  Deployment is explained in [DEPLOY.md][6]
 
 ## About us
 
-lorem
+  I started LocalGrowth in order to learn web-developement and to make a usefull application for my town while I was a student. I hope it grows into something bigger, I already have more people than myself working on this which I find great :) !! 
 
 ## Licence
+  
+  LocalGrowth is licenced under Creative Commons wich means the code can be used by anyone 
 
 
 
-
-[1]: https://www.ruby-lang.org/en/
-[2]: http://rubyonrails.org/
-[3]: http://git-scm.com/
+[ruby]: https://www.ruby-lang.org/en/
+[rails]: http://rubyonrails.org/
+[git]: http://git-scm.com/
 [rvm]: https://rvm.io/
 [RubyInstaller]: http://rubyinstaller.org/downloads/
 [5]: https://github.com/vasspilka/LocalGrowth/blob/master/CONTRIBUTING.md
+[6]: https://github.com/vasspilka/LocalGrowth/blob/master/DEPLOY.md

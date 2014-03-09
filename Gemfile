@@ -1,19 +1,21 @@
 source 'https://rubygems.org'
 
-
+## Below you can specify a ruby version and rvm gemset that you wish to use for the project.
 ruby '2.1.1'
 #ruby-gemset=LocalGrowth
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.0'
 
 #Locale and Languages
-gem 'i18n'
+gem 'rails-i18n'
 
 # Security and Admin tools
-gem "devise"
-gem 'omniauth-facebook'
-gem 'rails_admin', '0.6.0'
+gem "devise"                  # User model & authorisation
+gem 'omniauth-facebook'       # Facebook Login
+gem 'rails_admin', '0.6.0'    # Admin Panel
 gem 'bcrypt-ruby' 
 
 # Javascript related gems
@@ -26,7 +28,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'sass-rails'
 gem 'simple_form'
 
-#Front-end gems
+# Front-end gems
 gem 'compass-rails', '~> 1.1.3' 
 gem 'entypo-rails'
 gem "breakpoint"
@@ -73,12 +75,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Production gems
-group :production do
-  # Postgres Database
-  gem 'pg'
-  gem 'rails_12factor', '0.0.2'
-end
 
 
 # Capistrano for deployment
@@ -89,6 +85,12 @@ group :development do
   gem 'capistrano-rails'
 end
 
+# Production gems
+group :production do
+  # Postgres Database
+  gem 'pg'
+  gem 'rails_12factor', '0.0.2'
+end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
