@@ -21,10 +21,10 @@
 
 
 
-en:
-  views:
-    title: "#{CONFIG[:app_name]}, Online Store Catalog of #{CONFIG[:town_name]}"
 
+gr:
+  views:
+    title: "#{CONFIG[:app_name]}, Online Κατάλογος Καταστιμάτων #{CONFIG[:town_name]}ς"
 
     navigation:
       home: "Home"
@@ -35,9 +35,9 @@ en:
       legal: "Legal"
 
     sidenav:
-      fun: "fun"
-      food: "food"
-      other: "other"
+      fun: "Διασκέδαση"
+      food: "Φαγητό"
+      other: "Άλλα"
 
     pagination:
       first: "&laquo;"
