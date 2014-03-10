@@ -110,7 +110,6 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 
 ## Learning more
 
-  
   LocalGrowth is a web 2.0 application meaning it is a little bit more than a website.
 
   The technologies behind LocalGrowth are
@@ -124,17 +123,10 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 
   These technologies are the heart and body of the LocalGrowth project.
 
+## How to deploy
 
-## Goals, and the future
+  Deployment is explained in [DEPLOY.md][6]
 
-  LocalGrowths main feature tries to be an easy deployment and use by anyone.
-  Our goal is for LocalGrowth to be deployed for your local region to do tasks your comminity needs.
-
-  LocalGrowth dosen't want to be just a buissness app, It can potentially be used as a web project for developers to learn from, understand, modify and use in any way they like.
-
-  In the future LocalGrowth could be separated into modules that would help other aspects of  communities, as Local news or a place where people would suggest Ideas to improve their enviroment.
-
-  Then each time you would use the modules you want.
 
 ## Geting involved
   
@@ -147,9 +139,16 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
   bugs you have experienced. Just make a [new issue][issue] on the GitHub page.
 
 
-## How to deploy
+## Goals, and the future
 
-  Deployment is explained in [DEPLOY.md][6]
+  LocalGrowths main feature tries to be an easy deployment and use by anyone.
+  Our goal is for LocalGrowth to be deployed for your local region to do tasks your comminity needs.
+
+  LocalGrowth dosen't have to be just a buissness app, It can potentially be used as a web project for developers to learn from, understand, modify and use in any way they like.
+
+  In the future LocalGrowth could be separated into modules that would help other aspects of  communities, as Local news or a place where people would suggest ideas to improve their enviroment.
+
+  Then you could use the modules you want.
 
 ## About us
 
@@ -158,6 +157,12 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 ## Licence
   
   LocalGrowth is licenced under Creative Commons wich means the code can be used by anyone as long as it stays open.
+
+
+  ![alt tag](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)
+  Creative Commons License
+  LocalGrowth is licensed under a Creative [Commons Attribution-ShareAlike 4.0 International License][cc].
+  Based on a work at [LocalGrowth][].
 
 
 
@@ -169,3 +174,5 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 [5]: https://github.com/vasspilka/LocalGrowth/blob/master/CONTRIBUTING.md
 [6]: https://github.com/vasspilka/LocalGrowth/blob/master/DEPLOY.md
 [issue]: https://github.com/vasspilka/LocalGrowth/issues/new
+[cc]: http://creativecommons.org/licenses/by-sa/4.0/
+[LG]: https://github.com/vasspilka/LocalGrowth
