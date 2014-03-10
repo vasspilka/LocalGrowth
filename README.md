@@ -33,7 +33,7 @@ Main LocalGrowth features
 
 You will require the following software
 
-* [ruby version ~> 2.0][ruby]:
+* [ruby version ~> 2.1.1][ruby]:
 
   For Windows you can use [RubyInstaller][RubyInstaller] dont forget the DevKit. And FOLLOW THE INSTRUCTIONS!
   
@@ -132,9 +132,9 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 
   LocalGrowth dosen't want to be just a buissness app, It can potentially be used as a web project for developers to learn from, understand, modify and use in any way they like.
 
-## The Uses
+  In the future LocalGrowth could be separated into modules that would help other aspects of  communities, as Local news or a place where people would suggest Ideas to improve their enviroment.
 
-  
+  Then each time you would use the modules you want.
 
 ## Geting involved
   
@@ -144,7 +144,7 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 
 
   Feedback is also a good way to help, you can tell us suggestions you might have or 
-  bugs you have experienced. Just make a new issue.
+  bugs you have experienced. Just make a [new issue][issue] on the GitHub page.
 
 
 ## How to deploy
@@ -157,7 +157,7 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 
 ## Licence
   
-  LocalGrowth is licenced under Creative Commons wich means the code can be used by anyone 
+  LocalGrowth is licenced under Creative Commons wich means the code can be used by anyone as long as it stays open.
 
 
 
@@ -168,3 +168,4 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 [RubyInstaller]: http://rubyinstaller.org/downloads/
 [5]: https://github.com/vasspilka/LocalGrowth/blob/master/CONTRIBUTING.md
 [6]: https://github.com/vasspilka/LocalGrowth/blob/master/DEPLOY.md
+[issue]: https://github.com/vasspilka/LocalGrowth/issues/new

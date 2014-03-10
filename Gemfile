@@ -43,6 +43,7 @@ group :development, :test do
   gem 'meta_request'
   gem "binding_of_caller"
   gem 'rspec-rails'
+  gem 'railroady' # For Diagrams
 end
 
 # Testing framework

@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
-
+  has_many :comments
   has_many :phones, as: :phoneable
   #Relationship with other users       
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy

@@ -1,6 +1,3 @@
-## Contains all Polymorphic associations
-
-
 class CreateImages < ActiveRecord::Migration
   def change
     create_table :images do |t|
@@ -11,9 +8,9 @@ class CreateImages < ActiveRecord::Migration
     end
 
     create_table :comments do |t|
-      t.string :username
-      t.string :email
+      t.belongs_to :user
       t.text :content
+      t.int :rating
       t.belongs_to :commentable, polymorphic: true, index: true
 
       t.timestamps

@@ -80,4 +80,4 @@ ads = Ad.create([{image_url:'no-image.jpg',title: 'Trinity the ultimate clubbing
   {image_url:'no-image.jpg',title: 'Roots Rock-bar', description:'Chill out with relaxing music', adable_id: 3, adable_type: "FunShop" }])
 
 
-comments = Comment.create([{username: 'Snowden', email: 'snowden@gmail.com', content: 'This place is awsome, They will never find me here :D'}])
+#comments = Comment.create([{username: 'Snowden', email: 'snowden@gmail.com', content: 'This place is awsome, They will never find me here :D'}])

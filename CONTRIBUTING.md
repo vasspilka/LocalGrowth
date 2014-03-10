@@ -7,7 +7,7 @@
  
 
 
- A list of things we are working with is at our [trello page][1].
+ A list of things we are working on is at our [trello page][1].
 
 ## As a developer 
   
