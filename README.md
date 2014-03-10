@@ -159,10 +159,14 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
   LocalGrowth is licenced under Creative Commons wich means the code can be used by anyone as long as it stays open.
 
 
+  
+  
+  Creative Commons License. 
+  
   ![alt tag](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)
-  Creative Commons License
+  
   LocalGrowth is licensed under a Creative [Commons Attribution-ShareAlike 4.0 International License][cc].
-  Based on a work at [LocalGrowth][].
+  Based on a work at [LocalGrowth][LG].
 
 
 
