@@ -35,7 +35,7 @@ You will require the following software
 
 * [ruby version ~> 2.1.1][ruby]:
 
-  For Windows you can use [RubyInstaller][RubyInstaller] dont forget the DevKit. And FOLLOW THE INSTRUCTIONS!
+  For Windows you can use [RubyInstaller][RubyInstaller] dont forget the DevKit. And FOLLOW THE INSTRUCTIONS! (You will also need to modify ruby version under gemfile to 2.0 if you cant find 2.1)
   
   For Unix/Linux there is [RVM][rvm]. Just use this command `\curl -L https://get.rvm.io | bash -s stable` 
   and you should have the latest stable Ruby version with [RVM][rvm] a great tool for managing Ruby versions and gemsets.
@@ -121,7 +121,7 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
   * Javascript (Compiled from CoffeScript)
   * ~~Foundation (CSS & Javascript framework)~~
 
-  These technologies are the heart and body of the LocalGrowth project.
+  These technologies are the heart of the LocalGrowth project.
 
 ## How to deploy
 
