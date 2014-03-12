@@ -4,6 +4,44 @@
 
 <%= image_tag(@user.gravatar) %>
 
+
+
+
+
+<p>Stores relations</p>
+<div>
+  <% @user.liked_food_shops.each do |food_shop| %>
+    <%= food_shop.title %>
+  <% end %>
+
+  <% @user.liked_fun_shops.each do |fun_shop| %>
+    <%= fun_shop.title %>
+  <% end %>
+
+  <% @user.liked_other_shops.each do |other_shop| %>
+    <%= other_shop.title %>
+  <% end %>  
+</div>
+
+
+
+
+
+
+
+
+<p>Events and deals relations</p>
+<div>
+  <% @user.liked_events.each do |event| %>
+    <%= event.title %>
+  <% end %>
+  <% @user.liked_deals.each do |event| %>
+    <%= event.title %>
+  <% end %>  
+</div>
+
+
+
 <%= @user.email %>
 <%= render 'shared/stats' %>
 <%= render 'shared/user_info' %>

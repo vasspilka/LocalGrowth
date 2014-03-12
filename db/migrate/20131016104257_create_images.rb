@@ -10,7 +10,7 @@ class CreateImages < ActiveRecord::Migration
     create_table :comments do |t|
       t.belongs_to :user
       t.text :content
-      t.int :rating
+      t.integer :rating
       t.belongs_to :commentable, polymorphic: true, index: true
 
       t.timestamps
