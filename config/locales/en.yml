@@ -22,10 +22,12 @@
 
 
 en:
+  title: ", Online Store Catalog of "
+  entertainment: "Entertainment"
+  food: "Food"
+  other: "Other"
+
   views:
-    title: "#{CONFIG[:app_name]}, Online Store Catalog of #{CONFIG[:town_name]}"
-
-
     navigation:
       home: "Home"
       about_points: "About Points"
@@ -35,7 +37,7 @@ en:
       legal: "Legal"
 
     sidenav:
-      fun: "fun"
+      fun: "entertainment"
       food: "food"
       other: "other"
 
