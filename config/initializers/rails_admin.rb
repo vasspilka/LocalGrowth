@@ -30,7 +30,7 @@ RailsAdmin.config do |config|
 
   # Exclude specific models (keep the others):
   config.excluded_models =
-   ["FunSubcategorization","FoodSubcategorization","OtherSubcategorization","PollVote",
+   ["EntertainmentTagging","FoodTagging","OtherTagging","PollVote",
     "PollOption","Comment","Phone","Relationship","User","Like","Attending"]
 
   # Include specific models (exclude the others):
