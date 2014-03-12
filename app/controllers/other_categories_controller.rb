@@ -4,7 +4,7 @@ class OtherCategoriesController < ApplicationController
   	@categories = OtherCategory.all
   	@stores = OtherStore.page(params[:page]).order("points desc")
 
-  	@title = I18n.t "views.other"
+  	@title = I18n.t "other"
   	render "shared/categories_show.html.erb"
   end
 
@@ -13,7 +13,7 @@ class OtherCategoriesController < ApplicationController
   	@categories = OtherCategory.all
   	@stores = OtherStore.page(params[:page]).where(other_category_id: @category.id).order("points desc")
 
-  	@title = I18n.t("views.other") + " | #{@category.title}"
+  	@title = I18n.t("other") + " | #{@category.title}"
   	render "shared/categories_show.html.erb"
   end
 
