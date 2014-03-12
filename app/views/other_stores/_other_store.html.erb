@@ -1,24 +1,24 @@
-<h3>This is the view for individual Food shop find me in "app/views/food_shops/_food_shop.html.erb"</h3>
-<table class="shop-item " id="<%= other_shop.id%>" width="600px" height="100px"> 
-  <td class="shop-logo" width="130px;" height="100%"><%= image_tag(other_shop.logo_url) %></td>
-  <td class="shop-info" height="100%" width="65%"> 
+<h3>This is the view for individual Food store find me in "app/views/food_stores/_food_store.html.erb"</h3>
+<table class="store-item " id="<%= other_store.id%>" width="600px" height="100px"> 
+  <td class="store-logo" width="130px;" height="100%"><%= image_tag(other_store.logo_url) %></td>
+  <td class="store-info" height="100%" width="65%"> 
     <table width="100%" height="100%">
       <tr height="48%">
         <td width="100%"><table width="100%" height="100%" id="main-data">
-          <td width="56%" height="100%" class="center" id="title"><b ><%= other_shop.title %></b></td>
-          <td width="44%" id="address" class="center"><b>Διέυθηνση:</b><br><b><%= other_shop.address %></b></td>
+          <td width="56%" height="100%" class="center" id="title"><b ><%= other_store.title %></b></td>
+          <td width="44%" id="address" class="center"><b>Διέυθηνση:</b><br><b><%= other_store.address %></b></td>
         </table></td>
       </tr>
-      <% if other_shop.other_subcategories.any? %>
+      <% if other_store.other_tags.any? %>
       <tr>
-        <th width="100%"  class="subcategory center">          
+        <th width="100%"  class="tag center">          
             <b>Υποκατηγορίες:</b>
         </th>
       </tr>      
       <tr>
         <td width="100%" class="center">              
-          <% other_shop.other_subcategories.each do |subcategory| %>
-            <b class="subcategories"><%= subcategory.title %></b>
+          <% other_store.other_tags.each do |tag| %>
+            <b class="tags"><%= tag.title %></b>
           <% end %> 
         </td>
       </tr>
@@ -29,15 +29,15 @@
 
     </table>
   </td>
-  <% if other_shop.phones.any? %>
+  <% if other_store.phones.any? %>
   <td class="phones" height="100%" width="21%"> 
     <table class="center"> 
-    <% if other_shop.phones.count > 1 %>
+    <% if other_store.phones.count > 1 %>
       <th>Τηλέφωνα</th>
     <% else %>
       <th>Τηλέφωνο</th>
     <% end %>
-      <% other_shop.phones.each do |phone| %>
+      <% other_store.phones.each do |phone| %>
           <tr>            
             <td>
               <%= phone.number_type + ":" %>

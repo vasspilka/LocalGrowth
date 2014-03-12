@@ -14,13 +14,13 @@ class User < ActiveRecord::Base
                                    dependent:   :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
 
-  #Relationship with likeable objects (Shops,Events,Deals)
+  #Relationship with likeable objects (stores,Events,Deals)
   has_many :likes, foreign_key: "user_id", dependent: :destroy
   has_many :liked_events, through: :likes, source: :likeable, source_type: 'Event'
   has_many :liked_deals, through: :likes, source: :likeable, source_type: 'Deal'
-  has_many :liked_fun_shops, through: :likes, source: :likeable, source_type: 'FunShop'
-  has_many :liked_food_shops, through: :likes, source: :likeable, source_type: 'FoodShop'
-  has_many :liked_other_shops, through: :likes, source: :likeable, source_type: 'OtherShop'
+  has_many :liked_entertainment_stores, through: :likes, source: :likeable, source_type: 'EntertainmentStore'
+  has_many :liked_food_stores, through: :likes, source: :likeable, source_type: 'FoodStore'
+  has_many :liked_other_stores, through: :likes, source: :likeable, source_type: 'OtherStore'
   
   #Relationship with Events
   has_many :attendings, foreign_key: "user_id", dependent: :destroy

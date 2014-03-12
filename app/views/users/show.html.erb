@@ -10,16 +10,16 @@
 
 <p>Stores relations</p>
 <div>
-  <% @user.liked_food_shops.each do |food_shop| %>
-    <%= food_shop.title %>
+  <% @user.liked_food_stores.each do |food_store| %>
+    <%= food_store.title %>
   <% end %>
 
-  <% @user.liked_fun_shops.each do |fun_shop| %>
-    <%= fun_shop.title %>
+  <% @user.liked_entertainment_stores.each do |entertainment_store| %>
+    <%= entertainment_store.title %>
   <% end %>
 
-  <% @user.liked_other_shops.each do |other_shop| %>
-    <%= other_shop.title %>
+  <% @user.liked_other_stores.each do |other_store| %>
+    <%= other_store.title %>
   <% end %>  
 </div>
 

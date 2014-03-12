@@ -8,9 +8,9 @@
 <%= render 'shared/like_form', :likeable => food_store if user_signed_in? %>
 
 
-<% if food_store.food_subcategories.any? %>            
-    <% food_store.food_subcategories.each do |subcategory| %>
-      <%= subcategory.title %>
+<% if food_store.food_tags.any? %>            
+    <% food_store.food_tags.each do |tag| %>
+      <%= tag.title %>
     <% end %> 
 <% else %>
 <% end %>
