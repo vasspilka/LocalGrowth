@@ -27,7 +27,7 @@ class CreateOtherStores < ActiveRecord::Migration
     end
     
     create_table :other_taggings do |t|
-      t.belongs_to :other_subcategory, index: true
+      t.belongs_to :other_tag, index: true
       t.belongs_to :other_store, index: true
 
       t.timestamps

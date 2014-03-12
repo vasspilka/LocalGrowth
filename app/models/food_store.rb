@@ -1,7 +1,7 @@
 class FoodStore < ActiveRecord::Base
   belongs_to :food_category
-  has_many :food_subcategorizations
-  has_many :food_subcategories, through: :food_subcategorizations
+  has_many :food_taggings
+  has_many :food_tags, through: :food_taggings
   has_many :comments, as: :commentable
   has_many :images, as: :imageable
   has_many :phones, as: :phoneable

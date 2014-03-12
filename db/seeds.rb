@@ -69,7 +69,7 @@ admins = Admin.create([{email: 'admin@admin.com',password: 'admin_password',pass
 
 # Still need to create sample Events likes ,follows and attends
 
-events = Event.create([{image_url:'no-image.jpg',title: 'Roots Reggae at Roots', description:'Roots Reggae , dj ChillyWingz', eventable_id: 3, eventable_type:"EnEertainmentStore",starts_at: '28/12/2013 20:30'},
+events = Event.create([{image_url:'no-image.jpg',title: 'Roots Reggae at Roots', description:'Roots Reggae , dj ChillyWingz', eventable_id: 3, eventable_type:"EntertainmentStore",starts_at: '28/12/2013 20:30'},
   {image_url:'no-image.jpg',title: 'The Ultimate Booksale', description:'Old and new books really cheap, only at the corner bookstore for 2 weeks', eventable_id: 1, eventable_type:"OtherStore", starts_at: '13/1/2014', ends_at: '27/1/2014'}])
 
 

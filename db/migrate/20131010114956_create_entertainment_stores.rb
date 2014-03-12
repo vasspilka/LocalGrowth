@@ -28,7 +28,7 @@ class CreateEntertainmentStores < ActiveRecord::Migration
    
     create_table :entertainment_taggings do |t|
       t.belongs_to :entertainment_store, index: true
-      t.belongs_to :entertainment_subcategory, index: true
+      t.belongs_to :entertainment_tag, index: true
 
       t.timestamps
     end

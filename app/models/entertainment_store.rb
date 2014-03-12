@@ -1,7 +1,7 @@
 class EntertainmentStore < ActiveRecord::Base
   belongs_to :entertainment_category
-  has_many :entertainment_subcategorizations
-  has_many :entertainment_subcategories, :through => :entertainment_subcategorizations
+  has_many :entertainment_taggings
+  has_many :entertainment_tags, :through => :entertainment_taggings
   has_many :comments, as: :commentable
   has_many :images, as: :imageable
   has_many :phones, as: :phoneable

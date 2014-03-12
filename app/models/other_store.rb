@@ -1,7 +1,7 @@
 class OtherStore < ActiveRecord::Base
   belongs_to :other_category
-  has_many :other_subcategorizations
-  has_many :other_subcategories, through: :other_subcategorizations
+  has_many :other_taggings
+  has_many :other_tags, through: :other_taggings
   has_many :comments, as: :commentable
   has_many :images, as: :imageable
   has_many :phones, as: :phoneable

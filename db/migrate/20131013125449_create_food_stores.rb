@@ -28,7 +28,7 @@ class CreateFoodStores < ActiveRecord::Migration
     end
 
     create_table :food_taggings do |t|
-      t.belongs_to :food_subcategory, index: true
+      t.belongs_to :food_tag, index: true
       t.belongs_to :food_store, index: true
 
       t.timestamps
