@@ -15,12 +15,12 @@ LocalGrowth::Application.routes.draw do
   end
 
   # All the resources
-  resources :fun_categories
-  resources :fun_shops
+  resources :entertainment_categories
+  resources :entertainment_stores
   resources :food_categories
-  resources :food_shops
+  resources :food_stores
   resources :other_categories
-  resources :other_shops
+  resources :other_stores
   resources :events
   resources :deals
   resources :feedback_messages
@@ -46,7 +46,7 @@ LocalGrowth::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'fun_shops#index'
+  # root 'fun_stores#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

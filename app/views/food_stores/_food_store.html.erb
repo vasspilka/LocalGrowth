@@ -1,0 +1,29 @@
+<h3>This is the view for individual the Food store <%= food_store.title %> find me in "app/views/food_stores/_food_store.html.erb"</h3>
+
+<%= image_tag(food_store.logo_url) %>
+<%= food_store.title %>
+<%= food_store.address %>
+<p id="likes_count<%=food_store.class.to_s%><%=food_store.id%>"> <%= food_store.points %><p>
+
+<%= render 'shared/like_form', :likeable => food_store if user_signed_in? %>
+
+
+<% if food_store.food_subcategories.any? %>            
+    <% food_store.food_subcategories.each do |subcategory| %>
+      <%= subcategory.title %>
+    <% end %> 
+<% else %>
+<% end %>
+
+<% if food_store.phones.any? %>
+  <% if food_store.phones.count > 1 %>
+    <p>Τηλέφωνα</p>
+  <% else %>
+    <p>Τηλέφωνο</p>
+  <% end %>
+    <% food_store.phones.each do |phone| %>
+            <%= phone.number_type + ": " + phone.number %>
+    <% end %> 
+<% else %>
+<% end %>
+

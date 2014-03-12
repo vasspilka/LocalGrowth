@@ -14,24 +14,24 @@
           </thead>
           <tbody>
             <tr>
-              <td><%= image_tag "#{fun_shop.logo_url}", class: "geush-logo"%></td>
-              <td><%= fun_shop.title %></td>
+              <td><%= image_tag "#{entertainment_shop.logo_url}", class: "geush-logo"%></td>
+              <td><%= entertainment_shop.title %></td>
               <td><ul>
-                <% if fun_shop.phones.any? %>
-                  <% if fun_shop.phones.count > 1 %>
+                <% if entertainment_shop.phones.any? %>
+                  <% if entertainment_shop.phones.count > 1 %>
                     <th>Τηλέφωνα</th>
                   <% else %>
                     <th>Τηλέφωνο</th>
                   <% end %>
-                  <% fun_shop.phones.each do |phone| %>
+                  <% entertainment_shop.phones.each do |phone| %>
                     <li><%= phone.number_type + ": " + phone.number %></li>
                   <% end %> 
                 <% end %>
               </ul></td>
               <td>
-                <p>Διεύθυνση: <%= fun_shop.address %>   </p>          
-                <p><%= fun_shop.description %></p>
-                Likes: <span id="likes_count<%=fun_shop.class.to_s%><%=fun_shop.id%>"><%= fun_shop.points %><span>
+                <p>Διεύθυνση: <%= entertainment_shop.address %>   </p>          
+                <p><%= entertainment_shop.description %></p>
+                Likes: <span id="likes_count<%=entertainment_shop.class.to_s%><%=entertainment_shop.id%>"><%= entertainment_shop.points %><span>
               </td>
             </tr>
           </tbody>
@@ -41,7 +41,7 @@
     <section>
       <p class="title" data-section-title><a href="#panel2">Subcategories</a></p>
       <div class="content" data-section-content>
-        <% if fun_shop.fun_subcategories.any? %>
+        <% if entertainment_shop.entertainment_subcategories.any? %>
           <tr>
             <th width="100%"  class="subcategory center">          
                 <b>Υποκατηγορίες:</b>
@@ -49,7 +49,7 @@
           </tr>      
           <tr>
             <td width="100%" class="center">              
-              <% fun_shop.fun_subcategories.each do |subcategory| %>
+              <% entertainment_shop.entertainment_subcategories.each do |subcategory| %>
                 <b class="subcategories"><%= subcategory.title %></b>
               <% end %> 
             </td>
@@ -70,7 +70,7 @@
       </div>
     </section>
   </div>
-  <%= render 'shared/like_form', :likeable => fun_shop if user_signed_in? %>
+  <%= render 'shared/like_form', :likeable => entertainment_shop if user_signed_in? %>
 
   
 </article>
