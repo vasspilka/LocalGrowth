@@ -6,7 +6,7 @@ class CreateEntertainmentStores < ActiveRecord::Migration
       t.timestamps
     end  
 
-    create_table :entertainment_subcategories do |t|
+    create_table :entertainment_tags do |t|
       t.string :title
 
       t.timestamps
@@ -26,7 +26,7 @@ class CreateEntertainmentStores < ActiveRecord::Migration
       t.timestamps
     end
    
-    create_table :entertainment_subcategorizations do |t|
+    create_table :entertainment_taggings do |t|
       t.belongs_to :entertainment_store, index: true
       t.belongs_to :entertainment_subcategory, index: true
 
