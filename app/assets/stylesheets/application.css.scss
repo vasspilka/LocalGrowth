@@ -15,6 +15,13 @@
 @import "basestyles";
 
 
+html,body	{
+	background: #fff;
+	@include font-smoothing(on);
+	
+}
+
+
 /*
 ============================
 +               +

@@ -17,4 +17,5 @@ class FoodCategoriesController < ApplicationController
   	render "shared/categories_show.html.erb"
   end
 
+
 end
