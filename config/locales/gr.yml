@@ -27,6 +27,9 @@ gr:
   entertainment: "Διασκέδαση"
   food: "Φαγητό"
   other: "Άλλα"
+  phone: 
+    one: "Τηλέφωνο"
+    other: "Τηλέφωνα"
 
   views:
     navigation:

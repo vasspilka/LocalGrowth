@@ -22,12 +22,8 @@
 <% else %>
 <% end %>
 
-<% if food_store.phones.any? %>
-  <% if food_store.phones.count > 1 %>
-    <p>Τηλέφωνα</p>
-  <% else %>
-    <p>Τηλέφωνο</p>
-  <% end %>
+<% if food_store.phones.any? then %>
+    <p><%= t("phone", :count => food_store.phones.count ) %></p>
     <% food_store.phones.each do |phone| %>
             <%= phone.number_type + ": " + phone.number %>
     <% end %> 

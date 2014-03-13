@@ -26,6 +26,9 @@ en:
   entertainment: "Entertainment"
   food: "Food"
   other: "Other"
+  phone: 
+    one: "Phone"
+    other: "Phones"
 
   views:
     navigation:
