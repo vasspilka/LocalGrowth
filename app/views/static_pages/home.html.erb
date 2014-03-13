@@ -17,4 +17,14 @@
   
     <%= if current_user then render 'shared/poll' unless Poll.first.blank? end %> <!-- This is here for testing -->
 
+
+    <!-- You can do this for EntertainmentCategory and OtherCategory aswell -->
+
+    <ul><% FoodCategory.all.each do |category| %> 
+      <li><%= category.title %></li>
+    <% end %></ul>
+
+    <!-- we can do javascript together to make them show when you click if you want we can look into it tomorow :) -->
+
+
 </div>
