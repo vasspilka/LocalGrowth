@@ -1,7 +1,7 @@
 # LocalGrowth Local buissness web application
 
 
-Current version: Early Alpha
+Current version: Early Alpha (Unstable & Experimental)
 
 
 ## Description
