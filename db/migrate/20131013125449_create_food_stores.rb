@@ -1,18 +1,18 @@
 class CreateFoodStores < ActiveRecord::Migration
   def change
-    create_table :food_categories do |t|
+    create_table :stores_food_categories do |t|
       t.string :title
 
       t.timestamps
     end
 
-    create_table :food_tags do |t|
+    create_table :tags_food_tags do |t|
       t.string :title
 
       t.timestamps
     end
 
-    create_table :food_stores do |t|
+    create_table :stores_food_stores do |t|
       t.string :title
       t.references :food_category, index: true
       t.integer :points ,:default => 0
