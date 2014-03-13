@@ -183,45 +183,38 @@
 
 .sidenav {
    height: 100%;
-   width: 4em;
-   background: rgba(55, 59, 65, 1);
+   width: 4rem;
+   background: rgba(55, 59, 65, 0.5);
    font-size: 1rem;
    font-weight: 100;
    font-family: $font-1;
-
-   
-   border: 1px solid rgba(55, 59, 65, 0.93);
-   box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-   
+   display: table;
    position: fixed;    
    left: 0;
    top: 0;
    z-index: 10;
+   border: 1px solid rgba(55, 59, 65, 0.93);
+   box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+   
+
    
   @include transition-property(width, background);
   @include transition-duration(0.5s);
    
    
    ul { 
-     
-	width: 100%;
-	padding: 0;
-	margin-top: 5rem;
-	line-height: 1.2rem;
-	margin-right: 0em;
-	
+	   display: table-cell;
+	   vertical-align: middle;
+	   
+	   line-height: 2rem;
 	
 	li	{
 		
 		font-variant: small-caps;
 	    width: 100%;
- 
 		text-align: center;
-  
 	    overflow: hidden;
 		display: block;
-		
-		padding-top: 2.5rem;
 		
 		i	{
 			opacity: 1;
@@ -240,13 +233,10 @@
 		a {
 			display: block;
 		}
-	   
-
-		
-		
-	}
+}
 	
 }
+
 
 // &:hover	{
 //  width: 6em;
@@ -323,6 +313,54 @@
 
 }
 
+
+.dots	{
+	position: fixed;
+	right: 3%;
+	bottom: 1%;
+	display: block;
+	
+	i	{
+		color: #fff;
+		font-size: 1.2rem;
+	}
+	&:hover ~ .bubble	{
+		visibility: visible;
+	}
+
+}
+
+
+.bubble 
+{
+visibility: hidden;
+bottom: 6%;
+right:1%;
+position: fixed;
+width: 95px;
+height: 145px;
+padding: 0px;
+border: 1px solid #ddd;
+background: rgba(255, 255, 255, 1);
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+
+
+
+&:after {
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 0;
+border-color: rgba(255, 255, 255, 1) transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -10px;
+left: 48px;
+}
+}
 /* breakpoints  */
 
 @include breakpoint (max-width 768px)	{
