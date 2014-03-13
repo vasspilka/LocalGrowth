@@ -1,7 +1,7 @@
 class FoodStoresController < ApplicationController
   
   def show
-  	@store = FoodStore.find(params[:id])
+  	@store = Stores::FoodStore.find(params[:id])
   end
 
 end

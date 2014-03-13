@@ -6,7 +6,7 @@ class CreateEntertainmentStores < ActiveRecord::Migration
       t.timestamps
     end  
 
-    create_table :entertainment_tags do |t|
+    create_table :tags_entertainment_tags do |t|
       t.string :title
 
       t.timestamps
