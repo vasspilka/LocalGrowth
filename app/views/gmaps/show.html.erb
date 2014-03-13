@@ -1,0 +1,31 @@
+<%= stylesheet_link_tag :gmaps, :media => "all" %>
+
+<div class="page-header">
+  <%= link_to gmaps_path, :class => 'btn' do %>
+    <i class="icon-list-alt"></i>
+    Back
+  <% end %>
+  <%= link_to edit_gmap_path(@gmap), :class => 'btn btn-primary' do %>
+    <i class="icon-pencil icon-white"></i>
+    Edit
+  <% end %>
+  <h1>Listing gmaps</h1>
+</div>
+
+<dl>
+  <dt>Latitude:</dt>
+  <dd><%= @gmap.latitude %></dd>
+
+  <dt>Longitude:</dt>
+  <dd><%= @gmap.longitude %></dd>
+
+  <dt>Address:</dt>
+  <dd><%= @gmap.address %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @gmap.description %></dd>
+
+  <dt>Title:</dt>
+  <dd><%= @gmap.title %></dd>
+
+</dl>
