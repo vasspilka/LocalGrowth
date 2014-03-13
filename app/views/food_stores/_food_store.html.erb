@@ -4,8 +4,16 @@
 <!--<%= image_tag(food_store.logo_url) %>
 <%= food_store.title %>
 <%= food_store.address %>
+<<<<<<< HEAD
 <p id="likes_count<%=food_store.class.to_s%><%=food_store.id%>"> <%= food_store.points %></p>
 -->
+=======
+<%= button_to "show", food_store %>
+<p id="likes_count<%=food_store.class.to_s%><%=food_store.id%>"> <%= food_store.points %><p>
+
+<%= render 'shared/like_form', :likeable => food_store if user_signed_in? %>
+
+>>>>>>> 2daebf36e8a179c6c975e473a541259744cd7bd9
 
 <div id="columns">
   <figure>

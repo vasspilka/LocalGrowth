@@ -1,7 +1,7 @@
 class EntertainmentStoresController < ApplicationController
   
   def show
-  	@store = FunStore.find(params[:id])
+  	@store = EntertainmentStore.find(params[:id])
   end
 
 end

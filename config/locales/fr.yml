@@ -21,14 +21,11 @@
 
 
 
-
-gr:
-  title: ", Online Κατάλογος Καταστιμάτων "
-  entertainment: "Διασκέδαση"
-  food: "Φαγητό"
-  other: "Άλλα"
-
+en:
   views:
+    title: "#{CONFIG[:app_name]}, Online Store Catalog of #{CONFIG[:town_name]}"
+
+
     navigation:
       home: "Home"
       about_points: "About Points"
@@ -38,9 +35,9 @@ gr:
       legal: "Legal"
 
     sidenav:
-      entertainment: "Διασκέδαση"
-      food: "Φαγητό"
-      other: "Άλλα"
+      fun: "fun"
+      food: "food"
+      other: "other"
 
     pagination:
       first: "&laquo;"
