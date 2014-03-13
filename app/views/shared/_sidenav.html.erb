@@ -10,12 +10,18 @@
 <% # End of EAD rendering %>        
 -->
 	<nav class="sidenav">
-	    <ul>
-   		 <li> <a href="#"> <i class="icon-search"></i> </a></li>
-			
-	      <li><a href="/food_categories"> <i class="icon-bag"></i> <div class="sideli"><%= t "views.sidenav.food" %></div></a></li>
-		  <li><a href="/entertainment_categories"><i class="icon-rocket"></i><div class="sideli"><%= t "views.sidenav.fun" %></div></a></li>				  
-          <li><a href="/other_categories"> <i class="icon-numbered-list"></i><div class="sideli"><%= t "views.sidenav.other" %> </div></a></li>
+		
+	<ul class="toplist">
+  		 <li> <a href="#"> <i class="icon-search"></i> </a></li>
+	</ul>
+		 
+	    <ul class="midlist">
+<li><a href="/food_categories">  <%= t "views.sidenav.food" %></a></li>
+
+<li><a href="/entertainment_categories"> <%= t "views.sidenav.fun" %></a></li>
+	  
+<li><a href="/other_categories"> <%= t "views.sidenav.other" %></a></li>
 	    </ul>
+		
 	 </nav>
  

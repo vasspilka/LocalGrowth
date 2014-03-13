@@ -24,14 +24,17 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
-# Design related gems
-gem 'sass-rails'
-gem 'simple_form'
 
 # Front-end gems
 gem 'compass-rails', '~> 1.1.3' 
 gem 'entypo-rails'
 gem "breakpoint"
+gem 'sass-rails'
+gem 'simple_form'
+
+#google maps gem & related
+gem 'gmaps4rails'
+gem 'geocoder'
 
 # Pagination with
 gem 'kaminari'

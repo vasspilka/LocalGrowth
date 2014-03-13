@@ -185,8 +185,8 @@
    height: 100%;
    width: 4rem;
    background: rgba(55, 59, 65, 0.5);
-   font-size: 1rem;
-   font-weight: 100;
+   font-size: 0.9rem;
+   font-weight: 200;
    font-family: $font-1;
    display: table;
    position: fixed;    
@@ -196,63 +196,50 @@
    border: 1px solid rgba(55, 59, 65, 0.93);
    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
    
-
+	
    
   @include transition-property(width, background);
   @include transition-duration(0.5s);
    
+  .toplist	{
+	  font-size: 1rem;
+	  position: absolute;
+   	  text-align: center;
+	  width: 100%;
+	  margin-top: 3rem;
+	  
+	  i	{
+		  opacity:0.8;
+	  }
+	  
+  }
    
-   ul { 
+   .midlist { 
 	   display: table-cell;
 	   vertical-align: middle;
-	   
-	   line-height: 2rem;
-	
+	   width: 100%;
+	   text-align: center;
+	   line-height: 3rem;
+
 	li	{
-		
-		font-variant: small-caps;
-	    width: 100%;
-		text-align: center;
 	    overflow: hidden;
 		display: block;
+		font-weight: 400;
+		text-transform: uppercase;
 		
-		i	{
-			opacity: 1;
-			color: #fff;
-			font-size: 1.2rem;
-		}
-		
-		.sideli	{
-			margin-top: 0.2em;
-			opacity: 0;
-			@include transition-property(opacity);
-			@include transition-duration(0.3s);
-			
-		}
- 
-		a {
-			display: block;
-		}
 }
 	
 }
 
-
-// &:hover	{
-//  width: 6em;
-//  background: rgba(55, 59, 65, 1);
-  
+ &:hover	{
+  width: 6em;
+  background: rgba(55, 59, 65, 0.9);
   
   @include transition-property(width, background);
   @include transition-duration(0.3s);
   
-  &:hover .sideli	{
-	  opacity: 1;
-	  
-	@include transition-property(opacity);
-	@include transition-duration(0.3s);
-  }
-// }
+
+ }
 }
 
 /* ANIMATION FOR CHEVRON */
@@ -294,7 +281,6 @@
 	text-align: center;
 	font-family: $font-1;
 	font-weight: 100;
-	margin-top: 6em;
 		ul	{
 			
 		li	{
@@ -313,6 +299,7 @@
 
 }
 
+// MISC 
 
 .dots	{
 	position: fixed;
@@ -346,8 +333,6 @@ background: rgba(255, 255, 255, 1);
 -moz-border-radius: 0px;
 border-radius: 0px;
 
-
-
 &:after {
 content: '';
 position: absolute;
@@ -360,6 +345,11 @@ z-index: 1;
 bottom: -10px;
 left: 48px;
 }
+
+&:hover	{
+	visibility: visible;
+}
+
 }
 /* breakpoints  */
 

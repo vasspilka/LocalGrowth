@@ -7,37 +7,38 @@
 
 
 @font-face {
-  font-family: 'Roboto';    
-  src: url('Roboto-Thin.ttf') format('truetype');
+  font-family: 'IdealSans';    
+  src: url('IdealSans-Thin.otf') format('opentype');
   font-weight: 100;
 
 }
 
 
 @font-face {
-  font-family: 'Roboto';    
-  src: url('Roboto-Light.ttf') format('truetype');
+  font-family: 'IdealSans';    
+  src: url('IdealSans-XLight.otf') format('opentype');
   font-weight: 200;
 
 }
 
 @font-face {
-  font-family: 'Roboto';    
-  src: url('Roboto-Regular.ttf') format('truetype');
+  font-family: 'IdealSans';    
+  src: url('IdealSans-Light.otf') format('opentype');
   font-weight: 300;
 
 }
 
 @font-face {
-  font-family: 'Roboto';    
-  src: url('Roboto-Bold.ttf') format('truetype');
+  font-family: 'IdealSans';    
+  src: url('IdealSans-Book.otf') format('opentype');
   font-weight: 400;
 
 }
 
 @font-face {
-  font-family: 'HaloHandletter';    
-  src: url('HaloHandletter.otf') format('opentype');
+    font-family: 'IdealSans';    
+    src: url('IdealSans-Semibold.otf') format('opentype');
+	font-weight: 500;
 
 }
 
@@ -47,7 +48,7 @@
 
 
 /* font stack */
-$font-1: 'Roboto';
+$font-1: 'IdealSans';
 $font-2: 'HaloHandletter';
 
 
