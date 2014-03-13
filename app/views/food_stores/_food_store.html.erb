@@ -15,20 +15,19 @@
 	<figcaption>
 <ul>	
 	<li> <i class="icon-airplane"></i>	
-<% if food_store.food_tags.any? %>            
-    <% food_store.food_tags.each do |tag| %>
-      <%= tag.title %>
-    <% end %> 
-<% else %>
+<% if food_store.food_tags.any? then %>            
+  <% food_store.food_tags.each do |tag| %>
+    <%= tag.title %>
+  <% end %> 
 <% end %>
 
 <% if food_store.phones.any? then %>
-    <p><%= t("phone", :count => food_store.phones.count ) %></p>
-    <% food_store.phones.each do |phone| %>
-            <%= phone.number_type + ": " + phone.number %>
-    <% end %> 
-<% else %>
+  <%= t("phone", :count => food_store.phones.count ) %>
+  <% food_store.phones.each do |phone| %>
+    <%= phone.number_type + ": " + phone.number %>
+  <% end %> 
 <% end %>
+
 </li>
 
 
