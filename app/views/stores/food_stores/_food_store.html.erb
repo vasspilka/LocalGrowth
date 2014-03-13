@@ -1,13 +1,26 @@
-<h3>This is the view for individual the Food store <%= food_store.title %> find me in "app/views/food_stores/_food_store.html.erb"</h3>
+<%= stylesheet_link_tag :food_categories, :media => "all" %>
 
-<%= image_tag(food_store.logo_url) %>
+
+<!--<%= image_tag(food_store.logo_url) %>
 <%= food_store.title %>
 <%= food_store.address %>
+<<<<<<< HEAD:app/views/stores/food_stores/_food_store.html.erb
 <p id="likes_count<%=food_store.class.to_s%><%=food_store.id%>"> <%= food_store.points %><p>
 
 <%= render 'shared/like_form', :likeable => food_store if user_signed_in? %>
+=======
+<<<<<<< HEAD
+<p id="likes_count<%=food_store.class.to_s%><%=food_store.id%>"> <%= food_store.points %></p>
+-->
+>>>>>>> master:app/views/food_stores/_food_store.html.erb
 
 
+<div id="columns">
+  <figure>
+	  <%= image_tag(food_store.logo_url) %>
+	<figcaption>
+<ul>	
+	<li> <i class="icon-airplane"></i>	
 <% if food_store.food_tags.any? %>            
     <% food_store.food_tags.each do |tag| %>
       <%= tag.title %>
@@ -26,4 +39,24 @@
     <% end %> 
 <% else %>
 <% end %>
+</li>
+
+
+		
+		<li><i class="icon-airplane"></i> <%= food_store.title %></li>
+		<li><i class="icon-airplane"></i> <%= food_store.address %></li>
+		
+ <li id="likes_count<%=food_store.class.to_s%><%=food_store.id%>"><i class="icon-bar-graph"></i> <%= food_store.points %></li>
+		
+</ul>
+		
+	</figcaption>
+	</figure>
+	
+
+</div>
+  
+<%= render 'shared/like_form', :likeable => food_store if user_signed_in? %>
+
+
 

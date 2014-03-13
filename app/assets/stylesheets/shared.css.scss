@@ -184,7 +184,7 @@
 .sidenav {
    height: 100%;
    width: 4em;
-   background: rgba(55, 59, 65, 0);
+   background: rgba(55, 59, 65, 1);
    font-size: 1rem;
    font-weight: 100;
    font-family: $font-1;
@@ -248,9 +248,9 @@
 	
 }
 
- &:hover	{
-  width: 6em;
-  background: rgba(55, 59, 65, 1);
+// &:hover	{
+//  width: 6em;
+//  background: rgba(55, 59, 65, 1);
   
   
   @include transition-property(width, background);
@@ -262,8 +262,7 @@
 	@include transition-property(opacity);
 	@include transition-duration(0.3s);
   }
-	
- }
+// }
 }
 
 /* ANIMATION FOR CHEVRON */
