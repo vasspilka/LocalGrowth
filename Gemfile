@@ -12,8 +12,7 @@ gem 'rails', '~> 4.0'
 # Internationalization & Location
 gem 'rails-i18n'      # Locale & Languages
 gem "geocoder"        # Handling geographic data
-gem 'gmaps4rails'   
-
+gem 'gmaps4rails'     # Google maps intergration
 
 # Security and Admin tools
 gem "devise"                  # User model & authorisation
@@ -35,9 +34,7 @@ gem "breakpoint"
 gem 'sass-rails'
 gem 'simple_form'
 
-#google maps gem & related
-gem 'gmaps4rails'
-gem 'geocoder'
+
 
 # Pagination with
 gem 'kaminari'
