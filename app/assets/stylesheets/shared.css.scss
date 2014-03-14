@@ -183,10 +183,10 @@
 
 .sidenav {
    height: 100%;
-   width: 4rem;
+   width: 6rem;
    background: rgba(55, 59, 65, 0.5);
-   font-size: 0.9rem;
-   font-weight: 200;
+   font-size: 1rem;
+   font-weight: 400;
    font-family: $font-1;
    display: table;
    position: fixed;    
@@ -224,7 +224,6 @@
 	li	{
 	    overflow: hidden;
 		display: block;
-		font-weight: 400;
 		text-transform: uppercase;
 		
 }
@@ -232,7 +231,7 @@
 }
 
  &:hover	{
-  width: 6em;
+  width: 8em;
   background: rgba(55, 59, 65, 0.9);
   
   @include transition-property(width, background);

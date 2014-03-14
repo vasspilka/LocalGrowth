@@ -8,27 +8,30 @@
 <p id="likes_count<%=food_store.class.to_s%><%=food_store.id%>"> <%= food_store.points %></p>
 -->
 
-
 <div id="columns">
   <figure>
 	  <%= image_tag(food_store.logo_url) %>
 	<figcaption>
 <ul>	
 	<li> <i class="icon-airplane"></i>	
-<% if food_store.food_tags.any? then %>            
-  <% food_store.food_tags.each do |tag| %>
-    <%= tag.title %>
-  <% end %> 
+<% if food_store.food_tags.any? %>            
+    <% food_store.food_tags.each do |tag| %>
+      <%= tag.title %>
+    <% end %> 
+<% else %>
 <% end %>
 
-<% if food_store.phones.any? then %>
-  <%= t("phone", :count => food_store.phones.count ) %>
-  <% food_store.phones.each do |phone| %>
-    <%= phone.number_type + ": " + phone.number %>
-  <% end %> 
-
+<% if food_store.phones.any? %>
+  <% if food_store.phones.count > 1 %>
+    <p>Τηλέφωνα</p>
+  <% else %>
+    <p>Τηλέφωνο</p>
+  <% end %>
+    <% food_store.phones.each do |phone| %>
+            <%= phone.number_type + ": " + phone.number %>
+    <% end %> 
+<% else %>
 <% end %>
-
 </li>
 
 
@@ -46,7 +49,7 @@
 
 </div>
   
+  
 <%= render 'shared/like_form', :likeable => food_store if user_signed_in? %>
-
 
 

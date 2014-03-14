@@ -6,14 +6,16 @@
 
 body	{
 	background: #fff;
+	max-width: 100%;
 }
 .sidenav	{
 	display: none;
 }
 
 #columns {
-	margin: 10px 1rem 1rem 2rem;
 	display: inline;
+	
+	
 }
 
 div#columns figure {
@@ -22,7 +24,7 @@ div#columns figure {
 	border: 2px solid #fcfcfc;
 	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
 	padding: 15px;
-	margin: 0.3rem;
+	margin: 1rem;
   display: inline-block;
   opacity: 0.4;
   
