@@ -1,0 +1,11 @@
+<%= stylesheet_link_tag :gmaps, :media => "all" %>
+
+<div class="page-header">
+  <%= link_to gmaps_path, :class => 'btn' do %>
+    <i class="icon-list-alt"></i>
+    Back
+  <% end %>
+  <h1>New gmap</h1>
+</div>
+
+<%= render 'form' %>

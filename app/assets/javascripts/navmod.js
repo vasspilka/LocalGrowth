@@ -5,7 +5,7 @@ $(document).ready(function () {
        $scrollingDiv.stop()
            .animate({
        }, "slow");
-       $scrollingDiv.css("background", (($(window).scrollTop() / $(document).height()) > 0.10) ? "rgba(55, 59, 65, 1)" : "");
+       $scrollingDiv.css("background", (($(window).scrollTop() / $(document).height()) > 0.10) ? "rgba(55, 59, 65, 0.9)" : "");
 
      });
 	

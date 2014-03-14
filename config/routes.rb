@@ -1,7 +1,9 @@
 LocalGrowth::Application.routes.draw do
   
+  resources :gmaps
   root 'static_pages#home'
-
+  match '/maps', to: 'gmaps#index', via: 'get'
+  
   # Authentication
   devise_for :admins
   devise_for :users , path_names: {sign_in: "login",sign_out: "logout"}, controllers: {omniauth_callbacks: "omniauth_callbacks"}
