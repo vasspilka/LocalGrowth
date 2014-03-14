@@ -9,8 +9,11 @@ ruby '2.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.0'
 
-#Locale and Languages
-gem 'rails-i18n'
+# Internationalization & Location
+gem 'rails-i18n'      # Locale & Languages
+gem "geocoder"        # Handling geographic data
+gem 'gmaps4rails'   
+
 
 # Security and Admin tools
 gem "devise"                  # User model & authorisation
