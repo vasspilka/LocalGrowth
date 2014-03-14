@@ -20,9 +20,11 @@
 
     <!-- You can do this for EntertainmentCategory and OtherCategory aswell -->
 
-    <ul><% FoodCategory.all.each do |category| %> 
-      <li><%= category.title %></li>
-    <% end %></ul>
+    <ul>
+      <% FoodCategory.all.each do |category| %> 
+        <li><%= category.title %></li>
+      <% end %>
+    </ul>
 
     <!-- we can do javascript together to make them show when you click if you want we can look into it tomorow :) -->
 
