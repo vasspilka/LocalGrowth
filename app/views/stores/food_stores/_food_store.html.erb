@@ -20,28 +20,21 @@
 	<figcaption>
 <ul>	
 	<li> <i class="icon-airplane"></i>	
-<% if food_store.food_tags.any? %>            
+<% if food_store.food_tags.any? then %>            
     <% food_store.food_tags.each do |tag| %>
       <%= tag.title %>
     <% end %> 
-<% else %>
 <% end %>
 
-<% if food_store.phones.any? %>
-  <% if food_store.phones.count > 1 %>
-    <p>Τηλέφωνα</p>
-  <% else %>
-    <p>Τηλέφωνο</p>
-  <% end %>
-    <% food_store.phones.each do |phone| %>
-            <%= phone.number_type + ": " + phone.number %>
-    <% end %> 
-<% else %>
+<% if food_store.phones.any? then %>
+  <%= t("phone", :count => food_store.phones.count ) %>
+  <% food_store.phones.each do |phone| %>
+    <%= phone.number_type + ": " + phone.number %>
+  <% end %> 
 <% end %>
+
 </li>
-
-
-		
+	
 		<li><i class="icon-airplane"></i> <%= food_store.title %></li>
 		<li><i class="icon-airplane"></i> <%= food_store.address %></li>
 		
