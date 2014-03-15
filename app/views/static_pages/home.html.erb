@@ -18,10 +18,10 @@
     <%= if current_user then render 'shared/poll' unless Poll.first.blank? end %> <!-- This is here for testing -->
 
 
-    <!-- You can do this for EntertainmentCategory and OtherCategory aswell -->
+    <!-- You can do this for Stores::EntertainmentCategory and Stores::OtherCategory aswell -->
 
     <ul>
-      <% FoodCategory.all.each do |category| %> 
+      <% Stores::FoodCategory.all.each do |category| %> 
         <li><%= category.title %></li>
       <% end %>
     </ul>
