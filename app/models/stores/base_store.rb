@@ -12,4 +12,11 @@ class Stores::BaseStore < ActiveRecord::Base
 
   paginates_per 7
   validates :title, presence: true
+
+  private
+
+  def rating_percent
+    percentage = self.rating / self.reviews.with_rating.count
+  end
+
 end
