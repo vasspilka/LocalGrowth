@@ -7,6 +7,10 @@ RailsAdmin.config do |config|
 
 
   ################  Global configuration  ################
+  
+  # Locale for admin still working on it
+  require 'rails-i18n'
+  I18n.default_locale = CONFIG[:default_locale]
 
   # Set the admin name here (optional second array element will appear in red). For example:
   config.main_app_name = [CONFIG[:app_name], 'Admin']

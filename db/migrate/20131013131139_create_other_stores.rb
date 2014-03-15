@@ -1,18 +1,18 @@
 class CreateOtherStores < ActiveRecord::Migration
   def change
-    create_table :other_categories do |t|
+    create_table :stores_other_categories do |t|
       t.string :title
 
       t.timestamps
     end
 
-    create_table :other_tags do |t|
+    create_table :tags_other_tags do |t|
       t.string :title
 
       t.timestamps
     end
 
-    create_table :other_stores do |t|
+    create_table :stores_other_stores do |t|
       t.string :title
       t.references :other_category, index: true
       t.integer :points ,:default => 0

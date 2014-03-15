@@ -1,7 +1,11 @@
-class OtherStore < ActiveRecord::Base
+class Stores::OtherStore < ActiveRecord::Base
+
+  self.table_name = "stores_other_stores"
+  
+
   belongs_to :other_category
   has_many :other_taggings
-  has_many :other_tags, through: :other_taggings
+  has_many :other_tags, through: :other_taggings, class_name: "Tags::OtherTag"
   has_many :comments, as: :commentable
   has_many :images, as: :imageable
   has_many :phones, as: :phoneable

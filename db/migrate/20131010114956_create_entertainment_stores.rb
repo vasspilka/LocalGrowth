@@ -1,18 +1,18 @@
 class CreateEntertainmentStores < ActiveRecord::Migration
   def change
-    create_table :entertainment_categories do |t|
+    create_table :stores_entertainment_categories do |t|
       t.string :title
 
       t.timestamps
     end  
 
-    create_table :entertainment_tags do |t|
+    create_table :tags_entertainment_tags do |t|
       t.string :title
 
       t.timestamps
     end
 
-    create_table :entertainment_stores do |t|
+    create_table :stores_entertainment_stores do |t|
       t.string :title
       t.references :entertainment_category
       t.integer :points ,:default => 0
