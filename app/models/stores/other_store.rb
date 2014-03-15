@@ -4,8 +4,8 @@ class Stores::OtherStore < ActiveRecord::Base
   
 
   belongs_to :other_category
-  has_many :other_taggings
-  has_many :other_tags, through: :other_taggings, class_name: "Tags::OtherTag"
+  has_many :taggings, class_name: "Tags::Taggings"
+  has_many :tags, :through => :taggings , class_name: "Tags::Tag"
   has_many :comments, as: :commentable
   has_many :images, as: :imageable
   has_many :phones, as: :phoneable

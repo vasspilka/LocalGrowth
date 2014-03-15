@@ -1,4 +1,5 @@
-class Deal < ActiveRecord::Base
+class Ead::Deal < ActiveRecord::Base
+
   belongs_to :dealable, polymorphic: true
   
   # Callbacks 

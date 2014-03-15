@@ -4,8 +4,8 @@ class Stores::FoodStore < ActiveRecord::Base
   
 
   belongs_to :food_category
-  has_many :food_taggings
-  has_many :food_tags, through: :food_taggings ,class_name: "Tags::FoodTag"
+  has_many :taggings, class_name: "Tags::Taggings"
+  has_many :tags, :through => :taggings , class_name: "Tags::Tag"
   has_many :comments, as: :commentable
   has_many :images, as: :imageable
   has_many :phones, as: :phoneable

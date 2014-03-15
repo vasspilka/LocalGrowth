@@ -1,4 +1,5 @@
-class Ad < ActiveRecord::Base
+class Ead::Ad < ActiveRecord::Base
+
   belongs_to :adable, polymorphic: true
 
   # Callbacks 

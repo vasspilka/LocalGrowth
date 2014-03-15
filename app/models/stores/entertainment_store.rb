@@ -4,8 +4,8 @@ class Stores::EntertainmentStore < ActiveRecord::Base
 
 
   belongs_to :entertainment_category
-  has_many :entertainment_taggings
-  has_many :entertainment_tags, :through => :entertainment_taggings , class_name: "Tags::EntertainmentTag"
+  has_many :taggings, class_name: "Tags::Taggings"
+  has_many :tags, :through => :taggings , class_name: "Tags::Tag"
   has_many :comments, as: :commentable
   has_many :images, as: :imageable
   has_many :phones, as: :phoneable

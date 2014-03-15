@@ -1,4 +1,4 @@
-class PollOption < ActiveRecord::Base
+class Poll::PollOption < ActiveRecord::Base
 
   #relations
   belongs_to :poll

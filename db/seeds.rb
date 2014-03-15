@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+admins = Admin.create([{email: 'admin@admin.com',password: 'admin_password',password_confirmation: 'admin_password'}])
 
 
 entertainment_categories = Stores::EntertainmentCategory.create([{ title: 'Club'},{ title: 'Bar'},{title: 'Sport'}])
@@ -65,7 +66,6 @@ users = User.create([{username: 'Batman', email: 'batman@gmail.com',password: 'v
   {username: 'Vspilka', email: 'vspilka@gmail.com',password: 'valid_password',password_confirmation: 'valid_password'}
   ])
 
-admins = Admin.create([{email: 'admin@admin.com',password: 'admin_password',password_confirmation: 'admin_password'}])
 
 # Still need to create sample Events likes ,follows and attends
 

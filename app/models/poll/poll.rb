@@ -1,4 +1,5 @@
-class Poll < ActiveRecord::Base
+class Poll::Poll < ActiveRecord::Base
+
 
   has_many   :poll_options, :dependent => :destroy
   accepts_nested_attributes_for :poll_options,

@@ -1,4 +1,4 @@
-class CreateImages < ActiveRecord::Migration
+class CreateAssets < ActiveRecord::Migration
   def change
     create_table :images do |t|
       t.string :image_url
@@ -7,11 +7,11 @@ class CreateImages < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :comments do |t|
+    create_table :reviews do |t|
       t.belongs_to :user
       t.text :content
       t.integer :rating
-      t.belongs_to :commentable, polymorphic: true, index: true
+      t.belongs_to :reviewable, polymorphic: true, index: true
 
       t.timestamps
     end

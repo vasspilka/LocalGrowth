@@ -1,5 +1,6 @@
-class PollVote < ActiveRecord::Base
+class Poll::PollVote < ActiveRecord::Base
   
+
   before_create :increase_poll_votes
   before_create :increase_poll_option_votes 
   
