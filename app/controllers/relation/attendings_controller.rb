@@ -1,4 +1,4 @@
-class AttendingsController < ApplicationController
+class Relation::AttendingsController < ApplicationController
   #before_action :signed_in_user
 
   def create

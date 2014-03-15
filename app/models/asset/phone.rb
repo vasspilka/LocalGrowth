@@ -1,3 +1,3 @@
-class Phone < ActiveRecord::Base
+class Asset::Phone < ActiveRecord::Base
   belongs_to :phoneable, polymorphic: true
 end

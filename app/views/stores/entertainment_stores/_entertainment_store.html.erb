@@ -29,9 +29,9 @@
                 <% end %>
               </ul></td>
               <td>
-                <p>Διεύθυνση: <%= entertainment_store.address %>   </p>          
+                <p>Διεύθυνση:   </p>          
                 <p><%= entertainment_store.description %></p>
-                Likes: <span id="likes_count<%=entertainment_store.class.to_s%><%=entertainment_store.id%>"><%= entertainment_store.points %><span>
+                Likes: <span id="likes_count<%=entertainment_store.id%>"><%= entertainment_store.points %><span>
               </td>
             </tr>
           </tbody>
@@ -41,7 +41,7 @@
     <section>
       <p class="title" data-section-title><a href="#panel2">tags</a></p>
       <div class="content" data-section-content>
-        <% if entertainment_store.entertainment_tags.any? %>
+        <% if entertainment_store.tags.any? %>
           <tr>
             <th width="100%"  class="tag center">          
                 <b>Υποκατηγορίες:</b>

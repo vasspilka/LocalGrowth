@@ -15,7 +15,7 @@
     Hello, and wellcome to <%= CONFIG[:app_name] %>
   </p>
   
-    <%= if current_user then render 'shared/poll' unless Poll.first.blank? end %> <!-- This is here for testing -->
+    <%= if current_user then render 'shared/poll' unless Poll::Poll.first.blank? end %> <!-- This is here for testing -->
 
 
     <!-- You can do this for Stores::EntertainmentCategory and Stores::OtherCategory aswell -->

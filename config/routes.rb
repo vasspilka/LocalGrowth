@@ -24,12 +24,13 @@ LocalGrowth::Application.routes.draw do
   resources :events
   resources :deals
   resources :feedback_messages
-  resources :relationships, only: [:create, :destroy]
-  resources :likes, only: [:create, :destroy]
-  resources :attendings, only: [:create, :destroy]
   resources :poll_votes, only: [:create, :destroy]
 
-
+  namespace :relation do
+    resources :relationships, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
+    resources :attendings, only: [:create, :destroy]
+  end
 
   # Matching
   match '/help',    to: 'static_pages#help' ,   via: 'get'

@@ -1,5 +1,6 @@
 class CreateStores < ActiveRecord::Migration
   def change
+
     create_table :entertainment_categories do |t|
       t.string :title
 

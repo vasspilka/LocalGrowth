@@ -4,30 +4,30 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
-  has_many :comments
-  has_many :phones, as: :phoneable
-  #Relationship with other users       
-  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+
+  # Assets       
+  has_many :reviews ,class_name: "Asset::Review"
+  has_many :phones, as: :phoneable, class_name: "Asset::Phone"
+
+
+
+  # Relations       
+  has_many :relationships, foreign_key: "follower_id", class_name: "Relation::Relationship", dependent: :destroy
+  has_many :likes, foreign_key: "user_id", dependent: :destroy , class_name: "Relation::Like"
+  has_many :attendings, foreign_key: "user_id", dependent: :destroy, class_name: "Relation::Attending"
+  has_many :poll_votes, foreign_key: "user_id", dependent: :destroy, class_name: "Poll::PollVote"
+
+  # Relations scoped
   has_many :followed_users, through: :relationships, source: :followed
-  has_many :reverse_relationships, foreign_key: "followed_id",
-                                   class_name:  "Relationship",
-                                   dependent:   :destroy
+  has_many :reverse_relationships, foreign_key: "followed_id",class_name: "Relation::Relationship", dependent:   :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
-
-  #Relationship with likeable objects (stores,Events,Deals)
-  has_many :likes, foreign_key: "user_id", dependent: :destroy
-  has_many :liked_events, through: :likes, source: :likeable, source_type: 'Event'
-  has_many :liked_deals, through: :likes, source: :likeable, source_type: 'Deal'
-  has_many :liked_entertainment_stores, through: :likes, source: :likeable, source_type: 'EntertainmentStore'
-  has_many :liked_food_stores, through: :likes, source: :likeable, source_type: 'FoodStore'
-  has_many :liked_other_stores, through: :likes, source: :likeable, source_type: 'OtherStore'
-  
-  #Relationship with Events
-  has_many :attendings, foreign_key: "user_id", dependent: :destroy
-  has_many :attended_events, through: :attendings, source:  :event
-
-  has_many :poll_votes, foreign_key: "user_id", dependent: :destroy
-  has_many :voted_polls, through: :votes, source:  :poll
+  has_many :liked_events, through: :likes, source: :likeable, source_type: 'Ead::Event'
+  has_many :liked_deals, through: :likes, source: :likeable, source_type: 'Ead::Deal'
+  has_many :liked_entertainment_stores, through: :likes, source: :likeable, source_type: 'Stores::EntertainmentStore'
+  has_many :liked_food_stores, through: :likes, source: :likeable, source_type: 'Stores::FoodStore'
+  has_many :liked_other_stores, through: :likes, source: :likeable, source_type: 'Stores::OtherStore'
+  has_many :attended_events, through: :attendings, source:  :event, class_name: "Ead::Event"
+  has_many :voted_polls, through: :poll_votes, source:  :poll
 
   #Actions for connectors
   def attended?(event)

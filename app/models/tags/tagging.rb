@@ -1,7 +1,4 @@
-class EntertainmentTagging < ActiveRecord::Base
- 
-  self.table_name = "tags_taggings"
-
+class Tags::Tagging < ActiveRecord::Base
   belongs_to :tag
   belongs_to :tagable, polymorphic: true
 end

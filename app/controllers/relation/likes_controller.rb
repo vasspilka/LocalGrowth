@@ -1,8 +1,8 @@
-class LikesController < ApplicationController
+class Relation::LikesController < ApplicationController
   #before_action :signed_in_user
 
   def create
-    @likeable = params[:like][:likeable_type].constantize.find(params[:like][:likeable_id])
+    @likeable = params[:relation_like][:likeable_type].constantize.find(params[:relation_like][:likeable_id])
     current_user.like!(@likeable)
     respond_to do |format|
       format.html { redirect_to @likeable }
@@ -11,7 +11,7 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    @like = Like.find(params[:id])
+    @like = Relation::Like.find(params[:id])
     @likeable_object = @like.likeable_type.constantize
     @likeable = @likeable_object.find(@like.likeable_id)
     current_user.unlike!(@likeable)

@@ -1,4 +1,4 @@
-class RelationshipsController < ApplicationController
+class Relation::RelationshipsController < ApplicationController
   #before_action :signed_in_user
 
   def create
