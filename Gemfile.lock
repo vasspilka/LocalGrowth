@@ -4,6 +4,13 @@ GIT
   specs:
     database_cleaner (1.2.0)
 
+GIT
+  remote: git://github.com/jasonl/rails_admin_map_field.git
+  revision: 2a15647ece364509f690c0df739a689885bea532
+  specs:
+    rails_admin_map_field (0.0.1)
+      rails (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -328,6 +335,7 @@ DEPENDENCIES
   rails-i18n
   rails_12factor (= 0.0.2)
   rails_admin (= 0.6.0)
+  rails_admin_map_field!
   rspec-rails
   sass-rails
   sdoc
