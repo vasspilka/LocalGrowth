@@ -7,6 +7,7 @@ class CreateAssets < ActiveRecord::Migration
       t.timestamps
     end
 
+
     create_table :phones do |t|
       t.string :number
       t.string :number_type
@@ -33,5 +34,17 @@ class CreateAssets < ActiveRecord::Migration
 
       t.timestamps
     end
+
+
+    create_table :tags do |t|
+      t.string :title
+      t.timestamps
+    end
+
+    create_table :taggings do |t|
+      t.belongs_to :tag
+      t.belongs_to :tagable ,polymorphic: true, index: true
+      t.timestamps
+    end    
   end
 end

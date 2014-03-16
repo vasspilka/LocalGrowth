@@ -6,4 +6,11 @@ class Ead::Deal < Ead::Base
   self.table_name = "deals"
 
   belongs_to :dealable, polymorphic: true
+
+  public
+
+  def store
+    store = self.dealable
+    store
+  end
 end

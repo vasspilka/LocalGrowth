@@ -11,9 +11,9 @@ class Ead::Base < ActiveRecord::Base
   protected
 
   def add_points_to_store
-    unless self.adable.blank?
-  	  points = self.adable.points + self.points_value
-  	  self.adable.update_attributes(:points => points)
+    unless self.store.blank?
+  	  points = self.store.points + self.points_value
+  	  self.store.update_attributes(:points => points)
     end
   end
 

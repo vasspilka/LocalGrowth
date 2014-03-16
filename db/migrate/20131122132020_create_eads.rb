@@ -43,6 +43,7 @@ class CreateEads < ActiveRecord::Migration
       t.timestamps
     end
  
-
+    create_table :bases do |t|
+    end
   end
 end
