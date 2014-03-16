@@ -10,13 +10,14 @@
   <title><%= full_title(yield(:title)) %></title>
   <%= favicon_link_tag '/favicon.ico' %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/google_analytics_and_maps' %>
 </head>
 <body>
   <%= render 'shared/nav' %>
   <%= render 'shared/sidenav' %>
-	
+  
   <%= render 'layouts/flash_notice' %>
       
   <!-- # Main website content -->
@@ -26,7 +27,6 @@
   <%= render 'shared/misc' %>
   <%= render 'shared/footer' %>
   <%= render 'shared/mobilenav' %>
-	
-  <%= javascript_include_tag "application" %>
+  
 </body>
 </html>
