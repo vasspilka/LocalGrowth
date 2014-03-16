@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   # Assets       
   has_many :reviews ,class_name: "Asset::Review"
   has_many :phones, as: :phoneable, class_name: "Asset::Phone"
+  has_many :locations, as: :geocoded , class_name: "Asset::Location"
 
 
 
