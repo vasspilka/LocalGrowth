@@ -1,4 +1,8 @@
 class Stores::FoodStore < Stores::BaseStore
+
+  ## Inherits from BaseStore
+  #
+
   self.table_name = "food_stores"
 
   belongs_to :food_category
