@@ -11,7 +11,7 @@ class Asset::Review < ActiveRecord::Base
 
 
   # Scopes
-  scope :with_rating, where(rating: => true)
+  # scope :with_rating, where(rating: => true)
 
 
   private

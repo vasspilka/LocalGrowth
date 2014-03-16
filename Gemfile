@@ -26,6 +26,7 @@ gem 'uglifier', '>= 1.3.0'        # Removes all spaces from css files.
 gem 'coffee-rails', '~> 4.0.0' 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
+gem 'underscore-rails'
 
 
 # Front-end gems

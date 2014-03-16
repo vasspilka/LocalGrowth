@@ -1,7 +1,3 @@
-
-
-
-
 <!--
 <% # On EAD you can use any search method you want and you can load as manny objects as you want here are some rendering options %>
 <%= render partial: "shared/deal.html.erb", collection: Ead::Deal.all unless Ead::Deal.first.blank? %>
@@ -9,19 +5,16 @@
 <%= render partial: "shared/event.html.erb", object: Ead::Event.order( 'RANDOM()' ).first unless Ead::Event.first.blank? %>
 <% # End of EAD rendering %>        
 -->
-	<nav class="sidenav">
+<nav class="sidenav">
 		
-	<ul class="toplist">
-  		 <li> <a href="#"> <i class="icon-search"></i> </a></li>
-	</ul>
+  <ul class="toplist">
+    <li><a href="#"><i class="icon-search"></i></a></li>
+  </ul>
 		 
-	    <ul class="midlist">
-<li><a href="/food_categories">  <%= t "views.sidenav.explore" %></a></li>
+  <ul class="midlist">
+    <li><a href="/food_categories">  <%= t "views.sidenav.explore" %></a></li>
+    <li><a href="/entertainment_categories"> <%= t "views.sidenav.fun" %></a></li>	  
+    <li><a href="/other_categories"> <%= t "views.sidenav.other" %></a></li>
+  </ul>
 
-<li><a href="/entertainment_categories"> <%= t "views.sidenav.fun" %></a></li>
-	  
-<li><a href="/other_categories"> <%= t "views.sidenav.other" %></a></li>
-	    </ul>
-		
-	 </nav>
- 
+</nav>

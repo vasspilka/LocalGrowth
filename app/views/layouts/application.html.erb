@@ -11,25 +11,22 @@
   <%= favicon_link_tag '/favicon.ico' %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
-  <%= render 'layouts/google_analytics' %>
+  <%= render 'layouts/google_analytics_and_maps' %>
 </head>
 <body>
-    <%= render 'shared/nav' %>
-    <%= render 'shared/sidenav' %>
+  <%= render 'shared/nav' %>
+  <%= render 'shared/sidenav' %>
 	
-
-    <%= render 'layouts/flash_notice' %>
+  <%= render 'layouts/flash_notice' %>
       
-      <% # Main website content %>
-      <%= yield %>
-
-
+  <!-- # Main website content -->
+  <%= yield %>
    
 
-    <%= render 'shared/misc' %>
-    <%= render 'shared/footer' %>
-    <%= render 'shared/mobilenav' %>
+  <%= render 'shared/misc' %>
+  <%= render 'shared/footer' %>
+  <%= render 'shared/mobilenav' %>
 	
-    <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application" %>
 </body>
 </html>

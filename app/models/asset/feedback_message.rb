@@ -1,4 +1,4 @@
-class FeedbackMessage < ActiveRecord::Base
+class Asset::FeedbackMessage < ActiveRecord::Base
   belongs_to :user
 
 

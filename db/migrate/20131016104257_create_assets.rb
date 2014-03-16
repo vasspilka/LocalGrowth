@@ -15,6 +15,15 @@ class CreateAssets < ActiveRecord::Migration
       t.timestamps
     end
 
+    create_table :locations do |t|
+      t.string :address
+      t.belongs_to :geocoded, polymorphic: true, index: true
+      t.float :latitude
+      t.float :longitude
+
+      t.timestamps
+    end
+
     create_table :reviews do |t|
       t.belongs_to :user
       t.boolean  :expert, :default => false
