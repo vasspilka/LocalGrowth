@@ -7,7 +7,6 @@ class CreateTags < ActiveRecord::Migration
       t.timestamps
     end
 
-
     create_table :taggings do |t|
       t.belongs_to :tag, index: true
       t.belongs_to :tagable ,polymorphic: true, index: true

@@ -1,4 +1,4 @@
-class CreateStores < ActiveRecord::Migration
+class CreateStoresAndCategories < ActiveRecord::Migration
   def change
 
     create_table :entertainment_categories do |t|
@@ -9,9 +9,9 @@ class CreateStores < ActiveRecord::Migration
 
     create_table :entertainment_stores do |t|
       t.string :title
-      t.references :entertainment_category
+      t.references :entertainment_category, index: true
       t.text :description
-      t.string :logo_url
+      t.string :logo_url, :default => "no-image.jpg"
       t.string :website_url
       t.string :working_hours
       t.integer :rating ,:limit => 1
@@ -30,7 +30,7 @@ class CreateStores < ActiveRecord::Migration
       t.string :title
       t.references :food_category, index: true
       t.text :description
-      t.string :logo_url
+      t.string :logo_url, :default => "no-image.jpg"
       t.string :website_url
       t.string :working_hours
       t.integer :min_order, :default => 5
@@ -50,7 +50,7 @@ class CreateStores < ActiveRecord::Migration
       t.string :title
       t.references :other_category, index: true
       t.text :description
-      t.string :logo_url
+      t.string :logo_url, :default => "no-image.jpg" 
       t.string :website_url
       t.string :working_hours
       t.integer :points ,:default => 0

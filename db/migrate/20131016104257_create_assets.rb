@@ -7,19 +7,20 @@ class CreateAssets < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :reviews do |t|
-      t.belongs_to :user
-      t.text :content
-      t.integer :rating
-      t.belongs_to :reviewable, polymorphic: true, index: true
-
-      t.timestamps
-    end
-
     create_table :phones do |t|
       t.string :number
       t.string :number_type
       t.belongs_to :phoneable, polymorphic: true, index: true
+
+      t.timestamps
+    end
+
+    create_table :reviews do |t|
+      t.belongs_to :user
+      t.boolean  :expert, :default => false
+      t.text :content
+      t.integer :rating
+      t.belongs_to :reviewable, polymorphic: true, index: true
 
       t.timestamps
     end

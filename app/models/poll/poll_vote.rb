@@ -1,10 +1,9 @@
 class Poll::PollVote < ActiveRecord::Base
   
-
+  # callbacks
   before_create :increase_poll_votes
   before_create :increase_poll_option_votes 
   
-
   # associations
   belongs_to :user
   belongs_to :poll
@@ -13,7 +12,6 @@ class Poll::PollVote < ActiveRecord::Base
   # validations
   validates :poll_option_id, :user_id, :poll_id, :presence => true
 
-  # callbacks
   private
 
     def increase_poll_votes

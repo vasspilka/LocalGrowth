@@ -41,7 +41,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.date   :birthday
       t.string :address
       t.string :gravatar
-      t.integer :student_am
+      t.integer :student_id
 
 
       t.timestamps

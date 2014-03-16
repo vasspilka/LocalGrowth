@@ -10,13 +10,14 @@ class Stores::BaseStore < ActiveRecord::Base
   has_many :deals, as: :dealable, class_name: "Ead::Deal"
   has_many :likes, as: :likeable, class_name: "Relation::Like"
 
-  paginates_per 7
   validates :title, presence: true
+  paginates_per 20
 
-  private
+  public
 
   def rating_percent
     percentage = self.rating / self.reviews.with_rating.count
+    percentage
   end
 
 end

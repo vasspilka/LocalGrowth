@@ -1,5 +1,4 @@
 class Stores::OtherStore < Stores::BaseStore
-
   self.table_name = "other_stores"
 
   belongs_to :other_category
