@@ -57,7 +57,6 @@ users = User.create([
   ])
 
 
-# Still need to create sample likes ,follows and attends
 
 events = Ead::Event.create([{image_url:'no-image.jpg',title: 'Roots Reggae at Roots', description:'Roots Reggae , dj ChillyWingz', eventable_id: 3, eventable_type:"Stores::EntertainmentStore",starts_at: '28/12/2013 20:30'},
   {image_url:'no-image.jpg',title: 'The Ultimate Booksale', description:'Old and new books really cheap, only at the corner bookstore for 2 weeks', eventable_id: 1, eventable_type:"Stores::OtherStore", starts_at: '13/1/2014', ends_at: '27/1/2014'}])
@@ -69,5 +68,6 @@ deals = Ead::Deal.create([{image_url:'no-image.jpg',title: 'Pizza Frenzy', descr
 ads = Ead::Ad.create([{image_url:'no-image.jpg',title: 'Trinity the ultimate clubbing experience', description:'Daily House/RnB, Fridays and Saturdays guest DJ SoundBlast', adable_id: 1, adable_type: "Stores::EntertainmentStore" },
   {image_url:'no-image.jpg',title: 'Roots Rock-bar', description:'Chill out with relaxing music', adable_id: 3, adable_type: "Stores::EntertainmentStore" }])
 
+#reviews = Asset::Review.create([{username: 'Snowden', email: 'snowden@gmail.com', content: 'This place is awsome, They will never find me here :D'}])
 
-#comments = Comment.create([{username: 'Snowden', email: 'snowden@gmail.com', content: 'This place is awsome, They will never find me here :D'}])
+# Still need to create sample Relations and 

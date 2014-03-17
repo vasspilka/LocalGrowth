@@ -30,56 +30,34 @@ class User < ActiveRecord::Base
   has_many :attended_events, through: :attendings, source:  :event, class_name: "Ead::Event"
   has_many :voted_polls, through: :poll_votes, source:  :poll
 
-  #Actions for connectors
+  # Functions for Relations
   def attended?(event)
-  	attendings.find_by(event_id: event.id)
-  end
-  
+  	attendings.find_by(event_id: event.id) end
   def attend!(event)
-  	attendings.create!(event_id: event.id)
-  end
-
+  	attendings.create!(event_id: event.id) end
   def unattend!(event)
-  	attendings.find_by(event_id: event.id).destroy!
-  end
+  	attendings.find_by(event_id: event.id).destroy! end
 
-  #Actions for likeable obects
   def likes?(likeable)
-  	likes.find_by(likeable_id: likeable.id,likeable_type: likeable.class.to_s)
-  end
-  
+  	likes.find_by(likeable_id: likeable.id,likeable_type: likeable.class.to_s) end
   def like!(likeable)
-  	likes.create!(likeable_id: likeable.id,likeable_type: likeable.class.to_s)
-  end
-
+  	likes.create!(likeable_id: likeable.id,likeable_type: likeable.class.to_s) end
   def unlike!(likeable)
-  	likes.find_by(likeable_id: likeable.id,likeable_type: likeable.class.to_s).destroy!
-  end
+  	likes.find_by(likeable_id: likeable.id,likeable_type: likeable.class.to_s).destroy! end
 
-  #Actions for Relations with Users
   def following?(other_user)
-    relationships.find_by(followed_id: other_user.id)
-  end
-
+    relationships.find_by(followed_id: other_user.id) end
   def follow!(other_user)
-    relationships.create!(followed_id: other_user.id)
-  end
-
+    relationships.create!(followed_id: other_user.id) end
   def unfollow!(other_user)
-    relationships.find_by(followed_id: other_user.id).destroy!
-  end
+    relationships.find_by(followed_id: other_user.id).destroy! end
 
   def vote!(poll_option)
-    poll_votes.create!(poll_option_id: poll_option.id, poll_id: poll_option.poll_id)
-  end
-
+    poll_votes.create!(poll_option_id: poll_option.id, poll_id: poll_option.poll_id) end
   def unvote!(poll)
-    poll_votes.find_by(poll_id: poll.id).destroy!
-  end
-
+    poll_votes.find_by(poll_id: poll.id).destroy! end
   def voted?(poll)
-    poll_votes.find_by(poll_id: poll.id)
-  end
+    poll_votes.find_by(poll_id: poll.id) end
 
 
   # Facebook login using omniauth
