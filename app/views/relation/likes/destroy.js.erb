@@ -1,2 +1,2 @@
-$("#like-button<%=@likeable.id%>").html("<%= escape_javascript(render '/shared/like', :likeable => @likeable) %>")
+$("#like-button<%=@likeable.id%>").html("<%= escape_javascript(render '/relation/like', :likeable => @likeable) %>")
 $("#likes_count<%=@likeable.id%>").html('<%= @likeable.points - 1 %>')

@@ -1,4 +1,4 @@
-$("#attend_button").html("<%= escape_javascript(render('shared/attend', :event => @event)) %>")
+$("#attend_button").html("<%= escape_javascript(render('relation/attend', :event => @event)) %>")
 $("#attendings_count<%=@event.class.to_s%><%=@event.id%>").html('<%= @event.attendings.count %>')
 
 
