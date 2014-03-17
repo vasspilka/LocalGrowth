@@ -18,7 +18,7 @@ class Stores::BaseStore < ActiveRecord::Base
 
   def rating_percent
     percentage = self.rating / self.reviews.with_rating.count
-    percentage
+    return percentage
   end
 
 end

@@ -11,6 +11,6 @@ class Ead::Deal < Ead::Base
 
   def store
     store = self.dealable
-    store
+    return store
   end
 end

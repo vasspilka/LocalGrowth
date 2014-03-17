@@ -11,6 +11,6 @@ class Ead::Ad < Ead::Base
 
   def store
     store = self.adable
-    store
+    return store
   end
 end
