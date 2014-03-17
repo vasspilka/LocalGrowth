@@ -1,41 +1,31 @@
 <%= stylesheet_link_tag :food_categories, :media => "all" %>
 
 
-<!--<%= image_tag(food_store.logo_url) %>
-<%= food_store.title %>
-<%= food_store.address %>
-<<<<<<< HEAD:app/views/stores/food_stores/_food_store.html.erb
-<p id="likes_count<%=food_store.class.to_s%><%=food_store.id%>"> <%= food_store.points %><p>
-
-<%= render 'shared/like_form', :likeable => food_store if user_signed_in? %>
-=======
-<<<<<<< HEAD
-<p id="likes_count<%=food_store.class.to_s%><%=food_store.id%>"> <%= food_store.points %></p>
--->
-
 <div id="columns">
   <figure>
 	  <%= image_tag(food_store.logo_url) %>
 	<figcaption>
 <ul>	
-	<li> <i class="icon-airplane"></i>	
-<% if food_store.food_tags.any? then %>            
-    <% food_store.food_tags.each do |tag| %>
-      <%= tag.title %>
-    <% end %> 
-<% end %>
-
-<% if food_store.phones.any? then %>
-  <%= t("phone", :count => food_store.phones.count ) %>
-  <% food_store.phones.each do |phone| %>
-    <%= phone.number_type + ": " + phone.number %>
-  <% end %> 
-<% end %>
-
-</li>
+  <li><i class="icon-airplane"></i> <%= food_store.title %></li>
+  <li><i class="icon-airplane"></i>	
+    <% if food_store.tags.any? then %>          
+        <% food_store.tags.each do |tag| %>
+          <%= tag.title %>
+        <% end %> 
+    <% end %>
+  </li>
+  <li>
+    <% if food_store.phones.any? then %>
+      <%= t("phone", :count => food_store.phones.count ) %>
+      <% food_store.phones.each do |phone| %>
+        <%= phone.number_type + ": " + phone.number %>
+      <% end %> 
+    <% end %>
+  </li>
 	
-		<li><i class="icon-airplane"></i> <%= food_store.title %></li>
-		<li><i class="icon-airplane"></i> <%= food_store.address %></li>
+  <% food_store.locations.each do  |location|%>
+    <li><i class="icon-airplane"></i><%= location.address %></li>
+  <% end %>
 		
  <li id="likes_count<%=food_store.id%>"><i class="icon-bar-graph"></i> <%= food_store.points %></li>
 		

@@ -1,76 +1,43 @@
-<article>
-  <div class="section-container auto" data-section>
-    <section class="active">
-      <p class="title" data-section-title><a href="#panel1">General</a></p>
-      <div class="content" data-section-content>
-        <table>
-          <thead>
-            <tr>
-              <th width="90">Logo</th>
-              <th width="70">Title</th>
-              <th width="200">Phones</th>
-              <th width="200">Info</th>           
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><%= image_tag "#{entertainment_store.logo_url}", class: "geush-logo"%></td>
-              <td><%= entertainment_store.title %></td>
-              <td><ul>
-                <% if entertainment_store.phones.any? %>
-                  <% if entertainment_store.phones.count > 1 %>
-                    <th>Τηλέφωνα</th>
-                  <% else %>
-                    <th>Τηλέφωνο</th>
-                  <% end %>
-                  <% entertainment_store.phones.each do |phone| %>
-                    <li><%= phone.number_type + ": " + phone.number %></li>
-                  <% end %> 
-                <% end %>
-              </ul></td>
-              <td>
-                <p>Διεύθυνση:   </p>          
-                <p><%= entertainment_store.description %></p>
-                Likes: <span id="likes_count<%=entertainment_store.id%>"><%= entertainment_store.points %><span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <section>
-      <p class="title" data-section-title><a href="#panel2">tags</a></p>
-      <div class="content" data-section-content>
-        <% if entertainment_store.tags.any? %>
-          <tr>
-            <th width="100%"  class="tag center">          
-                <b>Υποκατηγορίες:</b>
-            </th>
-          </tr>      
-          <tr>
-            <td width="100%" class="center">              
-              <% entertainment_store.entertainment_tags.each do |tag| %>
-                <b class="tags"><%= tag.title %></b>
-              <% end %> 
-            </td>
-          </tr>
-        <% end %>
-      </div>
-    </section>
-    <section>
-      <p class="title" data-section-title><a href="#panel3">Deals</a></p>
-      <div class="content" data-section-content>
-        <p>Content of section 3.</p>
-      </div>
-    </section>
-    <section>
-      <p class="title" data-section-title><a href="#panel4">Links</a></p>
-      <div class="content" data-section-content>
-        <p>Content of section 4.</p>
-      </div>
-    </section>
-  </div>
-  <%= render 'shared/like_form', :likeable => entertainment_store if user_signed_in? %>
+<%= stylesheet_link_tag :entertainment_categories, :media => "all" %>
 
+
+<div id="columns">
+  <figure>
+    <%= image_tag(entertainment_store.logo_url) %>
+  <figcaption>
+<ul>  
+  <li><i class="icon-airplane"></i> <%= entertainment_store.title %></li>
+  <li><i class="icon-airplane"></i> 
+    <% if entertainment_store.tags.any? then %>          
+        <% entertainment_store.tags.each do |tag| %>
+          <%= tag.title %>
+        <% end %> 
+    <% end %>
+  </li>
+  <li>
+    <% if entertainment_store.phones.any? then %>
+      <%= t("phone", :count => entertainment_store.phones.count ) %>
+      <% entertainment_store.phones.each do |phone| %>
+        <%= phone.number_type + ": " + phone.number %>
+      <% end %> 
+    <% end %>
+  </li>
   
-</article>
+  <% entertainment_store.locations.each do  |location|%>
+    <li><i class="icon-airplane"></i><%= location.address %></li>
+  <% end %>
+    
+ <li id="likes_count<%=entertainment_store.id%>"><i class="icon-bar-graph"></i> <%= entertainment_store.points %></li>
+    
+</ul>
+    
+  </figcaption>
+  </figure>
+  
+
+</div>
+  
+  
+<%= render 'shared/like_form', :likeable => entertainment_store if user_signed_in? %>
+
+

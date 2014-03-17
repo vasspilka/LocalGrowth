@@ -1,53 +1,43 @@
-<h3>This is the view for individual Food store find me in "app/views/food_stores/_food_store.html.erb"</h3>
-<table class="store-item " id="<%= other_store.id%>" width="600px" height="100px"> 
-  <td class="store-logo" width="130px;" height="100%"><%= image_tag(other_store.logo_url) %></td>
-  <td class="store-info" height="100%" width="65%"> 
-    <table width="100%" height="100%">
-      <tr height="48%">
-        <td width="100%"><table width="100%" height="100%" id="main-data">
-          <td width="56%" height="100%" class="center" id="title"><b ><%= other_store.title %></b></td>
-          <td width="44%" id="address" class="center"><b>Διέυθηνση:</b><br><b><%= other_store.address %></b></td>
-        </table></td>
-      </tr>
-      <% if other_store.other_tags.any? %>
-      <tr>
-        <th width="100%"  class="tag center">          
-            <b>Υποκατηγορίες:</b>
-        </th>
-      </tr>      
-      <tr>
-        <td width="100%" class="center">              
-          <% other_store.other_tags.each do |tag| %>
-            <b class="tags"><%= tag.title %></b>
-          <% end %> 
-        </td>
-      </tr>
-      <% else %>
-      <tr></tr>
-      <tr></tr>
-      <% end %>
+<%= stylesheet_link_tag :other_categories, :media => "all" %>
 
-    </table>
-  </td>
-  <% if other_store.phones.any? %>
-  <td class="phones" height="100%" width="21%"> 
-    <table class="center"> 
-    <% if other_store.phones.count > 1 %>
-      <th>Τηλέφωνα</th>
-    <% else %>
-      <th>Τηλέφωνο</th>
+
+<div id="columns">
+  <figure>
+    <%= image_tag(other_store.logo_url) %>
+  <figcaption>
+<ul>  
+  <li><i class="icon-airplane"></i> <%= other_store.title %></li>
+  <li><i class="icon-airplane"></i> 
+    <% if other_store.tags.any? then %>          
+        <% other_store.tags.each do |tag| %>
+          <%= tag.title %>
+        <% end %> 
     <% end %>
+  </li>
+  <li>
+    <% if other_store.phones.any? then %>
+      <%= t("phone", :count => other_store.phones.count ) %>
       <% other_store.phones.each do |phone| %>
-          <tr>            
-            <td>
-              <%= phone.number_type + ":" %>
-              <%= phone.number %>
-            </td>
-          </tr>
+        <%= phone.number_type + ": " + phone.number %>
       <% end %> 
-    </table>
-  </td>
-  <% else %>
-    <td class="phones" height="100%" width="21%"></td>
+    <% end %>
+  </li>
+  
+  <% other_store.locations.each do  |location|%>
+    <li><i class="icon-airplane"></i><%= location.address %></li>
   <% end %>
-</table>
+    
+ <li id="likes_count<%=other_store.id%>"><i class="icon-bar-graph"></i> <%= other_store.points %></li>
+    
+</ul>
+    
+  </figcaption>
+  </figure>
+  
+
+</div>
+  
+  
+<%= render 'shared/like_form', :likeable => other_store if user_signed_in? %>
+
+
