@@ -2,11 +2,10 @@
 
 <nav class="sitenav animated fadeInDown">
   <span id="home"></span>
-  <a class="scroll" data-speed="500" data-easing="easeInOutCubic" data-url="false" href="#mnav"><i class="icon-list"></i></a>
   <div class="valign">
-	<ul>	
+	<ul>
        <li><%= link_to " home", root_path, :class => "home navicons" %></li>
-	   <li><%= link_to " login", new_user_session_path, :class => "login navicons" unless current_user %></li>	
+	   <li><%= link_to " login", new_user_session_path, :class => "login navicons" unless current_user %></li>
 	   <li><%= link_to " logout", destroy_user_session_path, :class => "logout navicons", method: "DELETE" if current_user %> </li>
 	</ul>
   </div>

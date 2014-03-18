@@ -19,23 +19,22 @@ gem "rails_admin_map_field", :git => "git://github.com/jasonl/rails_admin_map_fi
 gem "devise"                  # User model & authorisation
 gem 'omniauth-facebook'       # Facebook Login
 gem 'rails_admin', '0.6.0'    # Admin Panel
-gem 'bcrypt-ruby' 
+gem 'bcrypt-ruby'
 
 # Javascript related gems
 gem 'uglifier', '>= 1.3.0'        # Removes all spaces from css files.
-gem 'coffee-rails', '~> 4.0.0' 
+gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'underscore-rails'
 
 
 # Front-end gems
-gem 'compass-rails', '~> 1.1.3' 
+gem 'compass-rails', '~> 1.1.3'
 gem 'entypo-rails'
 gem "breakpoint"
 gem 'sass-rails'
 gem 'simple_form'
-
 
 
 # Pagination with

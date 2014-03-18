@@ -18,7 +18,7 @@
 html,body	{
 	background: #fff;
 	@include font-smoothing(on);
-	
+
 }
 
 
@@ -38,9 +38,9 @@ html,body	{
  max-height: 20px;
 }
 
-.footer-info { 
+.footer-info {
  list-style-type: none;
- 
+
  li {
   display: inline;
  }
@@ -70,4 +70,3 @@ html,body	{
 .skype-color {
  color: $skype-color;
 }
-

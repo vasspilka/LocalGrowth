@@ -4,112 +4,9 @@
 @import "basestyles";
 
 
-/*navigation*/	
+/*navigation*/
 
-#mobile_nav {
-	display: none;
-	margin-top: 2rem;
-	ul {
-		$font-family: $font-1;
-		list-style: none;
-		padding: 5px 0 0 0;
-		text-align: center;
-	}
-	
-	li {
-		
-		background: $solid-bg;
-		border-bottom: 1px solid $solid-bg-lighten;
-		color: #fff;
-		@include transition-property(background);
-		@include transition-duration(0.1s);
-		
-		&:hover,&:focus	{
-			background: $solid-bg-lighten;
-			
-			
-						}
-		a	{
-		
-					display: inline-block;
-					padding: 0 100px 0 100px;
-					text-decoration: none;
-					font-weight: 300;
-					text-transform: uppercase;
-					font-variant: small-caps;
-					letter-spacing: 0.1em;
-					letter-spacing: 0.1em;
-					line-height: 4em;
-					height: 4em;
 
-			}
-			
-			
-
-			&:first-child	{
-				margin-bottom: 1rem;
-				color: #000;
-				background: #fff;
-				border-bottom: none;
-			}
-			
-			
-			&:last-child {
-				
-				i	{
-					margin-right: 0.5rem;
-				}
-			
-			a	{
-				border-bottom: none;
-				margin-right: 0.8rem;
-				
-			}
-		}
-		.pulse	{
-		    -webkit-animation-duration: 2s;
-		    -webkit-animation-iteration-count: infinite;
-						
-   	  	  	-moz-animation-duration: 2s;
-	    	-moz-animation-iteration-count: infinite;
-			  
-		      animation-iteration-count: infinite;
-		      animation-duration: 2s;
-			
-		}
-		
-			&:hover	 .icon-direction {
-				@include transition-property(transform);
-				@include transition-duration(0.3s);
-				@include transition-timing-function(ease-in-out);
-   				@include rotate(-45deg);
-				
-			}
-			.icon-direction	{
-			    -webkit-animation-name: shine;
-			    -webkit-animation-duration: 1.5s;
-			    -webkit-animation-timing-function: ease-in-out;
-			    -webkit-animation-delay: 0s;
-			    -webkit-animation-iteration-count: infinite;
-			    -webkit-animation-direction: alternate;
-	
-			      -moz-animation-name: shine;
-			      -moz-animation-duration: 1.5s;
-			      -moz-animation-timing-function: ease-in-out;
-			      -moz-animation-delay: 0s;
-			      -moz-animation-iteration-count: infinite;
-			      -moz-animation-direction: alternate;
-	
-			      animation-name: shine;
-			      animation-duration: 1.5s;
-			      animation-timing-function: ease-in-out;
-			      animation-delay: 0s;
-			      animation-iteration-count: infinite;
-			      animation-direction: alternate;
-			}
-			
-	}
-}
 
 
 .sitenav	{
@@ -120,17 +17,17 @@
 	height: 60px;
 	background-color:rgba(255, 255, 255, 0);
 	z-index: 9;
-	
+
 	.icon-list	{
-		
+
 		display: none;
 		font-size: 270%;
 		background: rgba(0, 0, 0, 0.72);
 		padding: 0rem 1rem 0rem 1rem;
 		border-bottom-right-radius: 10px;
-	
+
 	}
-	
+
 
 	 ul	{
 	 	font-family: $font-1;
@@ -138,139 +35,207 @@
 		list-style-type: none;
 		float: right;
 	    padding: 1.250rem 0 1.875rem 0em;
-		
+
 		.navicons	{
 			@include font-smoothing(on);
 		}
-		
+
 		.home	{
 			font-family: 'entypo';
-			
+
 			&:before	{
 			content: "\2302";
 		}
 		}
-		
+
 		.login	{
-			
+
 			font-family: 'entypo';
-			
+
 			&:before	{
 			content: "\E740";
 		}
 	}
-	
+
 	.logout	{
-		
+
 		font-family: 'entypo';
-		
+
 		&:before	{
 		content: "\E741";
 	}
 }
 
 		li	{
-			
+
 			display: inline;
 			margin-right: 2.250rem;
-			
+
 		}
-	
+
 	}
 
 }
 
 
-.sidenav {
-   height: 100%;
-   width: 6rem;
-   background: rgba(55, 59, 65, 0.5);
-   font-size: 1rem;
-   font-weight: 400;
-   font-family: $font-1;
-   display: table;
-   position: fixed;    
-   left: 0;
-   top: 0;
-   z-index: 10;
-   border: 1px solid rgba(55, 59, 65, 0.93);
-   box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-   
-	
-   
-  @include transition-property(width, background);
-  @include transition-duration(0.5s);
-   
-  .toplist	{
-	  font-size: 1rem;
-	  position: absolute;
-   	  text-align: center;
-	  width: 100%;
-	  margin-top: 3rem;
-	  
-	  i	{
-		  opacity:0.8;
-	  }
-	  
-  }
-   
-   .midlist { 
-	   display: table-cell;
-	   vertical-align: middle;
-	   width: 100%;
-	   text-align: center;
-	   line-height: 3rem;
 
-	li	{
-	    overflow: hidden;
-		display: block;
-		text-transform: uppercase;
-		
+// SIDE NAVIGATION
+
+
+
+
+#layout {
+		position: relative;
+		padding-left: 0;
 }
-	
+		#layout.active {
+				position: relative;
+				left: 150px;
+		}
+				#layout.active #menu {
+						left: 150px;
+						width: 150px;
+				}
+
+				#layout.active .menu-link {
+						left: 150px;
+				}
+
+
+
+
+/*
+The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
+appears on the left side of the page.
+*/
+
+.menu-link	{
+	@include transition-property(background, left);
+	@include transition-duration(0.5s);
 }
 
- &:hover	{
-  width: 8em;
-  background: rgba(55, 59, 65, 0.9);
-  
-  @include transition-property(width, background);
-  @include transition-duration(0.3s);
-  
+#menu {
+		margin-left: -150px; /* "#menu" width */
+		width: 150px;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 1000; /* so the menu or its navicon stays above all content */
+		background: rgba(26, 25, 25, 1);
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		display: table;
 
- }
+@include transition-property(left);
+@include transition-duration(0.5s);
+
+		.pure-menu{
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+
+
+		ul {
+				border: none;
+				background: transparent;
+
+				li	{
+				margin-top: 2rem;
+				text-align: center;
+				text-transform: uppercase;
+
+			}
+
+		}
+
+		i	{
+			font-size: 1rem;
+		}
+
 }
 
-/* ANIMATION FOR CHEVRON */
-@-webkit-keyframes shine {
-  0% {
-	  opacity: 0.3;
-  }
 
-  100% {
-	  opacity: 1;
-  }
+.pure-menu-heading {
+
+		font-size: 1rem;
+		color: #fff;
+
 }
 
-@-moz-keyframes shine	{
-  0% {
-	  opacity: 0.3;
-  }
-
-  100% {
-	  opacity: 1;
-  }
+.pure-menu-selected a {
+		color: #fff;
+		opacity: 0.5;
 }
 
-@keyframes shine	{
-  0% {
-	  opacity: 0.3;
-  }
 
-  100% {
-	  opacity: 1;
-  }
 }
+
+/* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+/*
+The button to open/close the Menu is custom-made and not part of Pure. Here's
+how it works:
+*/
+
+/*
+`.menu-link` represents the responsive menu toggle that shows/hides on
+small screens.
+*/
+.menu-link {
+		position: fixed;
+		display: block; /* show this only on small screens */
+		top: 0;
+		left: 0; /* "#menu width" */
+		background: #000;
+		background: rgba(0,0,0,0.7);
+		font-size: 10px; /* change this value to increase/decrease button size */
+		z-index: 10;
+		width: 2em;
+		height: auto;
+		padding: 2.1em 1.6em;
+
+
+}
+
+		.menu-link:hover,
+		.menu-link:focus {
+				background: #000;
+		}
+
+		.menu-link span {
+				position: relative;
+				display: block;
+		}
+
+		.menu-link span,
+		.menu-link span:before,
+		.menu-link span:after {
+				background-color: #fff;
+				width: 100%;
+				height: 0.2em;
+		}
+
+				.menu-link span:before,
+				.menu-link span:after {
+						position: absolute;
+						margin-top: -0.6em;
+						content: " ";
+				}
+
+				.menu-link span:after {
+						margin-top: 0.6em;
+				}
+
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+
+
 
 
 // FOOTER
@@ -281,31 +246,31 @@
 	font-family: $font-1;
 	font-weight: 100;
 		ul	{
-			
+
 		li	{
 			opacity: 0.4;
 			margin-right: 0.5em;
-			
+
 			@include transition-property(opacity);
 			@include transition-duration(0.3s);
-			
+
 			&:hover	{
 				opacity:1;
-				
+
 			}
 		}
 	}
 
 }
 
-// MISC 
+// MISC
 
 .dots	{
 	position: fixed;
 	right: 3%;
 	bottom: 1%;
 	display: block;
-	
+
 	i	{
 		color: #fff;
 		font-size: 1.2rem;
@@ -317,7 +282,7 @@
 }
 
 
-.bubble 
+.bubble
 {
 visibility: hidden;
 bottom: 6%;
@@ -356,24 +321,44 @@ left: 48px;
 	.sidenav	{
 		display: none;
 	}
-	
+
 	.sitenav {
-	
-	.icon-list	{
-			display: inline;
-		}
-		
-		
+
 	ul	{
 		display: none;
 	}
 }
-	
+
 	#mobile_nav	{
 		display: block;
 	}
-	
 
 
-	
+
+
+}
+
+
+
+
+
+@include breakpoint (min-width 768px)	{
+
+    #layout {
+        padding-left: 150px; /* left col width "#menu" */
+        left: 0;
+    }
+    #menu {
+        left: 150px;
+    }
+
+    .menu-link {
+        position: fixed;
+        left: 150px;
+        display: none;
+    }
+
+    #layout.active .menu-link {
+        left: 150px;
+    }
 }
