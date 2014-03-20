@@ -12,7 +12,6 @@ class Ead::Event < Ead::Base
   public
 
   def store
-    store = self.eventable
-    return store
+    return self.eventable
   end
 end
