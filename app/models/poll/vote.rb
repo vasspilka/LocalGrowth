@@ -1,4 +1,6 @@
-class Poll::PollVote < ActiveRecord::Base
+class Poll::Vote < ActiveRecord::Base
+
+  self.table_name = "poll_votes"
   
   # callbacks
   before_create :increase_poll_votes

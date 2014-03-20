@@ -1,7 +1,7 @@
-class PollVotesController < ApplicationController
+class Poll::VotesController < ApplicationController
   
   def create
-    @option = PollOption.find(params[:poll_vote][:poll_option_id])
+    @option = Poll::PollOption.find(params[:poll_vote][:poll_option_id])
     current_user.vote!(@option)
     respond_to do |format|
       format.html { redirect_to @option }
@@ -10,7 +10,7 @@ class PollVotesController < ApplicationController
   end
 
   def destroy
-    @poll = Poll.find(@vote.poll_id)
+    @poll = Poll::Poll.find(@vote.poll_id)
     current_user.unvote!(@poll)
     respond_to do |format|
       format.html { redirect_to @poll }

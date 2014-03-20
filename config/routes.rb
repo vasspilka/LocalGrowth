@@ -24,8 +24,10 @@ LocalGrowth::Application.routes.draw do
   resources :events
   resources :deals
   resources :feedback_messages
-  resources :poll_votes, only: [:create, :destroy]
 
+  namespace :poll do
+    resources :votes, only: [:create, :destroy]
+  end
   namespace :relation do
     resources :relationships, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]

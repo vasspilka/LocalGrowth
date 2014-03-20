@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   has_many :relationships, foreign_key: "follower_id", class_name: "Relation::Relationship", dependent: :destroy
   has_many :likes, foreign_key: "user_id", dependent: :destroy , class_name: "Relation::Like"
   has_many :attendings, foreign_key: "user_id", dependent: :destroy, class_name: "Relation::Attending"
-  has_many :poll_votes, foreign_key: "user_id", dependent: :destroy, class_name: "Poll::PollVote"
+  has_many :poll_votes, foreign_key: "user_id", dependent: :destroy, class_name: "Poll::Vote"
 
   # Relations scoped
   has_many :followed_users, through: :relationships, source: :followed
@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
   has_many :liked_food_stores, through: :likes, source: :likeable, source_type: 'Stores::FoodStore'
   has_many :liked_other_stores, through: :likes, source: :likeable, source_type: 'Stores::OtherStore'
   has_many :attended_events, through: :attendings, source:  :event, class_name: "Ead::Event"
-  has_many :voted_polls, through: :poll_votes, source:  :poll
+  has_many :voted_polls, through: :poll_votes, source:  :poll, class_name: "Poll::Poll"
 
   # Functions for Relations
   def attended?(event)
