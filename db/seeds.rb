@@ -68,6 +68,8 @@ deals = Ead::Deal.create([{image_url:'no-image.jpg',title: 'Pizza Frenzy', descr
 ads = Ead::Ad.create([{image_url:'no-image.jpg',title: 'Trinity the ultimate clubbing experience', description:'Daily House/RnB, Fridays and Saturdays guest DJ SoundBlast', adable_id: 1, adable_type: "Stores::EntertainmentStore" },
   {image_url:'no-image.jpg',title: 'Roots Rock-bar', description:'Chill out with relaxing music', adable_id: 3, adable_type: "Stores::EntertainmentStore" }])
 
+
+locations = Asset::Localtion.create([{}])
 #reviews = Asset::Review.create([{username: 'Snowden', email: 'snowden@gmail.com', content: 'This place is awsome, They will never find me here :D'}])
 
 # Still need to create sample Relations and 
