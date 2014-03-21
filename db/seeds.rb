@@ -69,7 +69,11 @@ ads = Ead::Ad.create([{image_url:'no-image.jpg',title: 'Trinity the ultimate clu
   {image_url:'no-image.jpg',title: 'Roots Rock-bar', description:'Chill out with relaxing music', adable_id: 3, adable_type: "Stores::EntertainmentStore" }])
 
 
-locations = Asset::Localtion.create([{}])
+locations = Asset::Location.create([{address: "White house, New York", geocoded_id: "2" ,geocoded_type: "Stores::FoodStore" },
+  {address: "Central Square, New York", geocoded_id: "4" ,geocoded_type: "Stores::EntertainmentStore"},{address: "New York", geocoded_id: "5" ,geocoded_type: "Stores::EntertainmentStore"},{address: "White house, New York", geocoded_id: "4" ,geocoded_type: "Stores::EntertainmentStore"},
+  {address: "Statue of Liberty, New York", geocoded_id: "1" ,geocoded_type: "Stores::EntertainmentStore"},{address: "Moscue", geocoded_id: "3" ,geocoded_type: "Stores::EntertainmentStore"}])
 #reviews = Asset::Review.create([{username: 'Snowden', email: 'snowden@gmail.com', content: 'This place is awsome, They will never find me here :D'}])
 
 # Still need to create sample Relations and 
+
+## Parks can be in other categories
