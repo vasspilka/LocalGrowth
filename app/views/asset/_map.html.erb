@@ -9,8 +9,8 @@
 <script type="text/javascript">
 handler = Gmaps.build('Google');
 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  <% stores.each do |store| %>
-    <% store.locations.each do |marker|
+  <% all_stores.each do |store| %>
+    <% store.locations.each do |marker| %>
       markers = handler.addMarkers([
         {
           "lat": <%= marker.latitude %>,
@@ -20,7 +20,7 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
             "width":  30,
             "height": 30
           },
-          "infowindow": <%= marker.geocoded.description %>
+          "infowindow": "<%= marker.address %>"
         }
       ]);
     <% end %> 

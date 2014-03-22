@@ -1,5 +1,4 @@
-class Stores::EntertainmentStore < Stores::BaseStore
-
+class Stores::EntertainmentStore < ActiveRecord::Base
   has_many :taggings, as: :tagable , class_name: "Asset::Tagging" 
   has_many :tags, :through => :taggings , class_name: "Asset::Tag"  
   has_many :locations, as: :geocoded , class_name: "Asset::Location"
@@ -10,6 +9,17 @@ class Stores::EntertainmentStore < Stores::BaseStore
   has_many :events, as: :eventable, class_name: "Ead::Event"
   has_many :deals, as: :dealable, class_name: "Ead::Deal"
   has_many :likes, as: :likeable, class_name: "Relation::Like"
+
+  validates :title, presence: true
+  paginates_per 20
+
+  public
+
+  def rating_percent
+    percentage = self.rating / self.reviews.with_rating.count
+    return percentage
+  end
+
 
   ## Inherits from BaseStore
   #
