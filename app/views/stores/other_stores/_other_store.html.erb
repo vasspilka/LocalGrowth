@@ -1,43 +1,48 @@
-<%= stylesheet_link_tag :other_categories, :media => "all" %>
+<%= stylesheet_link_tag :categories, :media => "all" %>
 
 
-<div id="columns">
-  <figure>
-    <%= image_tag(other_store.logo_url) %>
-  <figcaption>
-<ul>  
-  <li><i class="icon-airplane"></i> <%= other_store.title %></li>
-  <li><i class="icon-airplane"></i> 
-    <% if other_store.tags.any? then %>          
-        <% other_store.tags.each do |tag| %>
-          <%= tag.title %>
-        <% end %> 
-    <% end %>
-  </li>
-  <li>
-    <% if other_store.phones.any? then %>
-      <%= t("phone", :count => other_store.phones.count ) %>
-      <% other_store.phones.each do |phone| %>
-        <%= phone.number_type + ": " + phone.number %>
-      <% end %> 
-    <% end %>
-  </li>
-  
-  <% other_store.locations.each do  |location|%>
-    <li><i class="icon-airplane"></i><%= location.address %></li>
-  <% end %>
-    
- <li id="likes_count<%=other_store.id%>"><i class="icon-bar-graph"></i> <%= other_store.points %></li>
-    
-</ul>
-    
-  </figcaption>
-  </figure>
-  
+<div class="store-grid">
+ <div class="image-grid">
+      <div class="image-content">        
+        <div class="image-img">  <%= image_tag(other_store.logo_url) %> </div>
+        <div class="image-text">
+          <div class="image-height">
+			<ul>	
+			  <li> <%= other_store.title %> </li>
+			  <li>	
+	      <% if other_store.tags.any? then %>          
+	          <% other_store.tags.each do |tag| %>
+	            <%= tag.title %>
+	          <% end %> 
+	      <% end %>
+			  </li>
+			  <li>
+	      <% if other_store.phones.any? then %>
+	        <%= t("phone", :count => other_store.phones.count ) %>
+	        <% other_store.phones.each do |phone| %>
+	          <%= phone.number_type + ": " + phone.number %>
+	        <% end %> 
+	      <% end %>
+			  </li>
+	
+	    <% other_store.locations.each do  |location|%>
+	      <li><i class="icon-airplane"></i><%= location.address %></li>
+	    <% end %>
+		
+		
+	    <li id="likes_count<%=other_store.id%>"><i class="icon-bar-graph"></i> <%= other_store.points %></li>
+		
+	<li><%= render 'shared/like_form', :likeable => other_store if user_signed_in? %></li>
+		
+		
+			</ul>
+          </div>          
+        </div>
+      </div>
+    </div>
+	</div> 
 
-</div>
-  
-  
-<%= render 'shared/like_form', :likeable => other_store if user_signed_in? %>
+
+
 
 
