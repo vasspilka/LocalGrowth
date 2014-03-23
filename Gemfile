@@ -92,8 +92,8 @@ end
 
 # Production gems
 group :production do
-  # Postgres Database
-  gem 'pg'
+  
+  gem 'pg'      # Postgres Database          
   gem 'rails_12factor', '0.0.2'
 end
 

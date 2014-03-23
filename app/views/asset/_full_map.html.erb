@@ -13,9 +13,9 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
     <% store.locations.each do |marker| %>
       markers = handler.addMarkers([
         {
-          "lat": <%= marker.latitude %>,
-          "lng": <%= marker.longitude%>,
-          "infowindow": "<%= marker.address %>"
+          lat: <%= marker.latitude %>,
+          lng: <%= marker.longitude%>,
+          infowindow: "<%= marker.address %>"
         }
       ]);
     <% end %> 
