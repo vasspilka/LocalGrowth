@@ -15,11 +15,6 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
         {
           "lat": <%= marker.latitude %>,
           "lng": <%= marker.longitude%>,
-          "picture": {
-            "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-            "width":  30,
-            "height": 30
-          },
           "infowindow": "<%= marker.address %>"
         }
       ]);
