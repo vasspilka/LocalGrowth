@@ -27,11 +27,6 @@ handler.buildMap({ internal: {id: 'directions'}}, function(){
         if (status == google.maps.DirectionsStatus.OK) {
           directionsDisplay.setDirections(response);}
       });
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: userPos,
-        content: 'Location found using HTML5.'
-      });
     }, function() {
       handleNoGeolocation(true);
     });
@@ -52,14 +47,6 @@ function handleNoGeolocation(errorFlag) {
   } else {
     var content = 'Error: Your browser doesn\'t support geolocation.';
   }
-
-  var options = {
-    map: map,
-    position: new google.maps.LatLng(60, 105),
-    content: content
-  };
-
-  var infowindow = new google.maps.InfoWindow(options);
 }
    
 </script>

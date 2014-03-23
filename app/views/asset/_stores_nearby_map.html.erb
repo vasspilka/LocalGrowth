@@ -16,11 +16,25 @@ handler.buildMap({ internal: {id: 'geolocation'} }, function(){
 });
 
 function displayOnMap(position){
-  var marker = handler.addMarker({
+  var user = handler.addMarker({
     lat: position.coords.latitude,
     lng: position.coords.longitude
   });
-  handler.map.centerOn(marker);
+
+  <% all_stores.each do |store|
+    store.locations.near([38.898335, 22.434903], 3).each do |marker| %>
+      markers = handler.addMarkers([
+        {
+          "lat": <%= marker.latitude %>,
+          "lng": <%= marker.longitude%>,
+          "infowindow": "<%= marker.address %>"
+        }
+      ]);
+    <% end %>
+  <% end %>
+
+  handler.map.centerOn(user);
+
 };
    
 </script>
