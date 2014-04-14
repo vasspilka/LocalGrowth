@@ -7,7 +7,7 @@ class CreateEads < ActiveRecord::Migration
       t.date :starts_at
       t.date :ends_at
       t.text   :description
-      t.string :image_url
+      t.attachment :image
       t.boolean :active, :default => false
       t.integer :points_value, :default => 30
       t.integer :points ,:default => 0
@@ -22,7 +22,7 @@ class CreateEads < ActiveRecord::Migration
       t.date :starts_at
       t.date :ends_at
       t.text   :description
-      t.string :image_url
+      t.attachment :image
       t.integer :points_value, :default => 20
       t.boolean :active, :default => false
 
@@ -36,7 +36,7 @@ class CreateEads < ActiveRecord::Migration
       t.date :ends_at
       t.string :title
       t.text   :description
-      t.string :image_url
+      t.attachment :image
       t.integer :points_value, :default => 30
       t.boolean :active, :default => false
 
