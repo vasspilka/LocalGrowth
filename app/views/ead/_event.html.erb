@@ -3,7 +3,7 @@
   <ul class="pricing-table">
     <li class="title"><%= event.title %></li>
     <li class="description"> <%= event.description %></li>
-    <li class="bullet-item"><%= image_tag "#{event.image_url}", class: "super-deal-image"%></li>
+    <li class="bullet-item"><%= image_tag "#{event.image.url}", class: "super-deal-image"%></li>
     <li class="cta-button"><%= link_to "See full page", "/events/#{event.id}" , class: "button" %></li>
     <li><p id="attendings_count<%=event.class.to_s%><%=event.id%>"><%= event.attendings.count %><p></li>
     <li><p id="likes_count<%=event.class.to_s%><%=event.id%>"><%= event.likes.count %><p></li>
