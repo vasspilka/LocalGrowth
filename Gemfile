@@ -23,9 +23,9 @@ gem 'bcrypt-ruby'
 
 # Javascript related gems
 gem 'uglifier', '>= 1.3.0'        # Removes all spaces from css files.
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
-gem 'jbuilder', '~> 1.2'
+gem 'coffee-rails', '~> 4.0.0'    # Compiles to js
+gem 'jquery-rails'                # Js library
+gem 'jbuilder', '~> 1.2' 
 gem 'underscore-rails'
 
 
@@ -36,18 +36,19 @@ gem "breakpoint"
 gem 'sass-rails'
 gem 'simple_form'
 
-
-# Pagination with
-gem 'kaminari'
+# Other
+gem 'kaminari'  # Pagination
+gem 'paperclip' # File Upload
 
 # sqlite database , error handling & test
 group :development, :test do
-  gem 'sqlite3'
-  gem "better_errors"
-  gem 'meta_request'
+  gem 'sqlite3'             # Easy Database adaptor
+  gem "better_errors"       # Browser Errors
+  gem 'meta_request'        # Chrome Plugin
   gem "binding_of_caller"
   gem 'rspec-rails'
-  gem 'railroady' # For Diagrams
+  gem 'quiet_assets'        # Better logs
+  gem 'railroady'           # For Diagrams
 end
 
 # Testing framework
@@ -58,14 +59,12 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
 
-  # For test pop up
-  # Linux
-    gem 'libnotify'
+  ## For test pop up
+    gem 'libnotify'              # Linux
 
-  # Windows
-  # gem 'rb-notifu', '0.0.4'
-  # gem 'win32console', '1.3.2'
-  # gem 'wdm', '0.1.0'
+  # gem 'rb-notifu', '0.0.4'     # Windows
+  # gem 'win32console', '1.3.2'  # Windows
+  # gem 'wdm', '0.1.0'           # Windows
 
   # MAC OS X.
   # gem 'growl', '1.0.3'

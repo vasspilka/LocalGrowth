@@ -11,7 +11,7 @@ class CreateStoresAndCategories < ActiveRecord::Migration
       t.string :title
       t.references :entertainment_category, index: true
       t.text :description
-      t.string :logo_url, :default => "no-image.jpg"
+      t.attachment :logo
       t.string :website_url
       t.string :working_hours
       t.integer :rating ,:limit => 1
@@ -30,7 +30,7 @@ class CreateStoresAndCategories < ActiveRecord::Migration
       t.string :title
       t.references :food_category, index: true
       t.text :description
-      t.string :logo_url, :default => "no-image.jpg"
+      t.attachment :logo
       t.string :website_url
       t.string :working_hours
       t.integer :min_order, :default => 5
@@ -50,7 +50,7 @@ class CreateStoresAndCategories < ActiveRecord::Migration
       t.string :title
       t.references :other_category, index: true
       t.text :description
-      t.string :logo_url, :default => "no-image.jpg" 
+      t.attachment :logo 
       t.string :website_url
       t.string :working_hours
       t.integer :points ,:default => 0

@@ -1,4 +1,4 @@
-class Stores::FoodStore < ActiveRecord::Base
+class Stores::FoodStore < Stores::BaseStore
 
   has_many :taggings, as: :tagable , class_name: "Asset::Tagging" 
   has_many :tags, :through => :taggings , class_name: "Asset::Tag"  
@@ -11,17 +11,6 @@ class Stores::FoodStore < ActiveRecord::Base
   has_many :deals, as: :dealable, class_name: "Ead::Deal"
   has_many :likes, as: :likeable, class_name: "Relation::Like"
 
-  validates :title, presence: true
-  paginates_per 20
-
-  public
-
-  def rating_percent
-    percentage = self.rating / self.reviews.with_rating.count
-    return percentage
-  end
-
-
   ## Inherits from BaseStore
   #
 
@@ -29,5 +18,5 @@ class Stores::FoodStore < ActiveRecord::Base
 
   belongs_to :food_category
   
-  validates :title,:food_category_id, presence: true
+  validates  :food_category_id, presence: true
 end

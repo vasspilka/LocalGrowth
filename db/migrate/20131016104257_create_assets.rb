@@ -1,7 +1,7 @@
 class CreateAssets < ActiveRecord::Migration
   def change
     create_table :images do |t|
-      t.string :image_url
+      t.attachment :image
       t.belongs_to :imageable, polymorphic: true, index: true
 
       t.timestamps

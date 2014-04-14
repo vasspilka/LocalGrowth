@@ -1,5 +1,5 @@
 LocalGrowth::Application.routes.draw do
-    root 'static_pages#home'
+  root 'static_pages#home'
   match '/maps', to: 'gmaps#index', via: 'get'
   
   # Authentication
