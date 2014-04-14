@@ -31,6 +31,7 @@ gem 'underscore-rails'
 
 # Front-end gems
 gem 'entypo-rails'
+gem 'compass-rails'
 gem "breakpoint"
 gem 'sass-rails'
 gem 'simple_form'
