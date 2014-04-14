@@ -30,11 +30,14 @@ gem 'underscore-rails'
 
 
 # Front-end gems
-gem 'compass-rails', '~> 1.1.3'
 gem 'entypo-rails'
 gem "breakpoint"
 gem 'sass-rails'
 gem 'simple_form'
+group :assets do
+     gem 'compass-rails'
+     # Add any compass extensions here
+end
 
 # Other
 gem 'kaminari'  # Pagination
