@@ -35,10 +35,6 @@ gem 'compass-rails'
 gem "breakpoint"
 gem 'sass-rails'
 gem 'simple_form'
-group :assets do
-     gem 'compass-rails'
-     # Add any compass extensions here
-end
 
 # Other
 gem 'kaminari'  # Pagination
@@ -49,6 +45,7 @@ group :development, :test do
   gem 'sqlite3'             # Easy Database adaptor
   gem "better_errors"       # Browser Errors
   gem 'meta_request'        # Chrome Plugin
+  gem 'pry'
   gem "binding_of_caller"
   gem 'rspec-rails'
   gem 'quiet_assets'        # Better logs

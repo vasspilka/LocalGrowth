@@ -159,6 +159,7 @@ GEM
       callsite
       rack-contrib
       railties
+    method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.5.3)
     minitest (4.7.5)
@@ -196,6 +197,10 @@ GEM
       mime-types
     pg (0.17.1)
     polyglot (0.3.4)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
@@ -277,6 +282,7 @@ GEM
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
+    slop (3.5.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -343,6 +349,7 @@ DEPENDENCIES
   omniauth-facebook
   paperclip
   pg
+  pry
   quiet_assets
   railroady
   rails (~> 4.0)
