@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: poll_votes
+#
+#  id             :integer          not null, primary key
+#  user_id        :integer
+#  poll_id        :integer
+#  poll_option_id :integer
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+
 class Poll::Vote < ActiveRecord::Base
 
   self.table_name = "poll_votes"

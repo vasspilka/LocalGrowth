@@ -1,3 +1,10 @@
+# == Schema Information
+#
+# Table name: base_stores
+#
+#  id :integer          not null, primary key
+#
+
 class Stores::BaseStore < ActiveRecord::Base
 
 

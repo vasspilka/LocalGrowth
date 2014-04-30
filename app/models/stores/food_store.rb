@@ -1,3 +1,24 @@
+# == Schema Information
+#
+# Table name: food_stores
+#
+#  id                :integer          not null, primary key
+#  title             :string(255)
+#  food_category_id  :integer
+#  description       :text
+#  logo_file_name    :string(255)
+#  logo_content_type :string(255)
+#  logo_file_size    :integer
+#  logo_updated_at   :datetime
+#  website_url       :string(255)
+#  working_hours     :string(255)
+#  min_order         :integer          default(5)
+#  points            :integer          default(0)
+#  rating            :integer
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+
 class Stores::FoodStore < Stores::BaseStore
 
   has_many :taggings, as: :tagable , class_name: "Asset::Tagging" 

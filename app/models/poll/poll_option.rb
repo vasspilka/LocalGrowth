@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: poll_options
+#
+#  id          :integer          not null, primary key
+#  poll_id     :integer
+#  text        :string(255)
+#  votes_count :integer          default(0)
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 class Poll::PollOption < ActiveRecord::Base
 
   #relations

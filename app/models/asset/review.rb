@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: reviews
+#
+#  id              :integer          not null, primary key
+#  user_id         :integer
+#  expert          :boolean          default(FALSE)
+#  content         :text
+#  rating          :integer
+#  reviewable_id   :integer
+#  reviewable_type :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
 class Asset::Review < ActiveRecord::Base
   # Callbacks 
   after_save :add_rating_to_store

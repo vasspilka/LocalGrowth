@@ -1,3 +1,23 @@
+# == Schema Information
+#
+# Table name: entertainment_stores
+#
+#  id                        :integer          not null, primary key
+#  title                     :string(255)
+#  entertainment_category_id :integer
+#  description               :text
+#  logo_file_name            :string(255)
+#  logo_content_type         :string(255)
+#  logo_file_size            :integer
+#  logo_updated_at           :datetime
+#  website_url               :string(255)
+#  working_hours             :string(255)
+#  rating                    :integer
+#  points                    :integer          default(0)
+#  created_at                :datetime
+#  updated_at                :datetime
+#
+
 class Stores::EntertainmentStore < Stores::BaseStore
 
   has_many :taggings, as: :tagable , class_name: "Asset::Tagging" 

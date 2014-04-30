@@ -1,3 +1,10 @@
+# == Schema Information
+#
+# Table name: bases
+#
+#  id :integer          not null, primary key
+#
+
 class Ead::Base < ActiveRecord::Base
 
   # Callbacks 

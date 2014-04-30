@@ -50,6 +50,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'quiet_assets'        # Better logs
   gem 'railroady'           # For Diagrams
+  gem 'annotate'
 end
 
 # Testing framework
