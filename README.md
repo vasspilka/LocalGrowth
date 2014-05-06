@@ -1,4 +1,4 @@
-# LocalGrowth Local buissness web application
+# LocalGrowth Local business web application
 
 
 Current version: Early Alpha (Unstable & Experimental)
@@ -8,7 +8,7 @@ Current version: Early Alpha (Unstable & Experimental)
 
 LocalGrowth is an opensourced webapp project.
 
-Our goal is to make a website, that can be deployed by anyone and potentially help local communities to improve their buisness.
+Our goal is to make a website that can be deployed by anyone and potentially help local communities to improve their business.
   
 
 
@@ -19,13 +19,13 @@ Main LocalGrowth features
 
 (Some features still under developement)
 
-  * A model for storing buisness data.
+  * A model for storing business data.
   * An UI so admins can easily interact with data.
   * An easy way for users to find what they need.
-  * A social netwok for users to interact with the local buisnesses and users.
+  * A social netwok for users to interact with the local businesses and users.
   * A model for storing Events and Deals data.
   * Smart integration with Facebook and Google data.
-  * Automated Analytics to help admin make buisness decisions.
+  * Automated Analytics to help admin make business decisions.
 
 
 
@@ -144,7 +144,7 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
   LocalGrowths main feature tries to be an easy deployment and use by anyone.
   Our goal is for LocalGrowth to be deployed for your local region to do tasks your comminity needs.
 
-  LocalGrowth dosen't have to be just a buissness app, It can potentially be used as a web project for developers to learn from, understand, modify and use in any way they like.
+  LocalGrowth dosen't have to be just a business app, It can potentially be used as a web project for developers to learn from, understand, modify and use in any way they like.
 
   In the future LocalGrowth could be separated into modules that would help other aspects of  communities, as Local news or a place where people would suggest ideas to improve their enviroment.
 
