@@ -198,7 +198,6 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    pg (0.17.1)
     polyglot (0.3.4)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -352,7 +351,6 @@ DEPENDENCIES
   meta_request
   omniauth-facebook
   paperclip
-  pg
   pry
   quiet_assets
   railroady
