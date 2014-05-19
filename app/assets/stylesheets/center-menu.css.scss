@@ -1,0 +1,100 @@
+$green:#82BF56;
+$green-shadow:#669644;
+$blue: #3498DB;
+$blue-shadow:#2980B9;
+$red:#E74C3C;
+$red-shadow:#BD3E31;
+
+/* Shops nav Buttons */
+.animate
+{
+  transition: all 0.01s;
+  -webkit-transition: all 0.01s;
+}
+
+.action-button
+{
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px;
+  float: left;
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  color: #FFF;
+  text-decoration: none;  
+}
+
+.blue
+{
+
+  background-color: $blue;
+  border-bottom: 7px solid $blue-shadow;
+  text-shadow: 0px -2px $blue-shadow;
+  
+}
+
+.red
+{
+  width: 120px;
+  background-color: $red;
+  border-bottom: 7px solid $red-shadow;
+  text-shadow: 0px -2px $red-shadow;
+  border-radius: 0px 10px;
+}
+
+.green
+{
+  width: 120px;
+  background-color: $green;
+  border-bottom: 7px solid $green-shadow;
+  text-shadow: 0px -2px $green-shadow;
+  border-radius: 10px 0px;
+}
+
+.action-button:active
+{
+  top: 7px;
+  border-bottom: 0px solid;
+}
+
+
+
+/* Center menu */
+
+#centeredmenu {
+   float:left;
+   width:100%;
+   overflow:hidden;
+   position:relative;
+  ul  {
+    clear:left;
+    float:left;
+    list-style:none;
+    margin:0;
+    padding:0;
+    position:relative;
+    left:50%;
+    text-align:center;
+    li {
+     display:block;
+     float:left;
+     list-style:none;
+     margin:0;
+     padding:0;
+     position:relative;
+     right:50%;
+      
+      a {
+        display:block;
+        margin:0px;
+        padding:9px 15px;
+        text-decoration:none;
+        line-height:1.3em;
+
+        &:hover {
+           color:black;
+        }
+      }
+    }   
+  }
+}

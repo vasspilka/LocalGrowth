@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ## Below you can specify a ruby version and rvm gemset that you wish to use for the project.
  ruby '2.1.1'
-# ruby-gemset=LocalGrowth
+#ruby-gemset=LocalGrowth
 
 
 
@@ -19,7 +19,7 @@ gem "rails_admin_map_field", :git => "git://github.com/jasonl/rails_admin_map_fi
 gem "devise"                  # User model & authorisation
 gem 'omniauth-facebook'       # Facebook Login
 gem 'rails_admin', '0.6.0'    # Admin Panel
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 
 # Javascript related gems
 gem 'uglifier', '>= 1.3.0'        # Removes all spaces from css files.
@@ -35,6 +35,8 @@ gem 'compass-rails'
 gem "breakpoint"
 gem 'sass-rails'
 gem 'simple_form'
+gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 
 # Other
 gem 'kaminari'  # Pagination
@@ -94,7 +96,7 @@ end
 # Production gems
 group :production do
   
-  # gem 'pg'      # Postgres Database          
+  gem 'pg'      # Postgres Database          
   gem 'rails_12factor', '0.0.2'
 end
 

@@ -30,6 +30,7 @@ namespace :deploy do
     end
   end
  before :updated, "configure:application"
+ after :publishing, :restart
 end
 
 
