@@ -18,14 +18,14 @@
     <%= if current_user then render 'poll/poll' unless Poll::Poll.first.blank? end %> <!-- This is here for testing -->
 
 
-    <!-- You can do this for Stores::EntertainmentCategory and Stores::OtherCategory aswell -->
+    <!-- You can do this for Stores::EntertainmentCategory and Stores::OtherCategory aswell 
 
     <ul>
       <% Stores::FoodCategory.all.each do |category| %> 
         <li><%= category.title %></li>
       <% end %>
     </ul>
-
+    -->
     <!-- we can do javascript together to make them show when you click if you want we can look into it tomorow :) -->
 
 

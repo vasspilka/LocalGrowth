@@ -4,8 +4,8 @@
 <%= render partial: "ead/ad.html.erb", object: Ead::Ad.order( 'RANDOM()' ).first unless Ead::Ad.first.blank? %>
 <%= render partial: "ead/event.html.erb", object: Ead::Event.order( 'RANDOM()' ).first unless Ead::Event.first.blank? %>
 <% # End of EAD rendering %>
-
 -->
+
 <%= stylesheet_link_tag :shared, :media => "all" %>
 <%= javascript_include_tag "menu-toggle" %>
 
@@ -19,7 +19,7 @@
         <div class="pure-menu pure-menu-open">
 
             <ul>
-						<li><a href="#"><i class="icon-network"> </i></a></li>
+					<li><a href="#"><i class="icon-network"> </i></a></li>
   					<li><a href="/food_categories">  <%= t "views.sidenav.explore" %></a></li>
     				<li><a href="/entertainment_categories"> <%= t "views.sidenav.fun" %></a></li>
     				<li><a href="/other_categories"> <%= t "views.sidenav.other" %></a></li>

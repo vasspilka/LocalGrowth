@@ -35,7 +35,7 @@ gem 'compass-rails'
 gem "breakpoint"
 gem 'sass-rails'
 gem 'simple_form'
-gem 'foundation-rails'
+gem 'bootstrap-sass', '~> 3.1.1'
 gem 'foundation-icons-sass-rails'
 
 # Other
