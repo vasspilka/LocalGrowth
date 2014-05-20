@@ -12,7 +12,7 @@ class Stores::BaseStore < ActiveRecord::Base
   validates_attachment :logo, :content_type => { :content_type => ["image/jpeg","image/jpg", "image/gif", "image/png"] }
 
   validates :title, presence: true
-  paginates_per 20
+  paginates_per 8
 
   public
 

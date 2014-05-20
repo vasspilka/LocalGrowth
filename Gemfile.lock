@@ -130,9 +130,6 @@ GEM
     ffi (1.9.3)
     font-awesome-rails (4.1.0.0)
       railties (>= 3.2, < 5.0)
-    foundation-icons-sass-rails (3.0.0)
-      railties (>= 3.1.1)
-      sass-rails (>= 3.1.1)
     fssm (0.2.10)
     geocoder (1.2.1)
     gherkin (2.12.2)
@@ -348,7 +345,6 @@ DEPENDENCIES
   devise
   entypo-rails
   factory_girl_rails
-  foundation-icons-sass-rails
   geocoder
   gmaps4rails
   jbuilder (~> 1.2)

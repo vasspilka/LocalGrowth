@@ -8,6 +8,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= full_title(yield(:title)) %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "LocalGrowth" %>">
   <%= favicon_link_tag '/favicon.ico' %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -15,17 +16,20 @@
   <%= render 'layouts/google_analytics_and_maps' %>
 </head>
 <body>
-  <%= render 'shared/nav' %>
-  <%= render 'shared/sidenav' %>
 
-  <%= render 'layouts/flash_notice' %>
+  <header>
+    <%= render 'shared/nav' %>
+    <%= render 'shared/sidenav' %>
+  </header>
 
   <!-- # Main website content -->
-  <%= yield %>
+  <main role="main">
+    <%= render 'layouts/flash_notice' %>
+    <%= yield %>
+  </main>
 
-
-  <%= render 'shared/misc' %>
-  <%= render 'shared/footer' %>
+  <%# render 'shared/misc' %>
+  <%= render 'layouts/footer' %>
 
 </body>
 </html>

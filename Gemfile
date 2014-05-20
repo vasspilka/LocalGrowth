@@ -36,7 +36,6 @@ gem "breakpoint"
 gem 'sass-rails'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.1.1'
-gem 'foundation-icons-sass-rails'
 
 # Other
 gem 'kaminari'  # Pagination
