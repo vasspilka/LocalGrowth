@@ -17,6 +17,10 @@
 #  created_at        :datetime
 #  updated_at        :datetime
 #
+# Indexes
+#
+#  index_other_stores_on_other_category_id  (other_category_id)
+#
 
 class Stores::OtherStore < Stores::BaseStore
 
@@ -33,7 +37,7 @@ class Stores::OtherStore < Stores::BaseStore
   
   ## Inherits from BaseStore
   #
-
+  paginates_per 18
   self.table_name = "other_stores"
 
   belongs_to :other_category

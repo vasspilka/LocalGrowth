@@ -12,6 +12,10 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #
+# Indexes
+#
+#  index_reviews_on_reviewable_id_and_reviewable_type  (reviewable_id,reviewable_type)
+#
 
 class Asset::Review < ActiveRecord::Base
   # Callbacks 

@@ -9,6 +9,10 @@
 #  created_at   :datetime
 #  updated_at   :datetime
 #
+# Indexes
+#
+#  index_taggings_on_tagable_id_and_tagable_type  (tagable_id,tagable_type)
+#
 
 class Asset::Tagging < ActiveRecord::Base
   belongs_to :tag , class_name: "Asset::Tag"

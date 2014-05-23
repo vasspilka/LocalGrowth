@@ -18,6 +18,10 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #
+# Indexes
+#
+#  index_ads_on_adable_id_and_adable_type  (adable_id,adable_type)
+#
 
 class Ead::Ad < Ead::Base
 

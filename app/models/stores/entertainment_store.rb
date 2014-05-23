@@ -17,6 +17,10 @@
 #  created_at                :datetime
 #  updated_at                :datetime
 #
+# Indexes
+#
+#  index_entertainment_stores_on_entertainment_category_id  (entertainment_category_id)
+#
 
 class Stores::EntertainmentStore < Stores::BaseStore
 
@@ -33,7 +37,7 @@ class Stores::EntertainmentStore < Stores::BaseStore
 
   ## Inherits from BaseStore
   #
-
+  paginates_per 18
   self.table_name = "entertainment_stores"
 
   belongs_to :entertainment_category

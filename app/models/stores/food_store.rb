@@ -18,6 +18,10 @@
 #  created_at        :datetime
 #  updated_at        :datetime
 #
+# Indexes
+#
+#  index_food_stores_on_food_category_id  (food_category_id)
+#
 
 class Stores::FoodStore < Stores::BaseStore
 
@@ -34,7 +38,7 @@ class Stores::FoodStore < Stores::BaseStore
 
   ## Inherits from BaseStore
   #
-
+  paginates_per 18
   self.table_name = "food_stores"
 
   belongs_to :food_category

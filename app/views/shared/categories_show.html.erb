@@ -1,13 +1,11 @@
 <%= provide(:title, @title) %>
 
-<div class="row">
-  <div class="col-md-2">
-    <%= render "shared/categories_sidebar" %>
-  </div>
-  <div class="col-md-10">
-    <%= paginate @stores %>
-    <%= render @stores %>  
-  </div>
+<div class='row '>
+    <div class='text-center'><%= paginate @stores %></div>
 </div>
+<div class='row'>
+    <%= render @stores %>  
+</div>
+
 
 

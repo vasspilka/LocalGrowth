@@ -19,6 +19,10 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #
+# Indexes
+#
+#  index_events_on_eventable_id_and_eventable_type  (eventable_id,eventable_type)
+#
 
 class Ead::Event < Ead::Base
 

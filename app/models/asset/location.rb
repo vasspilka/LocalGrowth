@@ -11,6 +11,10 @@
 #  created_at    :datetime
 #  updated_at    :datetime
 #
+# Indexes
+#
+#  index_locations_on_geocoded_id_and_geocoded_type  (geocoded_id,geocoded_type)
+#
 
 class Asset::Location < ActiveRecord::Base
   belongs_to :geocoded, polymorphic: true
