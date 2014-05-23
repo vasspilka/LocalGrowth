@@ -1,0 +1,7 @@
+<!--
+<% # On EAD you can use any search method you want and you can load as manny objects as you want here are some rendering options %>
+<%= render partial: "ead/deal.html.erb", collection: Ead::Deal.all unless Ead::Deal.first.blank? %>
+<%= render partial: "ead/ad.html.erb", object: Ead::Ad.order( 'RANDOM()' ).first unless Ead::Ad.first.blank? %>
+<%= render partial: "ead/event.html.erb", object: Ead::Event.order( 'RANDOM()' ).first unless Ead::Event.first.blank? %>
+<% # End of EAD rendering %>
+-->

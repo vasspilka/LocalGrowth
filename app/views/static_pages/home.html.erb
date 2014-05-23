@@ -1,25 +1,5 @@
-
 <div class="logo"> </div>
-
-
-<div class="maincontent">
-
+<div class="maincontent text-center">
   <h1> <%= CONFIG[:app_name] %></h1>
-
-  <p>
-    Hello, and wellcome to <%= CONFIG[:app_name] %>
-  </p>
-  
-    <%= if current_user then render 'poll/poll' unless Poll::Poll.first.blank? end %> <!-- This is here for testing -->
-
-
-    <!-- You can do this for Stores::EntertainmentCategory and Stores::OtherCategory aswell 
-    <ul>
-      <% Stores::FoodCategory.all.each do |category| %> 
-        <li><%= category.title %></li>
-      <% end %>
-    </ul>
-    -->
-
-
+  <p>Hello, and wellcome to <%= CONFIG[:app_name] %></p>
 </div>
