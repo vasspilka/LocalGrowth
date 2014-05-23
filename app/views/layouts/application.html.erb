@@ -15,7 +15,7 @@
   <%= csrf_meta_tags %>
   <%= render 'layouts/google_analytics_and_maps' %>
 </head>
-<body>
+<body class="container">
 
  
   <header>
@@ -32,7 +32,7 @@
     <%= render 'layouts/flash_notice' %>
     <div class="row">
       <div class="col-md-2">
-         <%= render "shared/categories_sidebar" if @categories %>
+         <%= render "shared/categories_sidebar" %>
       </div>
       <div class="col-md-8">      
         <%= yield %>

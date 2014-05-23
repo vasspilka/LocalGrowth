@@ -3,7 +3,7 @@
 <% if @categories %>
   <ul class="list-group">
     <% @categories.each do |category| %>
-      <a href=<%= "/#{category.class.to_s.underscore.pluralize(2)}/#{category.id}" %>><li class="list-group-item"><%= category.title %></li></a>
+      <a href=<%= "/#{category.class.to_s.underscore.pluralize(2)}/#{category.id}" %>><li class="list-group-item <%= 'active' if category.id == @category.id if @category %>"><%= category.title %></li></a>
     <% end %>
   </ul>
 <% end %>

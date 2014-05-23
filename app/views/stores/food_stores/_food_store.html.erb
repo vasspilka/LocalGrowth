@@ -1,42 +1,31 @@
 
 <div class="col-md-4">
  <div class="store-grid">        
-        <%= image_tag(food_store.logo.url, :class => "img-responsive image-img text-center") %>
-        <div class="image-text">
-          <div class="image-height text-center">
-			<ul class="list-group">	
-			  <li class="list-group-item"> <%= food_store.title %></li>
-			  <li class="list-group-item">	
-			    <% if food_store.tags.any? then %>          
-			        <% food_store.tags.each do |tag| %>
-			          <%= tag.title %>
-			        <% end %> 
-			    <% end %>
-			  </li>
-			  <li class="list-group-item">
-			    <% if food_store.phones.any? then %>
-			      <%= t("phone", :count => food_store.phones.count ) %>
-			      <% food_store.phones.each do |phone| %>
-			        <%= phone.number_type + ": " + phone.number %>
-			      <% end %> 
-			    <% end %>
-			  </li>
-	
-			    <li class="list-group-item">
-			      <% food_store.locations.each do  |location|%>
-			        <i class="icon-location"></i><%= location.address %>
-			      <% end %>
-			    </li>
-		
-			 <li class="list-group-item" id="likes_count<%=food_store.id%>"><i class="icon-bar-graph"></i><%= food_store.points %>
-			 <%= render 'shared/like_form', :likeable => food_store if user_signed_in? %></li>
-		
-		
-			</ul>
-          </div>         
-      </div>
-    </div> 
-
+   <ul class="list-group">	
+     <li class="list-group-item"> <%= food_store.title %><div id="likes_count<%=food_store.id%>"><i class="icon-bar-graph"></i><%= food_store.points %></div><%= render 'shared/like_form', :likeable => food_store if user_signed_in? %></li>
+     <li class="list-group-item"><%= image_tag(food_store.logo.url, :class => "img-responsive image-img text-center") %></li>
+     <% if food_store.tags.any? then %>          
+       <li class="list-group-item">	
+           <% food_store.tags.each do |tag| %>
+             <%= tag.title %>
+           <% end %> 
+       </li>
+     <% end %>
+     <li class="list-group-item">
+       <% if food_store.phones.any? then %>
+         <%# t("phone", :count => food_store.phones.count ) %>
+         <% food_store.phones.each do |phone| %>
+           <%= phone.number_type + ": " + phone.number %>
+         <% end %> 
+       <% end %>
+     </li>
+     <% food_store.locations.each do  |location|%>
+       <li class="list-group-item">
+         <i class="icon-location"></i><%= location.address %>
+       </li>	
+      <% end %>
+   </ul>
+  </div>         
 </div>
 
 
