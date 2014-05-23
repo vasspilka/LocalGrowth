@@ -19,6 +19,7 @@ gem "rails_admin_map_field", :git => "git://github.com/jasonl/rails_admin_map_fi
 gem "devise"                  # User model & authorisation
 gem 'omniauth-facebook'       # Facebook Login
 gem 'rails_admin', '0.6.0'    # Admin Panel
+gem 'secure_headers'          # Twitter HTTP security
 gem 'bcrypt'
 
 # Javascript related gems
