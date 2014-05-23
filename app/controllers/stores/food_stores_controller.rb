@@ -1,4 +1,4 @@
-class FoodStoresController < ApplicationController
+class Stores::FoodStoresController < ApplicationController
   
   def show
   	@store = Stores::FoodStore.find(params[:id])

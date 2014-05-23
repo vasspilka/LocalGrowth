@@ -1,4 +1,4 @@
-class FoodCategoriesController < ApplicationController
+class Stores::FoodCategoriesController < ApplicationController
 
   def index
   	@categories = Stores::FoodCategory.all

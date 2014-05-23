@@ -15,12 +15,14 @@ LocalGrowth::Application.routes.draw do
   end
 
   # All the resources
-  resources :entertainment_categories
-  resources :entertainment_stores
-  resources :food_categories
-  resources :food_stores
-  resources :other_categories
-  resources :other_stores
+  namespace :stores do
+    resources :entertainment_categories
+    resources :entertainment_stores
+    resources :food_categories
+    resources :food_stores
+    resources :other_categories
+    resources :other_stores
+  end
   resources :events
   resources :deals
   resources :feedback_messages

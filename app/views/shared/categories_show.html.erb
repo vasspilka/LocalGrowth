@@ -1,4 +1,13 @@
 <%= provide(:title, @title) %>
 
-<%= paginate @stores %>
-<%= render @stores %>
+<div class="row">
+  <div class="col-md-3">
+    <%= render "shared/categories_sidebar" %>
+  </div>
+  <div class="col-md-9">
+    <%= paginate @stores %>
+    <%= render @stores %>  
+  </div>
+</div>
+
+
