@@ -22,7 +22,8 @@
 #  index_entertainment_stores_on_entertainment_category_id  (entertainment_category_id)
 #
 
-class Stores::EntertainmentStore < Stores::BaseStore
+class Stores::EntertainmentStore < ActiveRecord::Base
+  extend Stores::BaseStore
 
   has_many :taggings, as: :tagable , class_name: "Asset::Tagging" 
   has_many :tags, :through => :taggings , class_name: "Asset::Tag"  
@@ -35,9 +36,10 @@ class Stores::EntertainmentStore < Stores::BaseStore
   has_many :deals, as: :dealable, class_name: "Ead::Deal"
   has_many :likes, as: :likeable, class_name: "Relation::Like"
 
-  ## Inherits from BaseStore
-  #
-  paginates_per 18
+  has_attached_file :logo, :styles => {:small => "150x150>", :thumb => "100x100>" }, :default => "no-image.jpg"
+  validates_attachment :logo, :content_type => { :content_type => ["image/jpeg","image/jpg", "image/gif", "image/png"] }
+
+  paginates_per 12
   self.table_name = "entertainment_stores"
 
   belongs_to :entertainment_category
