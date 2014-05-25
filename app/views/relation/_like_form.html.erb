@@ -1,8 +1,0 @@
-<h5>This is the Like button find me in "app/views/shared/_like_form.html.erb"</h5>
-<div id=<%= "like-button#{likeable.id}" %>>
-<% if current_user.likes?(likeable) %>
-  <%= render '/relation/unlike', :likeable => likeable %>
-<% else %>
-  <%= render '/relation/like', :likeable => likeable %>
-<% end %>
-</div>
