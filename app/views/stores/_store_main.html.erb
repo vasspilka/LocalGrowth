@@ -1,27 +1,2 @@
-<div class="col-md-3">        
-  <div class="image-img"><%= image_tag(store.logo.url) %> </div>
-</div>
-
-<div class="col-md-9">
-  <div class="row text-center">
-    <div class="btn-group ">
-      <button type="button" class="btn btn-default">General</button>
-      <button type="button" class="btn btn-default">Description</button>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <% store.locations.each do  |location|%>
-        <%= location.address %>
-      <% end %>
-    </div>
-    <div class="col-md-6">
-      <% if store.phones.any? then %>
-        <%= t("phone", :count => store.phones.count ) %><br>
-        <% store.phones.each do |phone| %>
-          <%= phone.number_type + ": " + phone.number %>
-        <% end %> 
-      <% end %>
-    </div>
-  </div>
-</div>
+<%= render "stores/store_main/info", store: store %>
+<%= render "stores/store_main/deals_events", store: store %>

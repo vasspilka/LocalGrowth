@@ -1,10 +1,12 @@
-<div class="col-md-5">
-  <%= store.title %>
+<div class="row">
+  <div class="col-md-5">
+    <%= store.title %>
+  </div>
+  <div class="col-md-5">
+    <button class="btn">Deals/Events</button>
+  </div>
+  <div class="col-md-2">
+    <div id="likes_count<%=store.id%>"><i class="icon-bar-graph"></i> <%= store.points %></div>
+    <div><%= render 'shared/like_form', :likeable => store if user_signed_in? %></div>
+  </div>
 </div>
-<div class="col-md-5">
-  <button class="btn">Deals/Events</button>
-</div>
-<div class="col-md-2">
-  <div id="likes_count<%=store.id%>"><i class="icon-bar-graph"></i> <%= store.points %></div>
-  <div><%= render 'shared/like_form', :likeable => store if user_signed_in? %></div>
-</div>  
