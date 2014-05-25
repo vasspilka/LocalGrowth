@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="store-grid">
+    <div class="row">
+      <%= render "stores/store_head", store: store %>
+    </div>
+    <div class="row"> 
+      <%= render "stores/store_main", store: store %>
+    </div>
+    <div class="row">
+      <% if store.tags.any? then %>          
+        <% store.tags.each do |tag| %>
+          <%= tag.title %>
+        <% end %> 
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+

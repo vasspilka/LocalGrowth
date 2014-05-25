@@ -13,12 +13,10 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <%# ensure_security_headers %>
   <%= render 'layouts/google_analytics_and_maps' %>
 </head>
 <body class="container">
 
- 
   <header>
     <div class="row">
        <%= render 'shared/nav' %>
@@ -35,10 +33,10 @@
       <div class="col-md-2">
          <%= render "shared/categories_sidebar" %>
       </div>
-      <div class="col-md-8">      
+      <div class="col-md-7">      
         <%= yield %>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-3">
         <%= render 'shared/ead' %>
       </div>
     </div>

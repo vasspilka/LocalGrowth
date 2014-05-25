@@ -1,5 +1,9 @@
 <%= form_for(current_user.likes.find_by(likeable_id: likeable.id, likeable_type: likeable.class.to_s),
              html: { method: :delete },
              remote: true) do |f| %>
-  <%= f.submit "", class: "" %>
+
+  <button name="commit" type="submit" value="" class="btn btn-default">
+     <span class="glyphicon glyphicon-star"></span>
+  </button>
+
 <% end %>

@@ -1,6 +1,6 @@
 
 <div class="col-md-4">
- <div class="store-grid">        
+ <div class="store-grid-1">        
    <ul class="list-group">	
      <li class="list-group-item"> <%= food_store.title %><div id="likes_count<%=food_store.id%>"><i class="icon-bar-graph"></i><%= food_store.points %></div><%= render 'shared/like_form', :likeable => food_store if user_signed_in? %></li>
      <li class="list-group-item"><%= image_tag(food_store.logo.url, :class => "img-responsive image-img text-center") %></li>

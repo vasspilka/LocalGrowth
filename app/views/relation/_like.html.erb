@@ -2,5 +2,9 @@
              remote: true) do |f| %>
   <div><%= f.hidden_field :likeable_id %></div>
   <div><%= f.hidden_field :likeable_type %></div>
-  <%= f.submit '', class: "like-button" %>
+
+  <button name="commit" type="submit" value="" class="btn btn-default">
+     <span class="glyphicon glyphicon-star-empty"></span>
+  </button>
+
 <% end %>
