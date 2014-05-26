@@ -3,7 +3,7 @@
     <%= store.title %>
   </div>
   <div class="col-md-5">
-    <button id="btn-store-ead-<%=store.id%>" class="btn">Deals/Events</button>
+    <button id="btn-store-info-<%=store.id%>" class="btn"><span style="display: none">Info</span><span>Deals/Events</span></button>
   </div>
   <div class="col-md-2">
     <div id="likes_count<%=store.id%>"><i class="icon-bar-graph"></i> <%= store.points %></div>
@@ -13,13 +13,10 @@
 
 <script>
   $( "#btn-store-info-<%=store.id%>" ).click(function() {
-    $("#btn-store-info-<%=store.id%>").attr('id','btn-store-ead-<%=store.id%>')
-    $("#btn-store-ead-<%=store.id%>").html("Info")
-    $("#main-store-<%=store.id%>").html("<%= escape_javascript(render('/stores/store_main/deals_events', :store => store)) %>")
-  });
-  $( "#btn-store-ead-<%=store.id%>" ).click(function() {
-    $("#btn-store-ead-<%=store.id%>").attr('id',"btn-store-info-<%=store.id%>")
-    $("#btn-store-info-<%=store.id%>").html("Deals/Events")
-    $("#main-store-<%=store.id%>").html("<%= escape_javascript(render('/stores/store_main/info', :store => store)) %>")
+    $("#btn-store-info-<%=store.id%> span").toggle()
+    $(".main-store-<%=store.id%>").toggle()
   });
 </script>
+
+
+

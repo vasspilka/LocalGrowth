@@ -3,11 +3,10 @@
     <div class="image-img"><%= image_tag(store.logo.url) %> </div>
   </div>
   
-  <div class="col-md-9">
+  <div class="col-md-9 store-info-<%= store.id %>">
     <div class="row text-center">
       <div class="btn-group ">
-        <button type="button" class="btn btn-default">General</button>
-        <button type="button" class="btn btn-default">Description</button>
+        <button id="btn-store-general-<%=store.id%>" class="btn btn-default">General</button>
       </div>
     </div>
     <div class="row">
@@ -26,6 +25,14 @@
       </div>
     </div>
   </div>
+  <div class="col-md-9 store-info-<%= store.id %>" style="display:none">
+    lorem
+    <div class="row text-center">
+      <div class="btn-group ">
+        <button id="btn-store-description-<%=store.id%>" class="btn btn-default">Description</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="row">
@@ -35,3 +42,15 @@
       <% end %> 
     <% end %>
 </div>
+
+<script>
+  $( "#btn-store-general-<%=store.id%>" ).click(function() {
+    $(".store-info-<%= store.id %>").toggle()
+  });
+  $( "#btn-store-description-<%=store.id%>" ).click(function() {
+    $(".store-info-<%= store.id %>").toggle()
+  });
+</script>
+
+
+

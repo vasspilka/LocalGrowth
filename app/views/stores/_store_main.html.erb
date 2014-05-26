@@ -1,1 +1,2 @@
-<div id="main-store-<%= store.id %>"><%= render "stores/store_main/info", store: store %></div>
+<div class="main-store-<%= store.id %>" ><%= render "stores/store_main/info", store: store %></div>
+<div class="main-store-<%= store.id %>" style="display: none"><%= render "stores/store_main/deals_events", store: store %></div>

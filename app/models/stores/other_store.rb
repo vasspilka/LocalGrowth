@@ -23,7 +23,7 @@
 #
 
 class Stores::OtherStore < ActiveRecord::Base
-  extend Stores::BaseStore
+  include Stores::BaseStore
 
   has_many :taggings, as: :tagable , class_name: "Asset::Tagging" 
   has_many :tags, :through => :taggings , class_name: "Asset::Tag"  

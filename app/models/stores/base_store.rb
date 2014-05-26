@@ -14,4 +14,8 @@ module Stores::BaseStore
     return percentage
   end
 
+  def has_events_or_deals?
+    return self.ads.any? || self.deals.any?
+  end
+
 end
