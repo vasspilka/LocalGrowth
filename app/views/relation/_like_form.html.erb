@@ -1,0 +1,8 @@
+
+<div class = "likeable-button" id=<%= "like-button#{likeable.id}" %>>
+<% if current_user.likes?(likeable) %>
+  <%= render '/relation/unlike', :likeable => likeable %>
+<% else %>
+  <%= render '/relation/like', :likeable => likeable %>
+<% end %>
+</div>

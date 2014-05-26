@@ -6,7 +6,7 @@
   <div class="col-md-9 store-info-<%= store.id %>">
     <div class="row text-center">
       <div class="btn-group ">
-        <button id="btn-store-general-<%=store.id%>" class="btn btn-default">General</button>
+        <button class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="<%= store.description %>">Description</button>
       </div>
     </div>
     <div class="row">
@@ -14,6 +14,8 @@
         <% store.locations.each do  |location|%>
           <%= location.address %>
         <% end %>
+        <%= store.working_hours %>
+        <%= store.website_url %>
       </div>
       <div class="col-md-6">
         <% if store.phones.any? then %>
@@ -26,10 +28,9 @@
     </div>
   </div>
   <div class="col-md-9 store-info-<%= store.id %>" style="display:none">
-    lorem
     <div class="row text-center">
       <div class="btn-group ">
-        <button id="btn-store-description-<%=store.id%>" class="btn btn-default">Description</button>
+        <button id="btn-store-general-<%=store.id%>" class="btn btn-default">General</button>
       </div>
     </div>
   </div>
@@ -45,12 +46,9 @@
 
 <script>
   $( "#btn-store-general-<%=store.id%>" ).click(function() {
-    $(".store-info-<%= store.id %>").toggle()
+    $("btn-store-general-<%=store.id%>").toggle()
   });
   $( "#btn-store-description-<%=store.id%>" ).click(function() {
     $(".store-info-<%= store.id %>").toggle()
   });
 </script>
-
-
-

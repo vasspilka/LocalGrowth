@@ -1,11 +1,5 @@
-# == Schema Information
-#
-# Table name: base_stores
-#
-#  id :integer          not null, primary key
-#
-
 module Stores::BaseStore
+
 
   public
 
