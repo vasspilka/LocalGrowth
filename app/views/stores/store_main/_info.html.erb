@@ -4,35 +4,41 @@
   </div>
   <div class="col-md-9 store-info-<%= store.id %>">
     <div class="row text-center">
-      <div class="btn-group ">
-        <button id="btn-store-description-<%=store.id%>" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="<%= store.description %>hello">Description</button>
-      </div>
     </div>
     <div class="row">
       <div class="col-md-6">
         <% store.locations.each do  |location|%>
-          <%= location.address %>
+          <%= location.address %><br>
         <% end %>
-        <%= store.working_hours %>
-        <%= store.website_url %>
+        <%= store.working_hours %><br>
+        <%= store.website_url %><br>
       </div>
       <div class="col-md-6">
         <% if store.phones.any? then %>
           <%= t("phone", :count => store.phones.count ) %><br>
           <% store.phones.each do |phone| %>
-            <%= phone.number_type + ": " + phone.number %>
+            <%= phone.number_type + ": " + phone.number %><br>
           <% end %> 
         <% end %>
       </div>
     </div>
+    <div class="row centered-pills">
+      <div class="col-md-11">
+        <% if store.tags.any? then %>
+          <small>
+            <ul class="nav nav-pills">       
+              <% store.tags.each do |tag| %>
+                <li><a href="#"><%= tag.title %></a></li>
+              <% end %> 
+            </ul>
+          </small>
+        <% end %>
+      </div>
+      <div class="col-md-1">
+        <button title="Description" id="btn-store-description-<%=store.id%>" class="btn btn-default pull-right" data-container="body" data-toggle="popover" data-placement="top" data-content="<%= store.description %>hello"><span class="glyphicon glyphicon-info-sign"></span></button>
+      </div>
+    </div>
   </div>
-
-<div class="row">
-    <% if store.tags.any? then %>          
-      <% store.tags.each do |tag| %>
-        <%= tag.title %>
-      <% end %> 
-    <% end %>
 </div>
 
 <script>

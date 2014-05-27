@@ -1,4 +1,22 @@
 <% if store.has_events_or_deals?  %>
+<div class="row">
+	<div class="col-md-4" >
+		
+	</div>
+	<div class="col-md-4">
+	  <div class="panel panel-default">
+        <div class="panel-heading">
+          <%= store.deals.first.title unless store.deals.first.nil? %>
+        </div>
+        <div class="panel-body">
+          <%= store.deals.first.description unless store.deals.first.nil? %>
+        </div>
+      </div>
+	</div>
+	<div class="col-md-4">
+		
+	</div>
+</div>
 
 <% else %>
 
