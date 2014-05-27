@@ -8,10 +8,17 @@
   margin: 10px;
 }
 
-.image-img{
-	height:130px;
-	width:130px;
+.store-img{
+  height:130px;
+  width:130px;
+
+  img{
+	max-height:130px;
+	max-width:130px;
+  }
 }
+
+
 
 .store-grid{ 
   height: 220px;
