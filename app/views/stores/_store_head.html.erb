@@ -3,10 +3,10 @@
     <button id="btn-store-info-<%=store.id%>" class="btn" ><span style="display: none">Info</span><span>Deals/Events</span></button>
   </div>
   <div class="col-md-8 text-center ">
-    <h2><%= store.title %></h2>
+    <h3 style="margin:5px"><%= store.title %></h3>
   </div>
   <div class="col-md-2">
-    <div id="likes_count<%=store.id%>"><i class="icon-bar-graph"></i> <%= store.points %></div>
+    <span id="likes_count<%=store.id%>" class="label label-default pull-right"><%= store.points %></span>
     <div><%= render 'shared/like_form', :likeable => store if user_signed_in? %></div>
   </div>
 </div>
