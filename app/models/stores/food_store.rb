@@ -37,6 +37,7 @@ class Stores::FoodStore < ActiveRecord::Base
   has_many :deals, as: :dealable, class_name: "Ead::Deal"
   has_many :likes, as: :likeable, class_name: "Relation::Like"
 
+  paginates_per 8
   
   has_attached_file :logo, :styles => {:small => "150x150>", :thumb => "100x100>" }, :default => "no-image.jpg"
   validates_attachment :logo, :content_type => { :content_type => ["image/jpeg","image/jpg", "image/gif", "image/png"] }

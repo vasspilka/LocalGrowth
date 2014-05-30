@@ -22,13 +22,20 @@
        <%= render 'shared/nav' %>
     </div>
     <div class="row">
-      <div class="text-center"><%= render 'shared/basenav' %></div>
+      <div class="col-md-offset-2 col-md-7 text-center">
+        <%= render 'shared/basenav' %>
+      </div>
     </div>   
   </header>
 
   <!-- # Main website content-->
   <main role="main">
     <%= render 'layouts/flash_notice' %>
+    <div class="row">
+      <div class="col-md-offset-2 col-md-7 text-center">
+        <%= paginate @stores if @stores%>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-2">
          <%= render "shared/categories_sidebar" %>

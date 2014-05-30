@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ## Below you can specify a ruby version and rvm gemset that you wish to use for the project.
- ruby '2.1.1'
+ ruby '2.1.2'
 #ruby-gemset=LocalGrowth
 
 
@@ -13,7 +13,7 @@ gem 'rails', '~> 4.0'
 gem 'rails-i18n'      # Locale & Languages
 gem "geocoder"        # Handling geographic data
 gem 'gmaps4rails'     # Google maps intergration
-gem "rails_admin_map_field", :git => "git://github.com/jasonl/rails_admin_map_field.git"
+# gem "rails_admin_map_field", :git => "git://github.com/jasonl/rails_admin_map_field.git"
 
 # Security and Admin tools
 gem "devise"                  # User model & authorisation

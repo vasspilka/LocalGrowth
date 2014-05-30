@@ -6,7 +6,7 @@
     <h3 style="margin:5px"><%= store.title %></h3>
   </div>
   <div class="col-md-2">
-    <span id="likes_count<%=store.id%>" class="label label-default pull-right"><%= store.points %></span>
+    <span id="likes_count<%=store.id%>" class="label label-info pull-right"><%= store.points %></span>
     <div><%= render 'shared/like_form', :likeable => store if user_signed_in? %></div>
   </div>
 </div>

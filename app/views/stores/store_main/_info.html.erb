@@ -23,7 +23,7 @@
               <%# t("phone", :count => store.phones.count ) %>
               <div class="pull-right text-center">
                 <% store.phones.each do |phone| %>
-                    <span class="label label-info"><%= phone.number_type %></span><br>
+                    <span class="label label-warning"><%= phone.number_type %></span><br>
                     <%=phone.number %><br>
                 <% end %> 
                </div>
@@ -47,11 +47,13 @@
     </div>
   </div>
   <div class="col-md-1">
-     <button title="Description" class="btn-popover" data-container="false" data-toggle="popover" data-placement="left" data-content="<%= store.description %>"><span class="glyphicon glyphicon-info-sign"></span></button>
-     <button data-toggle="modal" data-target="#store-map-<%= store.id %>"><span class="glyphicon glyphicon-map-marker"></span></button>
+     <button title="Description" class="btn-popover" data-container="body" data-toggle="popover" data-placement="left" data-content="<%= store.description %>"><span class="glyphicon glyphicon-info-sign"></span></button>
+     <button id="btn-store-map-<%= store.id %>"><span class="glyphicon glyphicon-map-marker"></span></button>
      <% unless store.website_url.empty? then %>
        <a href="http://<%= store.website_url %>"><button><span class="glyphicon glyphicon-link"></span></button></a>
      <% end %>     
    </div>
-   <%= render "stores/store_main/store_map", store: store %>
+   <%# render "stores/store_main/store_map", store: store %>
 </div>
+
+

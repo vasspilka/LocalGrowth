@@ -40,7 +40,7 @@ class Stores::OtherStore < ActiveRecord::Base
   has_attached_file :logo, :styles => {:small => "150x150>", :thumb => "100x100>" }, :default => "no-image.jpg"
   validates_attachment :logo, :content_type => { :content_type => ["image/jpeg","image/jpg", "image/gif", "image/png"] }
 
-  paginates_per 12
+  paginates_per 8
   self.table_name = "other_stores"
 
   belongs_to :other_category
