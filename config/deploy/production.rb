@@ -4,6 +4,7 @@ CONFIG.merge! CONFIG.fetch(Rails.env, {})
 CONFIG.symbolize_keys!
 
 set :stage, :production
+
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary
@@ -16,6 +17,7 @@ set :stage, :production
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
+
 server CONFIG[:server_ip], user: CONFIG[:server_user], roles: %w{web app db}, primary: true
 
 # you can set custom ssh options
