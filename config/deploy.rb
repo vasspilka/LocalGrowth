@@ -1,5 +1,5 @@
 require 'rails/all'
-CONFIG = YAML.load(File.read(File.expand_path('application.yml', __FILE__)))
+CONFIG = YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
 CONFIG.merge! CONFIG.fetch(Rails.env, {})
 CONFIG.symbolize_keys!
 
@@ -20,9 +20,7 @@ set :format, :pretty
 set :log_level, :debug
 set :pty, true
 
-set :linked_files, %w{config/database.yml}
-set :linked_files, %w{config/application.yml}
-
+set :linked_files, %w{config/application.yml config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 
