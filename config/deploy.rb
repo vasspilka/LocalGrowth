@@ -1,12 +1,12 @@
 require 'sshkit'
 
-set :application, 'lamiatodo'
+set :application, "#{CONFIG[:app_name]}"
 
 set :repo_url, 'https://github.com/vasspilka/LocalGrowth'
 set :branch, 'master'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
-set :deploy_to, "/home/user/apps/www/#{fetch(:application)}"
+set :deploy_to, "/home/#{CONFIG[:server_user]}/#{fetch(:application)}"
 set :scm, :git
 set :deploy_via, :remote_cache
 set :use_sudo, false
