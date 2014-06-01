@@ -34,7 +34,7 @@ RailsAdmin.config do |config|
 
   # Exclude specific models (keep the others):
   config.excluded_models =
-   ["Asset::Tagging","Poll::PollVote","Stores::BaseStore","Asset::Review",
+   ["Asset::Tagging","Poll::PollVote",
     "Relation::Relationship","Relation::Like","Relation::Attending","Ead::Base"]
 
   # Include specific models (exclude the others):

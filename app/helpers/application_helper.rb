@@ -18,7 +18,7 @@ module ApplicationHelper
 
   def meta_keywords
     "#{CONFIG[:app_name]},#{CONFIG[:town_name]},#{CONFIG[:app_name]} #{CONFIG[:town_name]}, #{I18n.t :food}, #{I18n.t :entertainment},
-     #{I18n.t :food} #{CONFIG[:town_name]}, #{I18n.t :entertainment} #{CONFIG[:town_name]}," 
+     #{I18n.t :food} #{CONFIG[:town_name]}, #{I18n.t :entertainment} #{CONFIG[:town_name]}" 
   end
 
 end

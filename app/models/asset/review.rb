@@ -19,7 +19,7 @@
 
 class Asset::Review < ActiveRecord::Base
   # Callbacks 
-  after_save :add_rating_to_store
+  #after_save :add_rating_to_store
 
   # Assosiations
   belongs_to :user
@@ -30,7 +30,7 @@ class Asset::Review < ActiveRecord::Base
 
 
   # Scopes
-  # scope :with_rating, where(rating: => true)
+  scope :with_rating, -> {where("rating IS NOT NULL")}
 
 
   private
@@ -41,6 +41,7 @@ class Asset::Review < ActiveRecord::Base
   	  self.reviewable.update_attributes(:rating => rating)
     end
   end
+
 
 
 

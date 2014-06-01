@@ -78,22 +78,4 @@ LocalGrowth::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  #config.action_mailer.delivery_method = :sendmail
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default :charset => "utf-8"
-
-  config.action_mailer.default_url_options = { :host => "lamiatodo.gr" }
-
-  config.action_mailer.smtp_settings = {
-    :address              => CONFIG[:action_mailer_address],
-    :port                 => CONFIG[:action_mailer_port],
-    :domain               => CONFIG[:action_mailer_domain],
-    :user_name            => CONFIG[:action_mailer_username],
-    :password             => CONFIG[:action_mailer_password],
-    :authentication       => :plain,
-    :enable_starttls_auto => true
-  }  
 end

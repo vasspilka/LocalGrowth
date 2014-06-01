@@ -35,13 +35,11 @@ class Poll::Vote < ActiveRecord::Base
   private
 
     def increase_poll_votes
-      self.poll.votes_count = self.poll.votes_count + 1
-      self.poll.save
+      self.poll.increment!(:votes_count)
     end
 
     def increase_poll_option_votes
-      self.poll_option.votes_count = self.poll_option.votes_count + 1
-      self.poll_option.save
+      self.poll_option.increment!(:votes_count)
     end
 
 end

@@ -24,6 +24,6 @@ module LocalGrowth
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.i18n.default_locale = CONFIG[:defaut_locale]
 
-    
+    config.action_mailer.default_url_options = {host: CONFIG[:action_mailer_address]}
   end
 end

@@ -32,15 +32,13 @@ class Relation::Like < ActiveRecord::Base
 
   def add_point
     if self.likeable.points
-  	  points = self.likeable.points + 1 
-  	  self.likeable.update_attributes(:points => points)
+  	  self.likeable.increment!(:points) 
     end
   end
 
   def remove_point
     if self.likeable.points
-      points = self.likeable.points - 1 
-      self.likeable.update_attributes(:points => points)
+      self.likeable.try(:decrement!, :points) 
     end
   end
 

@@ -45,7 +45,9 @@
         <%= yield %>
       </div>
       <div class="col-md-3">
+        <%= render 'poll/poll', poll: Poll::Poll.first if Poll::Poll.exists? && current_user%>
         <%= render 'shared/ead' %>
+
       </div>
     </div>
   </main>

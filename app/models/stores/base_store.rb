@@ -4,8 +4,7 @@ module Stores::BaseStore
   public
 
   def rating_percent
-    percentage = self.rating / self.reviews.with_rating.count
-    return percentage
+    self.rating / self.reviews.with_rating.count
   end
 
   def has_events_or_deals?
