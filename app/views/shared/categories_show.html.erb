@@ -7,6 +7,16 @@
     <%= render partial: "stores/store", collection: @stores %>  
 </div>
 
+<% content_for :sidebar do %>
+  <%= render "shared/categories_sidebar" %>
+<% end %>
+  
+<% content_for :topbar do %>
+  <div class="col-md-offset-2 col-md-7 text-center">
+    <%= paginate @stores if @stores%>
+  </div>
+<% end %>
+
 <script>
   $(".btn-popover").popover()
 </script>
