@@ -3,7 +3,7 @@
     <button id="btn-store-info-<%=store.id%>" class="btn" ><span style="display: none">Info</span><span>Deals/Events</span></button>
   </div>
   <div class="col-md-8 text-center ">
-    <h3 style="margin:5px"><%= store.title %></h3>
+    <h3 style="margin:5px"><%= store.title %><small><% store.category %></small></h1></h3>
   </div>
   <div class="col-md-2">
     <span id="likes_count<%=store.id%>" class="label label-info pull-right"><%= store.points %></span>

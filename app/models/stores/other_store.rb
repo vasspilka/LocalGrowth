@@ -46,4 +46,9 @@ class Stores::OtherStore < ActiveRecord::Base
   belongs_to :other_category
   
   validates  :other_category_id, presence: true
+
+  def category
+    self.other_category.title
+  end
+
 end

@@ -44,5 +44,11 @@ class Stores::EntertainmentStore < ActiveRecord::Base
 
   belongs_to :entertainment_category
 
+
   validates  :entertainment_category_id, presence: true
+
+  def category
+    self.entertainment_category.title
+  end
+
 end

@@ -47,4 +47,8 @@ class Stores::FoodStore < ActiveRecord::Base
   belongs_to :food_category
   
   validates  :food_category_id, presence: true
+
+  def category
+    self.food_category.title
+  end
 end
