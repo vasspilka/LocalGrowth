@@ -3,7 +3,7 @@ module Stores::BaseStore
 
   public
 
-  def rating_percent
+  def rating_compute
     self.rating / self.reviews.with_rating.count
   end
 

@@ -1,8 +1,11 @@
 <div class="row">
-  <div class="panel panel-default store-container  center-block">
-    <div class="panel-heading"><%= render "stores/store_head", store: store %></div>
-    <div class="panel-body"><%= render "stores/store_main", store: store %></div>
-  </div> 
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default store-container  center-block">
+      <div class="panel-heading"><%= render "stores/store_head", store: store %></div>
+      <div class="panel-body"><%= render "stores/store_main", store: store %></div>
+      <%# render "stores/store_main/store_accordion", store: store %> 
+    </div>
+  </div>
 </div>
 
 
