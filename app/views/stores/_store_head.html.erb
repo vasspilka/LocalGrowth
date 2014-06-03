@@ -1,6 +1,14 @@
 <div class="row">
   <div class="col-md-2">
-    <button id="btn-store-info-<%=store.id%>" class="btn" ><span style="display: none">Info</span><span>Deals/Events</span></button>
+    <% if store.has_events_or_deals? %>
+      <button id="btn-store-info-<%=store.id%>" class="btn" ><span style="display: none">Info</span><span>Deals/Events</span></button>
+      <script>
+        $( "#btn-store-info-<%=store.id%>" ).click(function() {
+          $("#btn-store-info-<%=store.id%> span").toggle()
+          $(".main-store-<%=store.id%>").toggle()
+        });
+      </script>
+    <% end %>
   </div>
   <div class="col-md-8 text-center ">
     <h3 style="margin:5px"><%= store.title %><small><% store.category %></small></h1></h3>
@@ -10,9 +18,3 @@
     <div><%= render 'shared/like_form', :likeable => store if user_signed_in? %></div>
   </div>
 </div>
-<script>
-  $( "#btn-store-info-<%=store.id%>" ).click(function() {
-    $("#btn-store-info-<%=store.id%> span").toggle()
-    $(".main-store-<%=store.id%>").toggle()
-  });
-</script>
