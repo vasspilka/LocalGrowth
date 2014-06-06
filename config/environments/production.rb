@@ -75,6 +75,17 @@ LocalGrowth::Application.configure do
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
 
+  #config.action_mailer.default_url_options = {host: CONFIG[:action_mailer_host]}
+  config.action_mailer.smtp_settings = {
+    address:               CONFIG[:action_mailer_address],
+    port:                  CONFIG[:action_mailer_port],
+    #domain:                CONFIG[:action_mailer_domain],
+    user_name:             CONFIG[:action_mailer_username],
+    password:              CONFIG[:action_mailer_password],
+    authentication:        :login,
+    enable_starttls_auto:  :true
+  }  
+
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
