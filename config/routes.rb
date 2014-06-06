@@ -15,7 +15,7 @@ LocalGrowth::Application.routes.draw do
   end
 
   # Store Recources
-  namespace :stores do
+  namespace :store do
     resources :entertainment_categories
     resources :entertainment_stores
     resources :food_categories
