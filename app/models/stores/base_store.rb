@@ -8,7 +8,11 @@ module Stores::BaseStore
   end
 
   def has_events_or_deals?
-    return self.ads.any? || self.deals.any?
+    self.ads.any? || self.deals.any?
+  end
+
+  def valid_locations
+    self.locations.where("longitude IS NOT 38.901383* AND latitude IS NOT ")
   end
 
 end
