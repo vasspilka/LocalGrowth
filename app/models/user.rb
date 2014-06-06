@@ -56,9 +56,9 @@ class User < ActiveRecord::Base
   has_many :followers, through: :reverse_relationships, source: :follower
   has_many :liked_events, through: :likes, source: :likeable, source_type: 'Ead::Event'
   has_many :liked_deals, through: :likes, source: :likeable, source_type: 'Ead::Deal'
-  has_many :liked_entertainment_stores, through: :likes, source: :likeable, source_type: 'Stores::EntertainmentStore'
-  has_many :liked_food_stores, through: :likes, source: :likeable, source_type: 'Stores::FoodStore'
-  has_many :liked_other_stores, through: :likes, source: :likeable, source_type: 'Stores::OtherStore'
+  has_many :liked_entertainment_stores, through: :likes, source: :likeable, source_type: 'Store::EntertainmentStore'
+  has_many :liked_food_stores, through: :likes, source: :likeable, source_type: 'Store::FoodStore'
+  has_many :liked_other_stores, through: :likes, source: :likeable, source_type: 'Store::OtherStore'
   has_many :attended_events, through: :attendings, source:  :event, class_name: "Ead::Event"
   has_many :voted_polls, through: :poll_votes, source:  :poll, class_name: "Poll::Poll"
 

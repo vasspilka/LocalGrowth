@@ -6,6 +6,13 @@
 RailsAdmin.config do |config|
 
 
+   # Authenticates with admin model
+   config.authenticate_with do
+     warden.authenticate! scope: :admin
+   end
+   config.current_user_method(&:current_user)
+
+
   ################  Global configuration  ################
   
   # Locale for admin still working on it

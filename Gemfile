@@ -7,7 +7,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.0'
+gem 'rails'
 
 # Internationalization & Location
 gem 'rails-i18n'      # Locale & Languages
@@ -18,7 +18,7 @@ gem 'gmaps4rails'     # Google maps intergration
 # Security and Admin tools
 gem "devise"                  # User and Authentication solution
 gem 'omniauth-facebook'       # Facebook Login
-gem 'rails_admin', '0.6.0'    # Admin Panel
+gem 'rails_admin'    # Admin Panel
 gem 'secure_headers'          # Twitter HTTP security
 gem 'bcrypt'
 
