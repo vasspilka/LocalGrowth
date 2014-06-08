@@ -1,17 +1,21 @@
 <%= provide(:title, @title) %>
 
-<div class='row'>
-    <%= render partial: "stores/store", collection: @stores %>  
+<!-- Stores list -->
+
+<%# rel_next_prev_link_tags @stores %>
+<%# binding.pry %>
+<div class='row'> 
+  <div class="col-md-1"></div>
+  <div class="col-md-10"><%= render partial: "stores/store", collection: @stores %></div>
+  <div class="col-md-1"></div>
 </div>
 
+<div class="row text-center">
+  <%= paginate @stores if @stores%>
+</div>
+  
 <% content_for :sidebar do %>
   <%= render "shared/categories_sidebar" %>
-<% end %>
-  
-<% content_for :topbar do %>
-  <div class="col-md-offset-2 col-md-7 text-center">
-    <%= paginate @stores if @stores%>
-  </div>
 <% end %>
 
 <script>
