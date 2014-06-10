@@ -3,10 +3,11 @@
   <h1>Επικοινωνία</h1>
   <div class= "row">
     <%= render "feedback_messages/form" %>
-    <br><br><br>
-  
-  
-    <span class="label label-info">Info</span>
-    <h5>E-mail: <%= CONFIG[:contact_email]%></h5>
   </div>
 </div>
+
+
+<%= content_for :sidebar do %>
+  <span class="label label-info">Info</span>
+  <h5>E-mail: <%= CONFIG[:contact_email]%></h5>
+<% end %>

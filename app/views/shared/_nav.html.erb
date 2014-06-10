@@ -1,10 +1,11 @@
 <nav class="sitenav animated fadeInDown">
   <div class="valign">
 	<ul class="nav nav-pills pull-right">
-       <li><%= link_to " home", root_path, :class => "home navicons" %></li>
-	   <li><%= link_to " login", new_user_session_path, :class => "login navicons" unless current_user %></li>
-	   <li><%= link_to "Profile", current_user, :class => "logout navicons" if current_user %> </li>
-	   <li><%= link_to " logout", destroy_user_session_path, :class => "logout navicons", method: "DELETE" if current_user %> </li>
+       <li><%= link_to t("nav.home"), root_path, :class => "home navicons" %></li>
+	   <li><%= link_to t("nav.contact"), contact_path %></li>
+	   <li><%= link_to t("nav.login"), new_user_session_path, :class => "login navicons" unless current_user %></li>
+	   <li><%= link_to t("nav.profile"), current_user, :class => "logout navicons" if current_user %> </li>
+	   <li><%= link_to t("nav.logout"), destroy_user_session_path, :class => "logout navicons", method: "DELETE" if current_user %> </li>
 	</ul>
   </div>
 </nav>
