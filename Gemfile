@@ -19,7 +19,7 @@ gem 'gmaps4rails'     # Google maps intergration
 gem "devise"                  # User and Authentication solution
 gem 'omniauth-facebook'       # Facebook Login
 gem 'rails_admin'    # Admin Panel
-gem 'secure_headers'          # Twitter HTTP security
+#gem 'secure_headers'          # Twitter HTTP security
 gem 'bcrypt'
 
 # Javascript related gems
