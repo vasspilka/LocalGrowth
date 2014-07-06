@@ -3,6 +3,8 @@
 
 Current version: Early Alpha (Unstable & Experimental) 
 
+Early [website sample][lamiatodo]
+
 ## Description
 
 LocalGrowth is an opensourced webapp project.
@@ -175,6 +177,7 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 [rails]: http://rubyonrails.org/
 [git]: http://git-scm.com/
 [rvm]: https://rvm.io/
+[lamiatodo]: http://lamiatodo.gr/
 [RubyInstaller]: http://rubyinstaller.org/downloads/
 [5]: https://github.com/vasspilka/LocalGrowth/blob/master/CONTRIBUTING.md
 [6]: https://github.com/vasspilka/LocalGrowth/blob/master/DEPLOY.md
