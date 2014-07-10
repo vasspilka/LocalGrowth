@@ -3,20 +3,23 @@
 
 Current version: Early Alpha (Unstable & Experimental) 
 
-Early [website sample][lamiatodo]
+[website sample][lamiatodo]
 
 ## Description
 
 LocalGrowth is an opensourced webapp project.
 
-Our goal is to make a website that can be deployed by anyone and potentially help local communities to improve their business.
-  
+
+It is supposed to be a social platform where someone can find places they will like.
+You can deploy it for a city or region of your chosing.
+
+
+In the future I plan to extend it with 3 modules. One for local news,
+one where people can discuss with each other, and one where people can donate or exchange goods.
 
 
 
 ##Features
-
-Main LocalGrowth features 
 
 (Some features still under developement)
 
@@ -46,7 +49,7 @@ You will require the following software
   Your output should be something like this.
   `ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-linux]`
 
-* [rails version ~> 4.0.0][rails]:
+* [rails version ~> 4.1.1][rails]:
 
   After succesfully installing Ruby, run these to install Bundler and Rails
 
@@ -124,8 +127,6 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
   * Javascript (Compiled from CoffeScript)
   * ~~Foundation (CSS & Javascript framework)~~
 
-  These technologies are the heart of the LocalGrowth project.
-
 ## How to deploy
 
   Deployment is explained in [DEPLOY.md][6]
@@ -144,14 +145,6 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 
 ## Goals, and the future
 
-  LocalGrowths main feature tries to be an easy deployment and use by anyone.
-  Our goal is for LocalGrowth to be deployed for your local region to do tasks your comminity needs.
-
-  LocalGrowth dosen't have to be just a business app, It can potentially be used as a web project for developers to learn from, understand, modify and use in any way they like.
-
-  In the future LocalGrowth could be separated into modules that would help other aspects of  communities, as Local news or a place where people would suggest ideas to improve their enviroment.
-
-  Then you could use the modules you want.
 
 ## About us
 
