@@ -6,7 +6,7 @@
 
   Our goal is to make deployment as easy as possible so anyone can deploy and use.
   With this in mind the deployment procedure is going to be further automated in the future.
-  [(Probably with Chef)][chef]
+  [(Probably with Chef)][chef] or with Rake.
 
 
   Right now it requires some knowledge of how to connect to a VSP (Virtual Private Server)
