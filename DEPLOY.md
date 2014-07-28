@@ -19,8 +19,8 @@
 Current deployment settings requires you to have a Linux based system with the following software 
 and free SSH access to it
  
- * Ruby ~> 2.0
- * Rails ~> 4.0 
+ * Ruby ~> 2.1
+ * Rails ~> 4.1
  * Git
  * Ngninx 
  * Passenger
