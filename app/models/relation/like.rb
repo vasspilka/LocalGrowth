@@ -9,6 +9,12 @@
 #  created_at    :datetime
 #  updated_at    :datetime
 #
+# Indexes
+#
+#  index_likes_on_likeable_id_and_likeable_type              (likeable_id,likeable_type)
+#  index_likes_on_user_id                                    (user_id)
+#  index_likes_on_user_id_and_likeable_id_and_likeable_type  (user_id,likeable_id,likeable_type) UNIQUE
+#
 
 class Relation::Like < ActiveRecord::Base
 
@@ -26,15 +32,13 @@ class Relation::Like < ActiveRecord::Base
 
   def add_point
     if self.likeable.points
-  	  points = self.likeable.points + 1 
-  	  self.likeable.update_attributes(:points => points)
+  	  self.likeable.increment!(:points) 
     end
   end
 
   def remove_point
     if self.likeable.points
-      points = self.likeable.points - 1 
-      self.likeable.update_attributes(:points => points)
+      self.likeable.try(:decrement!, :points) 
     end
   end
 

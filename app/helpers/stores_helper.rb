@@ -9,7 +9,7 @@ module StoresHelper
   end
 
   def other_stores
-  	return other_stores = Stores::OtherStore.all
+  	return Stores::OtherStore.all
   end
 
   def all_stores

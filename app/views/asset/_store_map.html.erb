@@ -1,0 +1,24 @@
+<div style='width: 600px;'>
+  <div id="map<%= store.id %>" style='width: 600px; height: 400px;'></div>
+</div>
+
+<script>
+  $("#btn-store-map-<%= store.id %>").click(function() {
+    $("#store-map-<%= store.id %>").toggle()
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: {}, internal: {id: 'map<%= store.id %>'}}, function(){
+        <% store.locations.each do |marker| %>
+          markers = handler.addMarkers([
+            {
+              lat: <%= marker.latitude %>,
+              lng: <%= marker.longitude%>,
+              infowindow: "<%= marker.address %>"
+            }
+          ]);
+        <% end %> 
+  
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+  });
+</script>

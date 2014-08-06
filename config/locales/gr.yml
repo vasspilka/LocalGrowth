@@ -27,19 +27,20 @@ gr:
   entertainment: "Διασκέδαση"
   food: "Φαγητό"
   other: "Άλλα"
-  phone: 
-    one: "Τηλέφωνο"
-    other: "Τηλέφωνα"
+
+  nav:
+    home: "Αρχική"
+    profile: "Προφίλ"
+    login: "Είσοδος"
+    logout: "Έξοδος"
+    about: "Σχετικά με εμάς"
+    about_points: "About Points"
+    contact: "Επικοινωνία"
+    help: "Βοήθεια"
+    info: "Πληροφορίες"
+    legal: "Όροι Χρήσης"
 
   views:
-    navigation:
-      home: "Home"
-      about_points: "About Points"
-      contact: "Contact"
-      help: "Help"
-      info: "Info"
-      legal: "Legal"
-
     sidenav:
       entertainment: "Διασκέδαση"
       food: "Φαγητό"

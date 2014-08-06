@@ -58,7 +58,5 @@ class CreateStoresAndCategories < ActiveRecord::Migration
 
       t.timestamps
     end  
-    create_table :base_stores do |t|
-    end
   end  
 end

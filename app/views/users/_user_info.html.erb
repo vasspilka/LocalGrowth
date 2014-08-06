@@ -1,12 +1,1 @@
-<% if current_user then %>
-
-<a href="<%= user_path(current_user) %>">
-  Current User Path
-</a>
-<h1>
-  <%= current_user.name %>
-</h1>
-<span>
-  <%= link_to "view my profile", current_user %>
-</span>
-<% end %>
+<h1 class="text-center"><%= @user.name %></h1>

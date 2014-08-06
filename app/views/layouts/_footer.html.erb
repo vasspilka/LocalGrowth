@@ -1,0 +1,24 @@
+<footer>
+  <%= image_tag "footer-divider.png", class: "footer-divider" %>
+  <div class="row">
+    <div class="span12 centered-pills">  
+      <small>
+        <ul class="nav nav-pills">
+          <li><%= link_to "Σχετικά με εμάς",about_path %> </li>
+          <li><%= link_to "Πληροφορίες", info_path %> </li>
+          <li><%= link_to "Όροι Χρήσης",legal_path %> </li>
+          <li><%= link_to "Βοήθεια", help_path %></li>
+          <li><%= link_to "Επικοινωνία", contact_path %></li>
+        </ul>
+      </small>
+    </div>
+  </div>
+  <div class="row text-center">
+    <small>
+      Part of the <a href="https://github.com/vasspilka/LocalGrowth">LocalGrowth</a>  project<br>      
+      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><%= CONFIG[:app_name] %></span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/gr/deed.en">CC Attribution-ShareAlike 3.0 Greece License</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/gr/deed.en"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/gr/88x31.png" /></a><br>
+    </small>
+      
+  </div>
+</footer>

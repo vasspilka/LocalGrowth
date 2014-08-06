@@ -8,6 +8,12 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
+# Indexes
+#
+#  index_attendings_on_event_id              (event_id)
+#  index_attendings_on_user_id               (user_id)
+#  index_attendings_on_user_id_and_event_id  (user_id,event_id) UNIQUE
+#
 
 class Relation::Attending < ActiveRecord::Base
   belongs_to :user

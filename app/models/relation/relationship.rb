@@ -8,6 +8,12 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #
+# Indexes
+#
+#  index_relationships_on_followed_id                  (followed_id)
+#  index_relationships_on_follower_id                  (follower_id)
+#  index_relationships_on_follower_id_and_followed_id  (follower_id,followed_id) UNIQUE
+#
 
 class Relation::Relationship < ActiveRecord::Base
   belongs_to :follower, class_name: "User"

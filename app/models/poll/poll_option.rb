@@ -9,6 +9,10 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #
+# Indexes
+#
+#  index_poll_options_on_poll_id  (poll_id)
+#
 
 class Poll::PollOption < ActiveRecord::Base
 

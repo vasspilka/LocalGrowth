@@ -7,75 +7,10 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require entypo
- *= require entypo-fonts
+ *= require_self
  */
- 
-@charset "UTF-8";
-@import "basestyles";
-@import "users";
-@import "static_pages";
-@import "shared";
-@import "categories";
-@import "fun_categories";
-@import "other_categories";
 
-
-
-
-html,body	{
-	background: #fff;
-	@include font-smoothing(on);
-
-}
-
-
-/*
-============================
-+               +
-+       FOOTER           +
-+               +
-============================
-
-*/
-
-.footer-divider {
- margin-top: 10px;
- margin-bottom: 10px;
- width: 100%;
- max-height: 20px;
-}
-
-.footer-info {
- list-style-type: none;
-
- li {
-  display: inline;
- }
-}
-
-.footer-social-buttons {
- color: lighten(#222222, 20%);
- text-align: center;
-}
-
-.footer-social-buttons i {
- margin-right: 10px;
-}
-
-.facebook-color {
- color: $facebook-color;
-}
-
-.twitter-color {
- color: $twitter-color;
-}
-
-.youtube-color {
- color: $youtube-color;
-}
-
-.skype-color {
- color: $skype-color;
-}
+ @import 'bootstrap_with_variables';
+ @import "animate";
+ @import "devise";
+ @import "custom";

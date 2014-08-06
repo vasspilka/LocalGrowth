@@ -1,33 +1,29 @@
-<% poll = Poll::Poll.first%>
 
-
-<div id=<%= "poll_#{poll.id}"%>>
- <h1><%= poll.question %></h1>
-
- <% if current_user.voted? poll %>
-   
-   <% poll.poll_options.each do |poll_option| %>
-     <%= poll_option.text %>
-    
-     <div id=<%= "poll_#{poll.id}_option_#{poll_option.id}" %>>
-     <%= poll_option.votes_count %>
-     </div>
-   <% end %>
-
- <% else %>
-
-
-   <% poll.poll_options.each do |poll_option| %>
-      <%= poll_option.text %>
+<div id="poll_<%= poll.id %>" class="panel panel-default">
+  <div class="panel-heading"><h3 ><%= poll.question %></h3></div>
+  <div class="panel-body"> 
+    <% if current_user.voted? poll %>
       
-      <div id=<%= "poll_#{poll.id}_option_#{poll_option.id}" %>>
-      <%= form_for(current_user.poll_votes.build(poll_id: poll.id, poll_option_id: poll_option.id),remote: true) do |f| %>
-        <div><%= f.hidden_field :poll_id %></div>
-        <div><%= f.hidden_field :poll_option_id %></div>
-      
-        <%= f.submit "Vote", class: "" %>
-      </div>
+      <% poll.poll_options.each do |poll_option| %>
+        <%= poll_option.text %>
+       
+        <div id=<%= "poll_#{poll.id}_option_#{poll_option.id}" %>>
+        <%= poll_option.votes_count %>
+        </div>
       <% end %>
-   <% end %>
- <% end %>
+    <% else %>
+      <% poll.poll_options.each do |poll_option| %>
+         <%= poll_option.text %>
+         
+         <div id=<%= "poll_#{poll.id}_option_#{poll_option.id}" %>>
+         <%= form_for(current_user.poll_votes.build(poll_id: poll.id, poll_option_id: poll_option.id),remote: true) do |f| %>
+           <div><%= f.hidden_field :poll_id %></div>
+           <div><%= f.hidden_field :poll_option_id %></div>
+         
+           <%= f.submit "Vote", class: "" %>
+         </div>
+         <% end %>
+      <% end %>
+    <% end %>
+  </div>
 </div>

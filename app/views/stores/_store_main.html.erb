@@ -1,0 +1,3 @@
+<div class="main-store-<%= store.id %>" ><%= render "stores/store_main/info", store: store %></div>
+<div class="main-store-<%= store.id %>" style="display: none"><%= render "stores/store_main/deals_events", store: store %></div>
+<div id="store-map-<%= store.id %>" style="display:none"><%= render "asset/store_map", store: store %></div>

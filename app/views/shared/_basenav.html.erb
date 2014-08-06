@@ -1,0 +1,7 @@
+<div>
+  <div class="btn-group">
+    <a href=<%= store_food_categories_path%>><button type="button" class="btn btn-primary btn-lg <%= 'active' if params[:controller] == "stores/food_categories" %> "><%= t "views.sidenav.food" %></button></a>
+    <a href=<%= store_entertainment_categories_path%>><button type="button" class="btn btn-primary btn-lg <%= 'active' if params[:controller] == "stores/entertainment_categories" %>"><%= t "views.sidenav.entertainment"%></button></a>
+  	<a href=<%= store_other_categories_path%>><button type="button" class="btn btn-primary btn-lg <%= 'active' if params[:controller] == "stores/other_categories" %>"><%= t "views.sidenav.other" %></button></a>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.centered-pills { text-align:center; }
+.centered-pills ul.nav-pills { display:inline-block; }
+.centered-pills li { display:inline; }
+.centered-pills a { float:left; }
+
+
+.store-img{
+  height:110px;
+  width:130px;
+
+  img{
+	max-height:110px;
+	max-width:130px;
+  }
+}
+
+.store-container{
+	width: 100% ;
+}

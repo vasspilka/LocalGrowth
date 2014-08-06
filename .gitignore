@@ -21,6 +21,7 @@ application.yml
 schema.rb
 /public/assets
 /public/system
+
 /config/application.yml
 *.swp
 *~

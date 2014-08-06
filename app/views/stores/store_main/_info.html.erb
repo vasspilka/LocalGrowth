@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-md-11">
+    <div class="row">
+      <div class="col-md-3">        
+        <div class="store-img"><%= image_tag(store.logo.url) %></div>
+      </div>
+      <div class="col-md-9 store-info-<%= store.id %>">
+        <div class="row text-center">
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <% store.locations.each do  |location|%>
+              <% unless location.address.empty? then %>
+                <span class="label label-info">Διεύθυνση</span><br><%= location.address %><br>
+              <% end %>
+            <% end %>
+            <% unless store.working_hours.empty? then %>
+              <span class="label label-info">Ώρες λειτουργίας</span><br><%= store.working_hours  %>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <% if store.phones.any? then %>
+              <%# t("phone", :count => store.phones.count ) %>
+              <div class="pull-right text-center">
+                <% store.phones.each do |phone| %>
+                    <span class="label label-warning"><%= phone.number_type %></span><br>
+                    <%=phone.number %><br>
+                <% end %> 
+               </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="row centered-pills">
+          <div class="col-md-12">
+            <% if store.tags.any? then %>
+              <small>
+                <ul class="nav nav-pills">       
+                  <% store.tags.each do |tag| %>
+                    <li><a href="#"><%= tag.title %></a></li>
+                  <% end %> 
+                </ul>
+              </small>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1">
+     <button title="Description" class="btn-popover" data-container="body" data-toggle="popover" data-placement="left" data-content="<%= store.description %>"><span class="glyphicon glyphicon-info-sign"></span></button>
+     <button id="btn-store-map-<%= store.id %>"><span class="glyphicon glyphicon-map-marker"></span></button>
+     <% unless store.website_url.empty? then %>
+       <a href="http://<%= store.website_url %>"><button><span class="glyphicon glyphicon-link"></span></button></a>
+     <% end %>     
+   </div>
+</div>
+
+

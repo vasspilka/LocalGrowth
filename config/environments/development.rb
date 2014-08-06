@@ -28,16 +28,25 @@ LocalGrowth::Application.configure do
   config.assets.debug = true
   
   # Mailer settings
-  config.action_mailer.default_url_options = {host: CONFIG[:action_mailer_host]}
+  
+  #config.action_mailer.default_url_options = {host: CONFIG[:action_mailer_host]}
   config.action_mailer.smtp_settings = {
-    :address              => CONFIG[:action_mailer_address],
-    :port                 => CONFIG[:action_mailer_port],
-    :domain               => CONFIG[:action_mailer_domain],
-    :user_name            => CONFIG[:action_mailer_username],
-    :password             => CONFIG[:action_mailer_password],
-    :authentication       => :plain,
-    :enable_starttls_auto => true
+    address:               CONFIG[:action_mailer_address],
+    port:                  CONFIG[:action_mailer_port],
+    #domain:                CONFIG[:action_mailer_domain],
+    user_name:             CONFIG[:action_mailer_username],
+    password:              CONFIG[:action_mailer_password],
+    authentication:        :login,
+    enable_starttls_auto:  :true
   }  
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.default charset: 'utf-8'
   
 
+end
+
+silence_warnings do 
+  require 'pry'
+  IRB = Pry
 end

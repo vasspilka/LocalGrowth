@@ -8,24 +8,51 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= full_title(yield(:title)) %></title>
+  <meta name="keywords" content="<%= meta_keywords %>"
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "#{CONFIG[:app_name]}" %>">
   <%= favicon_link_tag '/favicon.ico' %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/google_analytics_and_maps' %>
+  <%= yield :head %>
 </head>
-<body>
-  <%= render 'shared/nav' %>
-  <%= render 'shared/sidenav' %>
+<body class="container">
 
-  <%= render 'layouts/flash_notice' %>
+  <header>
+    <div class="row">
+       <%= render 'shared/nav' %>
+    </div>
+    <div class="row">
+      <div class="col-md-offset-2 col-md-7 text-center">
+        <%= render 'shared/basenav' %>
+      </div>
+    </div>   
+  </header>
 
-  <!-- # Main website content -->
-  <%= yield %>
+  <!-- # Main website content-->
+  <main role="main">
+    <%= render 'layouts/flash_notice' %>
+    <div class="row">
+      <%= yield :topbar %>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+         <%= yield :sidebar %>
+      </div>
+      <div class="col-md-7">      
+        <%= yield %>
+      </div>
+      <div class="col-md-3">
+        <%= render 'poll/poll', poll: Poll::Poll.first if Poll::Poll.exists? && current_user%>
+        <%= render 'shared/ead' %>
 
+      </div>
+    </div>
+  </main>
 
-  <%= render 'shared/misc' %>
-  <%= render 'shared/footer' %>
+  <%# render 'shared/misc' %>
+  <%= render 'layouts/footer' %>
 
 </body>
 </html>

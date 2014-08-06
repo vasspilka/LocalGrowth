@@ -18,6 +18,10 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #
+# Indexes
+#
+#  index_deals_on_dealable_id_and_dealable_type  (dealable_id,dealable_type)
+#
 
 class Ead::Deal < Ead::Base
 

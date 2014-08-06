@@ -1,21 +1,25 @@
 # LocalGrowth Local business web application
 
 
-Current version: Early Alpha (Unstable & Experimental)
+Current version: Early Alpha (Unstable & Experimental) 
 
+[website sample][lamiatodo]
 
 ## Description
 
 LocalGrowth is an opensourced webapp project.
 
-Our goal is to make a website that can be deployed by anyone and potentially help local communities to improve their business.
-  
+
+It is supposed to be a social platform where someone can find places they will like.
+You can deploy it for a city or region of your chosing.
+
+
+In the future I plan to extend it with 3 modules. One for local news,
+one where people can discuss with each other, and one where people can donate or exchange goods.
 
 
 
 ##Features
-
-Main LocalGrowth features 
 
 (Some features still under developement)
 
@@ -28,12 +32,11 @@ Main LocalGrowth features
   * Automated Analytics to help admin make business decisions.
 
 
-
 ## How to set up (Locally on your machine)
 
 You will require the following software
 
-* [ruby version ~> 2.1.1][ruby]:
+* [ruby version ~> 2.1.2][ruby]:
 
   For Windows you can use [RubyInstaller][RubyInstaller] dont forget the DevKit. And FOLLOW THE INSTRUCTIONS! (You will also need to modify ruby version under gemfile to 2.0 if you cant find 2.1)
   
@@ -44,9 +47,9 @@ You will require the following software
   To ensure you have properly installed Ruby run the following command in cmd or Terminal.
   `ruby -v`
   Your output should be something like this.
-  `ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux]`
+  `ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-linux]`
 
-* [rails version ~> 4.0.0][rails]:
+* [rails version ~> 4.1.1][rails]:
 
   After succesfully installing Ruby, run these to install Bundler and Rails
 
@@ -98,10 +101,13 @@ you will need this to set up `mysql` or `postgresql` when deploying to a server.
 
 `application.yml` has configurations for the application. While for local deployment these settings should work fine, for production you should change these according to your needs.
 
-Now we need to create the datatables and add some data. Finally we can run the server.
+Now we need to create the database.
 
-    > rake db:migrate && rake db:seed
-    > rails s 
+    > rake db:migrate
+
+And run the server.
+
+    > rails server
 
 The database is seeded with some basic data for you to see how the application works don't run `rake db:seed` if you want the app empty.
 
@@ -121,8 +127,6 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
   * Javascript (Compiled from CoffeScript)
   * ~~Foundation (CSS & Javascript framework)~~
 
-  These technologies are the heart of the LocalGrowth project.
-
 ## How to deploy
 
   Deployment is explained in [DEPLOY.md][6]
@@ -141,14 +145,6 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 
 ## Goals, and the future
 
-  LocalGrowths main feature tries to be an easy deployment and use by anyone.
-  Our goal is for LocalGrowth to be deployed for your local region to do tasks your comminity needs.
-
-  LocalGrowth dosen't have to be just a business app, It can potentially be used as a web project for developers to learn from, understand, modify and use in any way they like.
-
-  In the future LocalGrowth could be separated into modules that would help other aspects of  communities, as Local news or a place where people would suggest ideas to improve their enviroment.
-
-  Then you could use the modules you want.
 
 ## About us
 
@@ -174,6 +170,7 @@ Hopefully if everything ran smoothly, now you can visit your app inside your bro
 [rails]: http://rubyonrails.org/
 [git]: http://git-scm.com/
 [rvm]: https://rvm.io/
+[lamiatodo]: http://lamiatodo.gr/
 [RubyInstaller]: http://rubyinstaller.org/downloads/
 [5]: https://github.com/vasspilka/LocalGrowth/blob/master/CONTRIBUTING.md
 [6]: https://github.com/vasspilka/LocalGrowth/blob/master/DEPLOY.md
