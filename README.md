@@ -15,7 +15,7 @@ You can deploy it for a city or region of your chosing.
 
 
 In the future I plan to extend it with 3 modules. One for local news,
-one where people can discuss with each other, and one where people can donate or exchange goods.
+one where people can discuss with each other (possibly about local issues but not necessarily), and one where people can donate or exchange goods.
 
 
 
@@ -28,8 +28,8 @@ one where people can discuss with each other, and one where people can donate or
   * An easy way for users to find what they need.
   * A social netwok for users to interact with the local businesses and users.
   * A model for storing Events and Deals data.
-  * Smart integration with Facebook and Google data.
-  * Automated Analytics to help admin make business decisions.
+  * Smart integration with Facebook and Google.
+  * Automated Analytics to help overviewing content.
 
 
 ## How to set up (Locally on your machine)
