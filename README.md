@@ -1,4 +1,4 @@
-# LocalGrowth Local business web application
+# LocalGrowth A webapp for your city
 
 
 Current version: Early Alpha (Unstable & Experimental) 
