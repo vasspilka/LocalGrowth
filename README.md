@@ -1,7 +1,7 @@
 # LocalGrowth A webapp for your city
 
 
-Current version: Early Alpha (Unstable & Experimental) 
+Current version: Under Developement (Unstable & Experimental) 
 
 [website sample][lamiatodo]
 
@@ -10,7 +10,7 @@ Current version: Early Alpha (Unstable & Experimental)
 LocalGrowth is an opensourced webapp project.
 
 
-It is supposed to be a social platform where someone can find places they will like.
+It is a community driven social platform where someone can find places they'll enjoy.
 You can deploy it for a city or region of your chosing.
 
 
