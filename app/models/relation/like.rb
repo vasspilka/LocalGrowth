@@ -5,13 +5,13 @@
 #  id            :integer          not null, primary key
 #  user_id       :integer
 #  likeable_id   :integer
-#  likeable_type :string(255)
+#  likeable_type :string
 #  created_at    :datetime
 #  updated_at    :datetime
 #
 # Indexes
 #
-#  index_likes_on_likeable_id_and_likeable_type              (likeable_id,likeable_type)
+#  index_likes_on_likeable_type_and_likeable_id              (likeable_type,likeable_id)
 #  index_likes_on_user_id                                    (user_id)
 #  index_likes_on_user_id_and_likeable_id_and_likeable_type  (user_id,likeable_id,likeable_type) UNIQUE
 #

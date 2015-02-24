@@ -3,16 +3,16 @@
 # Table name: phones
 #
 #  id             :integer          not null, primary key
-#  number         :string(255)
-#  number_type    :string(255)
+#  number         :string
+#  number_type    :string
 #  phoneable_id   :integer
-#  phoneable_type :string(255)
+#  phoneable_type :string
 #  created_at     :datetime
 #  updated_at     :datetime
 #
 # Indexes
 #
-#  index_phones_on_phoneable_id_and_phoneable_type  (phoneable_id,phoneable_type)
+#  index_phones_on_phoneable_type_and_phoneable_id  (phoneable_type,phoneable_id)
 #
 
 class Asset::Phone < ActiveRecord::Base

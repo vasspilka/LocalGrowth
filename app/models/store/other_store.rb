@@ -3,16 +3,16 @@
 # Table name: other_stores
 #
 #  id                :integer          not null, primary key
-#  title             :string(255)
+#  title             :string
 #  other_category_id :integer
 #  description       :text
-#  logo_file_name    :string(255)
-#  logo_content_type :string(255)
+#  logo_file_name    :string
+#  logo_content_type :string
 #  logo_file_size    :integer
 #  logo_updated_at   :datetime
-#  website_url       :string(255)
-#  working_hours     :string(255)
-#  points            :integer          default(0)
+#  website_url       :string
+#  working_hours     :string
+#  points            :integer          default("0")
 #  rating            :integer
 #  created_at        :datetime
 #  updated_at        :datetime

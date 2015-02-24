@@ -3,9 +3,9 @@
 # Table name: polls
 #
 #  id          :integer          not null, primary key
-#  question    :string(255)
-#  active      :boolean          default(FALSE)
-#  votes_count :integer          default(0)
+#  question    :string
+#  active      :boolean          default("f")
+#  votes_count :integer          default("0")
 #  ends_at     :date
 #  created_at  :datetime
 #  updated_at  :datetime

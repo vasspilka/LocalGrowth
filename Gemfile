@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ## Below you can specify a ruby version and rvm gemset that you wish to use for the project.
- ruby '2.1.2'
+ ruby '2.2.0'
 #ruby-gemset=LocalGrowth
 
 
@@ -26,7 +26,7 @@ gem 'bcrypt'
 gem 'uglifier', '>= 1.3.0'        # Removes all spaces from css files.
 gem 'coffee-rails', '~> 4.0.0'    # Compiles to js
 gem 'jquery-rails'                # Js library
-gem 'jbuilder', '~> 1.2' 
+gem 'jbuilder', '~> 1.2'
 gem 'underscore-rails'
 
 
@@ -41,7 +41,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 # Other Backend
 gem 'kaminari'      # Pagination
 gem 'paperclip'     # File Upload
-gem 'sunspot_rails' # Easier searching 
+gem 'sunspot_rails' # Easier searching
 gem 'sunspot_solr'  # optional pre-packaged Solr distribution for use in development
 
 # sqlite database , error handling
@@ -93,8 +93,8 @@ group :development do
 end
 
 # Production gems
-group :production do  
-  gem 'pg'      # Postgres Database          
+group :production do
+  gem 'pg'      # Postgres Database
   gem 'rails_12factor', '0.0.2'
 end
 

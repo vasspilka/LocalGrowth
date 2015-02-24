@@ -1,4 +1,4 @@
-gr:
+el:
   errors:
     messages:
       expired: "έχει λήξει, παρακαλούμε ζητήστε νέο"
@@ -54,4 +54,3 @@ gr:
         subject: 'Οδηγίες επαναφοράς του κωδικού'
       unlock_instructions:
         subject: 'Οδηγίες ενεργοποίησης'
-

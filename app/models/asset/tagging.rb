@@ -5,13 +5,13 @@
 #  id           :integer          not null, primary key
 #  tag_id       :integer
 #  tagable_id   :integer
-#  tagable_type :string(255)
+#  tagable_type :string
 #  created_at   :datetime
 #  updated_at   :datetime
 #
 # Indexes
 #
-#  index_taggings_on_tagable_id_and_tagable_type  (tagable_id,tagable_type)
+#  index_taggings_on_tagable_type_and_tagable_id  (tagable_type,tagable_id)
 #
 
 class Asset::Tagging < ActiveRecord::Base

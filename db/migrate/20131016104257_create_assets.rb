@@ -42,9 +42,9 @@ class CreateAssets < ActiveRecord::Migration
     end
 
     create_table :taggings do |t|
-      t.references_to :tag
+      t.references :tag
       t.belongs_to :tagable ,polymorphic: true, index: true
       t.timestamps
-    end    
+    end
   end
 end

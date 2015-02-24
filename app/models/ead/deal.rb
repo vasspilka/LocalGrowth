@@ -4,23 +4,23 @@
 #
 #  id                 :integer          not null, primary key
 #  dealable_id        :integer
-#  dealable_type      :string(255)
+#  dealable_type      :string
 #  starts_at          :date
 #  ends_at            :date
-#  title              :string(255)
+#  title              :string
 #  description        :text
-#  image_file_name    :string(255)
-#  image_content_type :string(255)
+#  image_file_name    :string
+#  image_content_type :string
 #  image_file_size    :integer
 #  image_updated_at   :datetime
-#  points_value       :integer          default(30)
-#  active             :boolean          default(FALSE)
+#  points_value       :integer          default("30")
+#  active             :boolean          default("f")
 #  created_at         :datetime
 #  updated_at         :datetime
 #
 # Indexes
 #
-#  index_deals_on_dealable_id_and_dealable_type  (dealable_id,dealable_type)
+#  index_deals_on_dealable_type_and_dealable_id  (dealable_type,dealable_id)
 #
 
 class Ead::Deal < Ead::Base

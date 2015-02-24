@@ -4,17 +4,17 @@
 #
 #  id              :integer          not null, primary key
 #  user_id         :integer
-#  expert          :boolean          default(FALSE)
+#  expert          :boolean          default("f")
 #  content         :text
 #  rating          :integer
 #  reviewable_id   :integer
-#  reviewable_type :string(255)
+#  reviewable_type :string
 #  created_at      :datetime
 #  updated_at      :datetime
 #
 # Indexes
 #
-#  index_reviews_on_reviewable_id_and_reviewable_type  (reviewable_id,reviewable_type)
+#  index_reviews_on_reviewable_type_and_reviewable_id  (reviewable_type,reviewable_id)
 #
 
 class Asset::Review < ActiveRecord::Base

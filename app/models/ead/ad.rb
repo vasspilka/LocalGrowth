@@ -4,23 +4,23 @@
 #
 #  id                 :integer          not null, primary key
 #  adable_id          :integer
-#  adable_type        :string(255)
-#  title              :string(255)
+#  adable_type        :string
+#  title              :string
 #  starts_at          :date
 #  ends_at            :date
 #  description        :text
-#  image_file_name    :string(255)
-#  image_content_type :string(255)
+#  image_file_name    :string
+#  image_content_type :string
 #  image_file_size    :integer
 #  image_updated_at   :datetime
-#  points_value       :integer          default(20)
-#  active             :boolean          default(FALSE)
+#  points_value       :integer          default("20")
+#  active             :boolean          default("f")
 #  created_at         :datetime
 #  updated_at         :datetime
 #
 # Indexes
 #
-#  index_ads_on_adable_id_and_adable_type  (adable_id,adable_type)
+#  index_ads_on_adable_type_and_adable_id  (adable_type,adable_id)
 #
 
 class Ead::Ad < Ead::Base

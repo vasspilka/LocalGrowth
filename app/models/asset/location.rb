@@ -3,9 +3,9 @@
 # Table name: locations
 #
 #  id            :integer          not null, primary key
-#  address       :string(255)
+#  address       :string
 #  geocoded_id   :integer
-#  geocoded_type :string(255)
+#  geocoded_type :string
 #  latitude      :float
 #  longitude     :float
 #  created_at    :datetime
@@ -13,7 +13,7 @@
 #
 # Indexes
 #
-#  index_locations_on_geocoded_id_and_geocoded_type  (geocoded_id,geocoded_type)
+#  index_locations_on_geocoded_type_and_geocoded_id  (geocoded_type,geocoded_id)
 #
 
 class Asset::Location < ActiveRecord::Base
